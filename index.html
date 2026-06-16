@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>開発チームのご紹介 | Check Lab株式会社</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f6f3;
+    --white: #ffffff;
+    --ink: #1a1a1a;
+    --ink-mid: #4a4a4a;
+    --ink-light: #888;
+    --accent: #2a5fff;
+    --accent-soft: #eef1ff;
+    --line: #e4e2dc;
+    --tag-lead: #f0e6ff;
+    --tag-lead-text: #5a1a8a;
+    --tag-dev: #dceeff;
+    --tag-dev-text: #1a4a8a;
+    --tag-qa: #dcf5e8;
+    --tag-qa-text: #1a6b3c;
+    --tag-design: #fff0e0;
+    --tag-design-text: #8a4a00;
+    --tag-pm: #ffeaea;
+    --tag-pm-text: #8a1a1a;
+    --tag-ai: #e6f9ff;
+    --tag-ai-text: #006a8a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Header ── */
+  header {
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .logo-text {
+    font-family: 'DM Mono', monospace;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+
+  .logo-sep {
+    width: 1px;
+    height: 18px;
+    background: var(--line);
+  }
+
+  .logo-sub {
+    font-size: 13px;
+    color: var(--ink-light);
+    font-weight: 300;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    padding: 80px 40px 60px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .hero-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--accent);
+  }
+
+  .hero-desc {
+    font-size: 16px;
+    color: var(--ink-mid);
+    font-weight: 300;
+    max-width: 560px;
+    line-height: 1.9;
+  }
+
+  /* ── Section ── */
+  .section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--ink-light);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ── Team Cards ── */
+  .team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  @media (max-width: 640px) {
+    .team-grid { grid-template-columns: 1fr; }
+    header { padding: 16px 20px; }
+    .hero, .section { padding-left: 20px; padding-right: 20px; }
+    .hero { padding-top: 48px; }
+  }
+
+  .card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 32px;
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeUp 0.5s ease forwards;
+  }
+
+  .card:nth-child(2) { animation-delay: 0.1s; }
+  .card:nth-child(3) { animation-delay: 0.2s; }
+  .card:nth-child(4) { animation-delay: 0.3s; }
+  .card:nth-child(5) { animation-delay: 0.4s; }
+  .card:nth-child(6) { animation-delay: 0.5s; }
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .card-role {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  .role-lead   { background: var(--tag-lead);   color: var(--tag-lead-text);   }
+  .role-dev    { background: var(--tag-dev);    color: var(--tag-dev-text);    }
+  .role-qa     { background: var(--tag-qa);     color: var(--tag-qa-text);     }
+  .role-design { background: var(--tag-design); color: var(--tag-design-text); }
+  .role-pm     { background: var(--tag-pm);     color: var(--tag-pm-text);     }
+  .role-ai     { background: var(--tag-ai);     color: var(--tag-ai-text);     }
+
+  .card-initial {
+    font-family: 'DM Mono', monospace;
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .card-meta {
+    font-size: 13px;
+    color: var(--ink-light);
+    margin-bottom: 20px;
+  }
+
+  .card-summary {
+    font-size: 14px;
+    color: var(--ink-mid);
+    line-height: 1.85;
+    margin-bottom: 24px;
+    font-weight: 300;
+  }
+
+  .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .skill {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    padding: 4px 10px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    color: var(--ink-mid);
+  }
+
+  .card-cv-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    padding: 6px 14px;
+    border-radius: 4px;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .card-cv-link:hover {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  /* ── Strengths ── */
+  .strengths {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 48px;
+  }
+
+  .strengths h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    letter-spacing: -0.01em;
+  }
+
+  .strength-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  @media (max-width: 640px) {
+    .strength-items { grid-template-columns: 1fr; }
+    .strengths { padding: 24px; }
+  }
+
+  .strength-item {
+    display: flex;
+    gap: 16px;
+  }
+
+  .strength-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    padding-top: 2px;
+    flex-shrink: 0;
+  }
+
+  .strength-body h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .strength-body p {
+    font-size: 13px;
+    color: var(--ink-mid);
+    font-weight: 300;
+    line-height: 1.8;
+  }
+
+  /* ── Manager ── */
+  .manager-block {
+    background: var(--accent-soft);
+    border: 1px solid #c5d2ff;
+    border-radius: 12px;
+    padding: 32px 40px;
+    margin-bottom: 48px;
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+  }
+
+  @media (max-width: 640px) {
+    .manager-block { flex-direction: column; gap: 16px; padding: 24px; }
+  }
+
+  .manager-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding-top: 3px;
+  }
+
+  .manager-text h4 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .manager-text p {
+    font-size: 13px;
+    color: var(--ink-mid);
+    font-weight: 300;
+    line-height: 1.85;
+  }
+
+  /* ── CTA ── */
+  .cta-block {
+    background: var(--ink);
+    border-radius: 12px;
+    padding: 48px 40px;
+    text-align: center;
+    color: var(--white);
+  }
+
+  .cta-block h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+
+  .cta-block p {
+    font-size: 14px;
+    color: #aaa;
+    font-weight: 300;
+    margin-bottom: 28px;
+  }
+
+  .cta-links {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+
+  .btn:hover { opacity: 0.85; }
+
+  .btn-primary {
+    background: var(--accent);
+    color: var(--white);
+  }
+
+  .btn-ghost {
+    border: 1px solid #555;
+    color: #ccc;
+  }
+
+  /* ── Footer ── */
+  footer {
+    text-align: center;
+    padding: 32px 20px;
+    font-size: 12px;
+    color: var(--ink-light);
+    border-top: 1px solid var(--line);
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="logo-text">Check Lab</span>
+  <div class="logo-sep"></div>
+  <span class="logo-sub">フルリモート開発チーム</span>
+</header>
+
+<section class="hero">
+  <p class="hero-label">Team Introduction</p>
+  <h1>設計・開発・デザイン <em>+</em> QA、<br>フルリモートで一貫対応します。</h1>
+  <p class="hero-desc">Check Lab株式会社は、要件定義・設計・開発・デザイン・品質管理まで対応できるフルリモートチームです。5名の専門家が連携し、小規模な保守から本格的なWebシステム・組込み開発まで幅広くご支援します。</p>
+</section>
+
+<div class="section">
+  <p class="section-label">Members</p>
+
+  <div class="team-grid">
+
+    <!-- S.A. -->
+    <div class="card">
+      <span class="card-role role-lead">● Tech Lead / SE・PG</span>
+      <div class="card-initial">S.A.</div>
+      <div class="card-meta">男性・61歳　／　フルリモート対応</div>
+      <p class="card-summary">
+        金融・流通・医療・公共など多業種でSE・SA・PM・PLを経験。近年はPHP／Laravel／MySQL／AWSを中心に地図検索システム・予約システムを複数開発。Check A Toilet・Check A Golfなど実運用サービスの設計・実装を担当。要件定義から運用支援まで一貫対応。
+      </p>
+      <div class="skill-list">
+        <span class="skill">PHP / Laravel</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">MySQL / Oracle</span>
+        <span class="skill">AWS</span>
+        <span class="skill">Linux</span>
+        <span class="skill">要件定義・設計</span>
+        <span class="skill">地図検索システム</span>
+        <span class="skill">Oracle Master Gold</span>
+      </div>
+      <a class="card-cv-link" href="https://drive.google.com/file/d/1bbFzpcIOa6LCS6EvEavPx0QDbOyib3-t/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
+    </div>
+
+    <!-- K.K. -->
+    <div class="card">
+      <span class="card-role role-dev">● Backend / Web Engineer</span>
+      <div class="card-initial">K.K.</div>
+      <div class="card-meta">男性・37歳　／　フルリモート対応</div>
+      <p class="card-summary">
+        前職でExcelVBA＋Pythonによる自動化ツールを開発し、6人月相当の作業を1人月に圧縮した実績を持つ。現在はLaravel・Vue.js・FastAPI・React・AWSを用いたWebアプリを独学で複数開発・デプロイ。自走力と課題解決力が強み。
+      </p>
+      <div class="skill-list">
+        <span class="skill">PHP / Laravel</span>
+        <span class="skill">Python / FastAPI</span>
+        <span class="skill">Vue.js / React</span>
+        <span class="skill">MySQL</span>
+        <span class="skill">AWS</span>
+        <span class="skill">Docker</span>
+        <span class="skill">GitHub Actions</span>
+        <span class="skill">TypeScript</span>
+      </div>
+      <a class="card-cv-link" href="https://drive.google.com/file/d/1S5ibP55BosD1Cs84GKDgeg87AquOSAov/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
+    </div>
+
+    <!-- K.I. -->
+    <div class="card">
+      <span class="card-role role-design">● Graphic / Web Designer</span>
+      <div class="card-initial">K.I.</div>
+      <div class="card-meta">女性・53歳　／　フルリモート対応</div>
+      <p class="card-summary">
+        編集プロダクション・出版社・デザイン事務所を経て、30年以上のデザイン実務経験を持つ。紙媒体からWeb広告・イラスト・電子書籍・動画まで幅広く対応。Adobe製品全般（Illustrator・Photoshop・XD・Premiere・After Effects）を使いこなす即戦力デザイナー。
+      </p>
+      <div class="skill-list">
+        <span class="skill">Illustrator</span>
+        <span class="skill">Photoshop</span>
+        <span class="skill">Adobe XD</span>
+        <span class="skill">Premiere / AE</span>
+        <span class="skill">Web広告デザイン</span>
+        <span class="skill">イラスト制作</span>
+        <span class="skill">DTP / 入稿</span>
+        <span class="skill">SEO設定</span>
+      </div>
+      <a class="card-cv-link" href="https://drive.google.com/file/d/18qDMctPkje3Gr2SAgVgK3F6yUXxOo9_i/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
+      <a class="card-cv-link" href="https://www.foriio.com/atelierclover" target="_blank">ポートフォリオを見る →</a>
+    </div>
+
+    <!-- M.S. -->
+    <div class="card">
+      <span class="card-role role-pm">● 組込み／SE・PM</span>
+      <div class="card-initial">M.S.</div>
+      <div class="card-meta">男性・48歳　／　フルリモート対応</div>
+      <p class="card-summary">
+        医療用超音波診断装置のソフトウェア開発に約20年従事。C++・C・C#・Javaを用いた組込み・制御系開発に精通し、アプリケーション層からハードウェア制御層まで幅広く対応。PL／PMとして30名以上の開発組織で工程管理・外注管理を経験。復職後は自動車部品DX・プリンタ制御・ECサイト開発にも対応。
+      </p>
+      <div class="skill-list">
+        <span class="skill">C++ / C</span>
+        <span class="skill">C# / Java</span>
+        <span class="skill">SQL Server</span>
+        <span class="skill">組込み・制御系</span>
+        <span class="skill">Redmine / Jenkins</span>
+        <span class="skill">GitHub / Coverity</span>
+        <span class="skill">要件定義・設計</span>
+        <span class="skill">基本情報技術者</span>
+      </div>
+      <a class="card-cv-link" href="https://drive.google.com/file/d/1H56NNx6i4JA6pUDzBbBy9gb3ffS6Ihw0/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
+    </div>
+
+    <!-- E.H. -->
+    <div class="card">
+      <span class="card-role role-qa">● QA / Tester</span>
+      <div class="card-initial">E.H.</div>
+      <div class="card-meta">女性・48歳　／　フルリモート対応</div>
+      <p class="card-summary">
+        Webシステム・スマホアプリ・API・業務系システムのテストに豊富な実績。医療・航空・公共など品質が厳しい領域での経験を持ち、テストケース作成から不具合報告・品質改善提案まで一貫して対応可能。JSTQB Foundation Level取得。
+      </p>
+      <div class="skill-list">
+        <span class="skill">テストケース作成</span>
+        <span class="skill">不具合報告</span>
+        <span class="skill">リグレッションテスト</span>
+        <span class="skill">Jira / Backlog</span>
+        <span class="skill">JSTQB FL</span>
+        <span class="skill">品質改善提案</span>
+      </div>
+      <a class="card-cv-link" href="https://drive.google.com/file/d/1JT9FNA8G_3LZ6V_hTHE6KnuLJD5M4Q0E/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
+    </div>
+
+  </div>
+
+  <!-- Strengths -->
+  <p class="section-label">Why Choose Our Team</p>
+
+  <div class="strengths">
+    <h3>このチームを選ぶ理由</h3>
+    <div class="strength-items">
+      <div class="strength-item">
+        <span class="strength-num">01</span>
+        <div class="strength-body">
+          <h4>要件定義からデザイン・開発・QAまで</h4>
+          <p>上流設計・実装・デザイン・品質管理まで、チーム内で完結できます。発注側の管理コストを大幅に削減できます。</p>
+        </div>
+      </div>
+      <div class="strength-item">
+        <span class="strength-num">02</span>
+        <div class="strength-body">
+          <h4>完全フルリモート対応</h4>
+          <p>Slack・Zoom・Meetを使ったリモート業務に慣れたメンバーです。コミュニケーションの手間をかけずに稼働できます。</p>
+        </div>
+      </div>
+      <div class="strength-item">
+        <span class="strength-num">03</span>
+        <div class="strength-body">
+          <h4>小さな案件からお試しOK</h4>
+          <p>保守・テスト・バナー制作などの小規模タスクからご依頼いただけます。まずお気軽にご相談ください。</p>
+        </div>
+      </div>
+      <div class="strength-item">
+        <span class="strength-num">04</span>
+        <div class="strength-body">
+          <h4>経験豊富なリーダーが品質を担保</h4>
+          <p>実運用サービスの開発実績を持つテックリードと、PM経験者がプロジェクト全体を管理します。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Manager -->
+  <p class="section-label">Management</p>
+
+  <div class="manager-block">
+    <span class="manager-label">Team Manager</span>
+    <div class="manager-text">
+      <h4>金子 健二　／　代表取締役</h4>
+      <p>人材派遣会社にて約80名規模の在宅障害者チームを10年以上マネジメントした経験を持つ。継続就労・在宅勤務支援のノウハウを活かし、発注側の負担を最小化するチーム運営を行っている。NPO法人Checkとして多機能トイレ情報共有サービス「Check A Toilet」（登録72,000件）も運営。</p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-block">
+    <h3>まずはお気軽にご相談ください</h3>
+    <p>30分程度のオンライン説明から承っております。</p>
+    <div class="cta-links">
+      <a href="mailto:saiyo@check.or.jp" class="btn btn-primary">メールで問い合わせる</a>
+      <a href="https://checklab.net/" target="_blank" class="btn btn-ghost">会社サイトを見る</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © Check Lab株式会社　〒158-0082 東京都世田谷区等々力4-7-10　／　<a href="https://checklab.net/" style="color:inherit;">checklab.net</a>
+</footer>
+
+</body>
+</html>
