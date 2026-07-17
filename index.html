@@ -154,7 +154,7 @@
   .card:nth-child(4) { animation-delay: 0.3s; }
   .card:nth-child(5) { animation-delay: 0.4s; }
   .card:nth-child(6) { animation-delay: 0.5s; }
-  .card:nth-child(6) { animation-delay: 0.5s; }
+  .card:nth-child(7) { animation-delay: 0.6s; }
   @keyframes fadeUp {
     to { opacity: 1; transform: translateY(0); }
   }
@@ -390,6 +390,47 @@
     border-top: 1px solid var(--line);
     margin-top: 20px;
   }
+
+  /* ── Registered Engineer Pool ── */
+  .pool-intro {
+    font-size: 14px;
+    color: var(--ink-mid);
+    font-weight: 300;
+    max-width: 640px;
+    margin: -16px 0 28px;
+    line-height: 1.85;
+  }
+
+  .pool-badge {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    color: var(--ink-light);
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 2px 8px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  .card.card-pool {
+    border-style: dashed;
+    background: #fbfaf8;
+  }
+
+  .pool-empty {
+    background: var(--white);
+    border: 1px dashed var(--line);
+    border-radius: 12px;
+    padding: 32px;
+    text-align: center;
+    color: var(--ink-light);
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: 48px;
+  }
 </style>
 </head>
 <body>
@@ -403,7 +444,7 @@
 <section class="hero">
   <p class="hero-label">Team Introduction</p>
   <h1>設計・開発・デザイン <em>+</em> QA、<br>フルリモートで一貫対応します。</h1>
-  <p class="hero-desc">Check Lab株式会社は、要件定義・設計・開発・デザイン・品質管理まで対応できるフルリモートチームです。6名の専門家が連携し、小規模な保守から本格的なWebシステム・組込み開発まで幅広くご支援します。</p>
+  <p class="hero-desc">Check Lab株式会社は、要件定義・設計・開発・デザイン・品質管理まで対応できるフルリモートチームです。7名の専門家が連携し、小規模な保守から本格的なWebシステム・組込み開発、React/TypeScriptによるモダンフロントエンド開発、生成AIツールを活用した開発まで幅広くご支援します。</p>
 </section>
 
 <div class="section">
@@ -547,9 +588,86 @@
       <a class="card-cv-link" href="https://drive.google.com/file/d/1DbxPM0BahqIS8PJyXfBnI5z-XEX95Vyr/view?usp=sharing" target="_blank">スキルシートを見る →</a>
     </div>
 
+    <!-- Y.Y. -->
+    <div class="card">
+      <span class="card-role role-ai">● Frontend Engineer / AI-Driven Dev</span>
+      <div class="card-initial">Y.Y.</div>
+      <div class="card-meta">男性・28歳　／　フルリモート対応</div>
+      <p class="card-summary">
+        IT業界で約6年の実務経験を持つWebアプリケーションエンジニア。官公庁・鉄道・銀行・EC・社内システムなど幅広い開発経験を持つ。React・TypeScript・Next.jsによるモダンフロントエンド開発と、Java・Spring Boot・C#・ASP.NETによるバックエンド開発の両面に対応でき、Claude CodeなどのAI開発支援ツールを活用した開発にも取り組む柔軟性の高いエンジニア。
+      </p>
+      <div class="skill-list">
+        <span class="skill">React / TypeScript</span>
+        <span class="skill">Next.js</span>
+        <span class="skill">Java / Spring Boot</span>
+        <span class="skill">C# / ASP.NET</span>
+        <span class="skill">MySQL / Cloud Spanner</span>
+        <span class="skill">Git / GitHub</span>
+        <span class="skill">Claude Code</span>
+        <span class="skill">既存改修・データ移行</span>
+      </div>
+      <a class="card-cv-link" href="https://drive.google.com/file/d/196QeS0dBt9kKxJ-4nIXsIUy2k7VAu9E_/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
+      <a class="card-cv-link" href="https://drive.google.com/file/d/1ymrOJ7RFouCQVBL-2xYYcRbxLea8QKl9/view?usp=sharing" target="_blank">サマリを見る →</a>
+      <a class="card-cv-link" href="https://drive.google.com/file/d/1HIKURDJtRuYGrlZj72aGOonvUyBM3WUo/view?usp=sharing" target="_blank">スキルシートを見る →</a>
+    </div>
+
   </div>
 
-  <!-- Strengths -->
+  <!-- Registered Engineer Pool -->
+  <p class="section-label">登録エンジニア（時短勤務希望）</p>
+  <p class="pool-intro">上記7名のコアチームに加え、時短勤務を希望する登録エンジニアです。案件のスポット対応や、稼働時間を抑えた形でのご参画が可能です。稼働条件はお問い合わせ時にご相談ください。</p>
+
+  <div class="team-grid">
+
+    <!-- T.U. -->
+    <div class="card card-pool">
+      <span class="card-role role-dev">● Web System Engineer<span class="pool-badge">時短勤務希望</span></span>
+      <div class="card-initial">T.U.</div>
+      <div class="card-meta">男性・45歳　／　PHP・Java開発／業務システム保守・改修</div>
+      <p class="card-summary">
+        Webシステム開発、業務システム開発、既存システム改修、保守運用を中心に長年の開発経験を持つシステムエンジニア。証券取引、オンラインゲーム、アンケート集計、EC、施設管理など多様な領域のシステム開発に携わり、基本設計からテスト・保守まで一貫対応可能。リーダー・サブリーダー経験もあり、既存システムの機能追加・不具合修正に強み。
+      </p>
+      <div class="skill-list">
+        <span class="skill">Java</span>
+        <span class="skill">PHP</span>
+        <span class="skill">JavaScript / Vue.js</span>
+        <span class="skill">Visual Basic / Python</span>
+        <span class="skill">Oracle / MySQL</span>
+        <span class="skill">SQL Server / DB2</span>
+        <span class="skill">AWS / WordPress</span>
+        <span class="skill">既存システム保守・改修</span>
+      </div>
+      <a class="card-cv-link" href="https://drive.google.com/file/d/1ABYLz28EqG8HjDhxgIZFhTlSEDgHY3md/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
+      <a class="card-cv-link" href="https://drive.google.com/file/d/11j769hp1LTk42VszuGlbp6oOtf2Xyz0o/view?usp=sharing" target="_blank">サマリを見る →</a>
+      <a class="card-cv-link" href="https://drive.google.com/file/d/1SNSY-z7DFUvc559eaFkxJ76DoikQjhe2/view?usp=sharing" target="_blank">スキルシートを見る →</a>
+    </div>
+
+    <!-- R.S. -->
+    <div class="card card-pool">
+      <span class="card-role role-dev">● Web Engineer / Full-Stack<span class="pool-badge">時短勤務希望</span></span>
+      <div class="card-initial">R.S.</div>
+      <div class="card-meta">男性・36歳　／　ゲームUI・アニメーション実装／フルスタック開発</div>
+      <p class="card-summary">
+        ゲーム開発企業・IT企業にてプログラミングおよびUI・アニメーション実装を行ってきたエンジニア。グリー株式会社では多くのプロダクト制作に関わり、JavaScript／HTML5、その後はUnity+C#によるソーシャルゲーム制作に従事。個人制作ではPython・Next.js・PostgreSQLによるWebアプリを開発しており、デザイナーとプログラマー双方への理解を活かせる人材。
+      </p>
+      <div class="skill-list">
+        <span class="skill">Python (Django/FastAPI)</span>
+        <span class="skill">TypeScript / JavaScript (Next.js)</span>
+        <span class="skill">C# / Unity</span>
+        <span class="skill">PHP / HTML / CSS</span>
+        <span class="skill">Nginx / PostgreSQL</span>
+        <span class="skill">Photoshop / Illustrator</span>
+        <span class="skill">ゲームUI・アニメーション</span>
+      </div>
+      <a class="card-cv-link" href="https://drive.google.com/file/d/1DIyDJGBBkvpXCtkC1IJTfyHcReIFly16/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
+      <a class="card-cv-link" href="https://drive.google.com/file/d/1rUj2DT-Cir23wA1Y4NsD_tT4GdLYtk7G/view?usp=sharing" target="_blank">サマリを見る →</a>
+      <a class="card-cv-link" href="https://drive.google.com/file/d/1sQWTdSUv4O36p31IG0mJKd4vfGF8GM3A/view?usp=sharing" target="_blank">スキルシートを見る →</a>
+      <a class="card-cv-link" href="https://drive.google.com/file/d/1_opYnross7lroZYFffmJzbhXFeGgFPVB/view?usp=sharing" target="_blank">ポートフォリオを見る →</a>
+    </div>
+
+  </div>
+
+  <!-- Why Choose Our Team -->
   <p class="section-label">Why Choose Our Team</p>
 
   <div class="strengths">
@@ -581,6 +699,13 @@
         <div class="strength-body">
           <h4>経験豊富なリーダーが品質を担保</h4>
           <p>実運用サービスの開発実績を持つテックリードと、PM経験者がプロジェクト全体を管理します。</p>
+        </div>
+      </div>
+      <div class="strength-item">
+        <span class="strength-num">05</span>
+        <div class="strength-body">
+          <h4>生成AI活用による開発効率化</h4>
+          <p>ChatGPT・Claude Code・Geminiなどの生成AIツールを積極活用し、コーディング支援からテスト設計、ドキュメント作成まで効率化。開発スピードと品質を両立します。</p>
         </div>
       </div>
     </div>
