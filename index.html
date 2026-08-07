@@ -304,6 +304,8 @@
 
   @media (max-width: 640px) {
     .manager-block { flex-direction: column; gap: 16px; padding: 24px; }
+    [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
+  }
   }
 
   .manager-label {
@@ -448,6 +450,7 @@
   <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:32px;">
     <a href="#members" class="btn btn-primary" style="text-decoration:none;">チームメンバーを見る ↓</a>
     <a href="#service" class="btn btn-ghost" style="text-decoration:none;">受託開発の対応領域を見る ↓</a>
+    <a href="#works" class="btn btn-ghost" style="text-decoration:none;">制作実績を見る ↓</a>
   </div>
 </section>
 
@@ -710,6 +713,95 @@
     </div>
   </div>
 
+  <!-- Company Info -->
+  <div style="margin-top:80px; padding-top:16px;">
+    <p class="section-label">Company</p>
+    <h2 style="font-size:1.5rem; font-weight:800; margin-bottom:32px; letter-spacing:-0.01em;">会社概要</h2>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px;">
+
+      <!-- 基本情報 -->
+      <div>
+        <table style="width:100%; border-collapse:collapse; font-size:0.88rem;">
+          <tr style="border-bottom:1px solid #e5e5e5;">
+            <td style="padding:12px 0; font-weight:700; color:#555; width:36%;">会社名</td>
+            <td style="padding:12px 0;">Check Lab株式会社</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e5e5;">
+            <td style="padding:12px 0; font-weight:700; color:#555;">設立</td>
+            <td style="padding:12px 0;">2003年（平成15年）10月1日<br><span style="font-size:0.8rem; color:#999;">※商号変更：2017年（平成29年）6月</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e5e5;">
+            <td style="padding:12px 0; font-weight:700; color:#555;">資本金</td>
+            <td style="padding:12px 0;">金400万円</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e5e5;">
+            <td style="padding:12px 0; font-weight:700; color:#555;">所在地</td>
+            <td style="padding:12px 0;">東京都世田谷区等々力四丁目7番10号</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e5e5;">
+            <td style="padding:12px 0; font-weight:700; color:#555;">代表取締役</td>
+            <td style="padding:12px 0;">金子 健二</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e5e5;">
+            <td style="padding:12px 0; font-weight:700; color:#555;">主な事業</td>
+            <td style="padding:12px 0;">システム開発・運用／SES／<br>障害者雇用・労務管理事業</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e5e5;">
+            <td style="padding:12px 0; font-weight:700; color:#555;">ミッション</td>
+            <td style="padding:12px 0; font-weight:700;">誰もが気兼ねなく外出できる社会の実現</td>
+          </tr>
+          <tr>
+            <td style="padding:12px 0; font-weight:700; color:#555;">Web</td>
+            <td style="padding:12px 0;"><a href="https://checklab.net/" target="_blank" style="color:#1a6bbf;">checklab.net</a></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- 自社で開発・運営するサービス -->
+      <div>
+        <h4 style="font-size:0.82rem; font-weight:700; color:#555; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:16px;">自社で開発・運営するサービス</h4>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <a href="https://checkahotel.sakura.ne.jp/check_a_golf/" target="_blank" style="text-decoration:none; color:inherit;">
+            <div style="display:flex; align-items:center; gap:14px; padding:14px 16px; border:1px solid #e5e5e5; transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+              <span style="font-size:1.4rem;">⛳</span>
+              <div>
+                <div style="font-size:0.9rem; font-weight:700;">Check A Golf</div>
+                <div style="font-size:0.78rem; color:#666;">全世界19,000件以上のゴルフ施設を検索できる検索サービス</div>
+              </div>
+            </div>
+          </a>
+          <a href="https://checkahotel.sakura.ne.jp/worldbooking/" target="_blank" style="text-decoration:none; color:inherit;">
+            <div style="display:flex; align-items:center; gap:14px; padding:14px 16px; border:1px solid #e5e5e5; transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+              <span style="font-size:1.4rem;">✈️</span>
+              <div>
+                <div style="font-size:0.9rem; font-weight:700;">World Booking.jp</div>
+                <div style="font-size:0.78rem; color:#666;">ゴルフ・釣り等、世界の体験ツアーを検索・予約できる総合サイト</div>
+              </div>
+            </div>
+          </a>
+          <a href="https://www.checkatoilet.com/" target="_blank" style="text-decoration:none; color:inherit;">
+            <div style="display:flex; align-items:center; gap:14px; padding:14px 16px; border:1px solid #e5e5e5; transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+              <span style="font-size:1.4rem;">🚻</span>
+              <div>
+                <div style="font-size:0.9rem; font-weight:700;">Check A Toilet</div>
+                <div style="font-size:0.78rem; color:#666;">多機能トイレ検索などの情報サービス。Google Maps・NAVITIME等と連携</div>
+              </div>
+            </div>
+          </a>
+          <div style="display:flex; align-items:center; gap:14px; padding:14px 16px; border:1px solid #e5e5e5;">
+            <span style="font-size:1.4rem;">🍽</span>
+            <div>
+              <div style="font-size:0.9rem; font-weight:700;">Check A Food</div>
+              <div style="font-size:0.78rem; color:#666;">アレルギー対応・食事制限対応の飲食店検索サービス</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <!-- Service -->
   <div id="service" style="margin-top:80px; padding-top:16px;">
     <p class="section-label">受託開発</p>
@@ -808,6 +900,115 @@
       </p>
     </div>
   </div>
+
+  <!-- Works -->
+  <div id="works" style="margin-top:80px; padding-top:16px;">
+    <p class="section-label">制作実績</p>
+    <h2 style="font-size:1.5rem; font-weight:800; margin-bottom:8px; letter-spacing:-0.01em;">自社・受託で培った開発実績</h2>
+    <p style="font-size:0.92rem; color:#555; line-height:1.9; max-width:680px; margin-bottom:32px;">
+      自社サービスの開発・運用から受託開発まで、実運用を見据えた設計・実装を行っています。
+    </p>
+
+    <!-- タブ -->
+    <div style="display:flex; gap:0; margin-bottom:32px; border-bottom:2px solid #e5e5e5;">
+      <button onclick="showTab('tab-own')" id="btn-own"
+        style="padding:10px 28px; font-size:0.9rem; font-weight:700; border:none; background:none; cursor:pointer; border-bottom:3px solid #1a1a1a; margin-bottom:-2px; color:#1a1a1a; font-family:'Noto Sans JP',sans-serif;">
+        自社サービス
+      </button>
+      <button onclick="showTab('tab-client')" id="btn-client"
+        style="padding:10px 28px; font-size:0.9rem; font-weight:700; border:none; background:none; cursor:pointer; border-bottom:3px solid transparent; margin-bottom:-2px; color:#999; font-family:'Noto Sans JP',sans-serif;">
+        受託・支援実績
+      </button>
+    </div>
+
+    <!-- 自社サービス -->
+    <div id="tab-own">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
+
+        <a href="https://www.checkatoilet.com/" target="_blank" style="text-decoration:none; color:inherit;">
+          <div style="border:1px solid #e5e5e5; padding:28px 24px; transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+            <div style="font-size:1.6rem; margin-bottom:12px;">🚻</div>
+            <h4 style="font-size:1rem; font-weight:800; margin-bottom:8px;">Check A Toilet</h4>
+            <p style="font-size:0.82rem; color:#666; line-height:1.8; margin-bottom:12px;">多機能トイレ情報共有サービス。全国72,000件以上を掲載。Google Maps・NAVITIME・Mapionと連携。</p>
+            <div style="display:flex; flex-wrap:wrap; gap:6px;">
+              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">PHP / Laravel</span>
+              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">Google Maps API</span>
+              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">AWS</span>
+            </div>
+            <p style="font-size:0.78rem; color:#1a6bbf; margin-top:12px;">checkatoilet.com →</p>
+          </div>
+        </a>
+
+        <a href="https://checkahotel.sakura.ne.jp/check_a_golf/" target="_blank" style="text-decoration:none; color:inherit;">
+          <div style="border:1px solid #e5e5e5; padding:28px 24px; transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+            <div style="font-size:1.6rem; margin-bottom:12px;">⛳</div>
+            <h4 style="font-size:1rem; font-weight:800; margin-bottom:8px;">Check A Golf</h4>
+            <p style="font-size:0.82rem; color:#666; line-height:1.8; margin-bottom:12px;">全世界19,000件以上のゴルフ施設を検索できるサービス。米国・英国・カナダ・オーストラリア対応。</p>
+            <div style="display:flex; flex-wrap:wrap; gap:6px;">
+              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">PHP / Laravel</span>
+              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">MySQL</span>
+              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">地図API</span>
+            </div>
+            <p style="font-size:0.78rem; color:#1a6bbf; margin-top:12px;">Check A Golf →</p>
+          </div>
+        </a>
+
+        <a href="https://check.or.jp/" target="_blank" style="text-decoration:none; color:inherit;">
+          <div style="border:1px solid #e5e5e5; padding:28px 24px; transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+            <div style="font-size:1.6rem; margin-bottom:12px;">♿</div>
+            <h4 style="font-size:1rem; font-weight:800; margin-bottom:8px;">NPO法人 Check</h4>
+            <p style="font-size:0.82rem; color:#666; line-height:1.8; margin-bottom:12px;">バリアフリー・ユニバーサルデザインに関する情報収集・発信を行うNPO法人の公式サイト。</p>
+            <div style="display:flex; flex-wrap:wrap; gap:6px;">
+              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">WordPress</span>
+              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">Web制作</span>
+            </div>
+            <p style="font-size:0.78rem; color:#1a6bbf; margin-top:12px;">check.or.jp →</p>
+          </div>
+        </a>
+
+        <a href="https://checkahotel.sakura.ne.jp/worldbooking/" target="_blank" style="text-decoration:none; color:inherit;">
+          <div style="border:1px solid #e5e5e5; padding:28px 24px; transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+            <div style="font-size:1.6rem; margin-bottom:12px;">✈️</div>
+            <h4 style="font-size:1rem; font-weight:800; margin-bottom:8px;">World Booking.jp</h4>
+            <p style="font-size:0.82rem; color:#666; line-height:1.8; margin-bottom:12px;">ゴルフ・釣り等、世界の体験ツアーを検索・予約できる総合サイト。</p>
+            <div style="display:flex; flex-wrap:wrap; gap:6px;">
+              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">PHP</span>
+              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">予約システム</span>
+              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">多言語対応</span>
+            </div>
+            <p style="font-size:0.78rem; color:#1a6bbf; margin-top:12px;">World Booking.jp →</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- 受託・支援実績 -->
+    <div id="tab-client" style="display:none;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
+
+        <div style="border:1px solid #e5e5e5; border-style:dashed; padding:28px 24px; display:flex; align-items:center; justify-content:center;">
+          <p style="font-size:0.88rem; color:#aaa; text-align:center; line-height:2;">
+            掲載可能な実績を<br>順次追加予定
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+  function showTab(id) {
+    document.getElementById('tab-own').style.display = 'none';
+    document.getElementById('tab-client').style.display = 'none';
+    document.getElementById(id).style.display = 'block';
+    document.getElementById('btn-own').style.borderBottomColor = id === 'tab-own' ? '#1a1a1a' : 'transparent';
+    document.getElementById('btn-own').style.color = id === 'tab-own' ? '#1a1a1a' : '#999';
+    document.getElementById('btn-client').style.borderBottomColor = id === 'tab-client' ? '#1a1a1a' : 'transparent';
+    document.getElementById('btn-client').style.color = id === 'tab-client' ? '#1a1a1a' : '#999';
+  }
+  </script>
 
   <!-- CTA -->
   <div class="cta-block">
