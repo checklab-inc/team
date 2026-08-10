@@ -7,14 +7,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f7f6f3;
+    --bg: #f0f4f8;
     --white: #ffffff;
-    --ink: #1a1a1a;
-    --ink-mid: #4a4a4a;
-    --ink-light: #888;
-    --accent: #2a5fff;
-    --accent-soft: #eef1ff;
-    --line: #e4e2dc;
+    --ink: #0f172a;
+    --ink-mid: #475569;
+    --ink-light: #94a3b8;
+    --accent: #0ea5e9;
+    --accent-dark: #0369a1;
+    --accent-soft: #e0f2fe;
+    --line: #e2e8f0;
     --tag-lead: #f0e6ff;
     --tag-lead-text: #5a1a8a;
     --tag-dev: #dceeff;
@@ -43,35 +44,76 @@
   header {
     background: var(--white);
     border-bottom: 1px solid var(--line);
-    padding: 20px 40px;
+    padding: 0 40px;
+    height: 60px;
     display: flex;
     align-items: center;
-    gap: 16px;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
   .logo-text {
     font-family: 'DM Mono', monospace;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+  }
+
+  .logo-text span {
     color: var(--accent);
-    letter-spacing: 0.05em;
   }
 
-  .logo-sep {
-    width: 1px;
-    height: 18px;
-    background: var(--line);
+  .header-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
   }
 
-  .logo-sub {
+  .header-nav a {
     font-size: 13px;
-    color: var(--ink-light);
-    font-weight: 300;
+    color: var(--ink-mid);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.15s;
+    white-space: nowrap;
+  }
+
+  .header-nav a:hover {
+    color: var(--accent);
+  }
+
+  .header-contact {
+    background: var(--accent);
+    color: #fff !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    padding: 7px 16px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .header-contact:hover {
+    background: var(--accent-dark);
+    color: #fff !important;
+  }
+
+  @media (max-width: 768px) {
+    .header-nav { display: none; }
   }
 
   /* ── Hero ── */
   .hero {
-    padding: 80px 40px 60px;
+    padding: 72px 40px 56px;
     max-width: 900px;
     margin: 0 auto;
   }
@@ -379,8 +421,9 @@
   }
 
   .btn-ghost {
-    border: 1px solid #555;
-    color: #ccc;
+    border: 1px solid var(--line);
+    color: var(--ink-mid);
+    background: var(--white);
   }
 
   /* ── Footer ── */
@@ -438,12 +481,19 @@
 <body>
 
 <header>
-  <span class="logo-text">Check Lab</span>
-  <div class="logo-sep"></div>
-  <span class="logo-sub">フルリモート開発チーム</span>
+  <div class="header-left">
+    <span class="logo-text">Check <span>Lab</span></span>
+  </div>
+  <nav class="header-nav">
+    <a href="#company">会社概要</a>
+    <a href="#about">Check Labとは？</a>
+    <a href="#members">チームメンバー</a>
+    <a href="#works">制作実績</a>
+    <a href="mailto:saiyo@check.or.jp" class="header-contact">お問い合わせ</a>
+  </nav>
 </header>
 
-<section class="hero">
+<section class="hero" id="about">
   <p class="hero-label">Team Introduction</p>
   <h1>設計・開発・デザイン <em>+</em> QA、<br>フルリモートで一貫対応します。</h1>
   <p class="hero-desc">Check Lab株式会社は、SESを中心に、要件定義・設計・開発・デザイン・品質管理まで対応できるフルリモートチームです。6名の専門家が連携し、小規模な保守から本格的なWebシステム・組込み開発、React/TypeScriptによるモダンフロントエンド開発、生成AIツールを活用した開発まで幅広くご支援します。チーム単位での受託開発・準委任にも対応しています。</p>
@@ -660,7 +710,7 @@
   </div>
 
 
-  <!-- Manager -->
+  <div id="company" style="padding-top:16px;">
   <p class="section-label">Management</p>
 
   <div class="manager-block">
@@ -930,12 +980,12 @@
     });
     ['btn-own','btn-client','btn-company'].forEach(b => {
       document.getElementById(b).style.borderBottomColor = 'transparent';
-      document.getElementById(b).style.color = '#999';
+      document.getElementById(b).style.color = '#94a3b8';
     });
     document.getElementById(id).style.display = 'block';
     const btnId = 'btn-' + id.replace('tab-','');
-    document.getElementById(btnId).style.borderBottomColor = '#1a1a1a';
-    document.getElementById(btnId).style.color = '#1a1a1a';
+    document.getElementById(btnId).style.borderBottomColor = '#0ea5e9';
+    document.getElementById(btnId).style.color = '#0ea5e9';
   }
   </script>
 
