@@ -5,565 +5,141 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>開発チームのご紹介 | Check Lab株式会社</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: '#f5faff',
+          ink: '#0f172a',
+          'ink-mid': '#475569',
+          'ink-light': '#94a3b8',
+          accent: '#00b2f0',
+          'accent-dark': '#0284c7',
+          'accent-soft': '#d6f3ff',
+          line: '#e2e8f0',
+          'tag-lead': '#ecdcff',
+          'tag-lead-text': '#5a1a8a',
+          'tag-dev': '#d0eaff',
+          'tag-dev-text': '#1a4a8a',
+          'tag-qa': '#c9f5df',
+          'tag-qa-text': '#1a6b3c',
+          'tag-design': '#ffe9cf',
+          'tag-design-text': '#8a4a00',
+          'tag-pm': '#ffdede',
+          'tag-pm-text': '#8a1a1a',
+          'tag-ai': '#d3f7ff',
+          'tag-ai-text': '#006a8a',
+        },
+        fontFamily: {
+          sans: ['Noto Sans JP', 'sans-serif'],
+          mono: ['DM Mono', 'monospace'],
+        },
+      },
+    },
+  };
+</script>
 <style>
-  :root {
-    --bg: #f5faff;
-    --white: #ffffff;
-    --ink: #0f172a;
-    --ink-mid: #475569;
-    --ink-light: #94a3b8;
-    --accent: #00b2f0;
-    --accent-dark: #0284c7;
-    --accent-soft: #d6f3ff;
-    --line: #e2e8f0;
-    --tag-lead: #ecdcff;
-    --tag-lead-text: #5a1a8a;
-    --tag-dev: #d0eaff;
-    --tag-dev-text: #1a4a8a;
-    --tag-qa: #c9f5df;
-    --tag-qa-text: #1a6b3c;
-    --tag-design: #ffe9cf;
-    --tag-design-text: #8a4a00;
-    --tag-pm: #ffdede;
-    --tag-pm-text: #8a1a1a;
-    --tag-ai: #d3f7ff;
-    --tag-ai-text: #006a8a;
-  }
+  * { -webkit-font-smoothing: antialiased; }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    font-family: 'Noto Sans JP', sans-serif;
-    background: var(--bg);
-    color: var(--ink);
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  /* ── Header ── */
-  header {
-    background: var(--white);
-    border-bottom: 1px solid var(--line);
-    padding: 0 40px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-  }
-
-  .header-left {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .logo-text {
-    font-family: 'DM Mono', monospace;
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--ink);
-    letter-spacing: 0.02em;
-  }
-
-  .logo-text span {
-    color: var(--accent);
-  }
-
-  .header-nav {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-  }
-
-  .header-nav a {
-    font-size: 13px;
-    color: var(--ink-mid);
-    text-decoration: none;
-    font-weight: 400;
-    transition: color 0.15s;
-    white-space: nowrap;
-  }
-
-  .header-nav a:hover {
-    color: var(--accent);
-  }
-
-  .header-contact {
-    background: var(--accent);
-    color: #fff !important;
-    font-size: 12px !important;
-    font-weight: 600 !important;
-    padding: 7px 16px;
-    border-radius: 4px;
-    white-space: nowrap;
-  }
-
-  .header-contact:hover {
-    background: var(--accent-dark);
-    color: #fff !important;
-  }
-
-  @media (max-width: 768px) {
-    .header-nav { display: none; }
-  }
-
-  /* ── Hero ── */
-  .hero {
-    padding: 72px 40px 56px;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .hero-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    color: var(--accent);
-    text-transform: uppercase;
-    margin-bottom: 20px;
-  }
-
-  .hero h1 {
-    font-size: clamp(28px, 4vw, 44px);
-    font-weight: 700;
-    line-height: 1.3;
-    letter-spacing: -0.02em;
-    margin-bottom: 24px;
-  }
-
-  .hero h1 em {
-    font-style: normal;
-    color: var(--accent);
-  }
-
-  .hero-desc {
-    font-size: 16px;
-    color: var(--ink-mid);
-    font-weight: 300;
-    max-width: 560px;
-    line-height: 1.9;
-  }
-
-  /* ── Section ── */
-  .section {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 40px 80px;
-  }
-
-  .section-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    color: var(--ink-light);
-    text-transform: uppercase;
-    margin-bottom: 32px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--line);
-  }
-
-  /* ── Team Cards ── */
-  .team-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin-bottom: 48px;
-  }
-
-  @media (max-width: 640px) {
-    .team-grid { grid-template-columns: 1fr; }
-    header { padding: 16px 20px; }
-    .hero, .section { padding-left: 20px; padding-right: 20px; }
-    .hero { padding-top: 48px; }
-  }
-
-  .card {
-    background: var(--white);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 32px;
+  .card-fade {
     opacity: 0;
     transform: translateY(16px);
     animation: fadeUp 0.5s ease forwards;
   }
-
-  .card:nth-child(2) { animation-delay: 0.1s; }
-  .card:nth-child(3) { animation-delay: 0.2s; }
-  .card:nth-child(4) { animation-delay: 0.3s; }
-  .card:nth-child(5) { animation-delay: 0.4s; }
-  .card:nth-child(6) { animation-delay: 0.5s; }
-  .card:nth-child(7) { animation-delay: 0.6s; }
+  .card-fade:nth-child(2) { animation-delay: 0.1s; }
+  .card-fade:nth-child(3) { animation-delay: 0.2s; }
+  .card-fade:nth-child(4) { animation-delay: 0.3s; }
+  .card-fade:nth-child(5) { animation-delay: 0.4s; }
+  .card-fade:nth-child(6) { animation-delay: 0.5s; }
+  .card-fade:nth-child(7) { animation-delay: 0.6s; }
   @keyframes fadeUp {
     to { opacity: 1; transform: translateY(0); }
   }
-
-  .card-role {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    padding: 4px 10px;
-    border-radius: 4px;
-    margin-bottom: 20px;
-  }
-
-  .role-lead   { background: var(--tag-lead);   color: var(--tag-lead-text);   }
-  .role-dev    { background: var(--tag-dev);    color: var(--tag-dev-text);    }
-  .role-qa     { background: var(--tag-qa);     color: var(--tag-qa-text);     }
-  .role-design { background: var(--tag-design); color: var(--tag-design-text); }
-  .role-pm     { background: var(--tag-pm);     color: var(--tag-pm-text);     }
-  .role-ai     { background: var(--tag-ai);     color: var(--tag-ai-text);     }
-
-  .card-initial {
-    font-family: 'DM Mono', monospace;
-    font-size: 36px;
-    font-weight: 500;
-    letter-spacing: -0.02em;
-    color: var(--ink);
-    margin-bottom: 4px;
-  }
-
-  .card-meta {
-    font-size: 13px;
-    color: var(--ink-light);
-    margin-bottom: 20px;
-  }
-
-  .card-summary {
-    font-size: 14px;
-    color: var(--ink-mid);
-    line-height: 1.85;
-    margin-bottom: 24px;
-    font-weight: 300;
-  }
-
-  .skill-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .skill {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    padding: 4px 10px;
-    background: var(--bg);
-    border: 1px solid var(--line);
-    border-radius: 4px;
-    color: var(--ink-mid);
-  }
-
-  .card-cv-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    margin-top: 16px;
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--accent);
-    text-decoration: none;
-    border: 1px solid var(--accent);
-    padding: 6px 14px;
-    border-radius: 4px;
-    transition: background 0.15s, color 0.15s;
-  }
-
-  .card-cv-link:hover {
-    background: var(--accent);
-    color: #fff;
-  }
-
-  /* ── Strengths ── */
-  .strengths {
-    background: var(--white);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 40px;
-    margin-bottom: 48px;
-  }
-
-  .strengths h3 {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 28px;
-    letter-spacing: -0.01em;
-  }
-
-  .strength-items {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
-
-  @media (max-width: 640px) {
-    .strength-items { grid-template-columns: 1fr; }
-    .strengths { padding: 24px; }
-  }
-
-  .strength-item {
-    display: flex;
-    gap: 16px;
-  }
-
-  .strength-num {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--accent);
-    padding-top: 2px;
-    flex-shrink: 0;
-  }
-
-  .strength-body h4 {
-    font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 6px;
-  }
-
-  .strength-body p {
-    font-size: 13px;
-    color: var(--ink-mid);
-    font-weight: 300;
-    line-height: 1.8;
-  }
-
-  /* ── Manager ── */
-  .manager-block {
-    background: var(--accent-soft);
-    border: 1px solid #c5d2ff;
-    border-radius: 12px;
-    padding: 32px 40px;
-    margin-bottom: 48px;
-    display: flex;
-    gap: 32px;
-    align-items: flex-start;
-  }
-
-  @media (max-width: 640px) {
-    .manager-block { flex-direction: column; gap: 16px; padding: 24px; }
-    [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
-  }
-  }
-
-  .manager-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    color: var(--accent);
-    text-transform: uppercase;
-    white-space: nowrap;
-    padding-top: 3px;
-  }
-
-  .manager-text h4 {
-    font-size: 15px;
-    font-weight: 700;
-    margin-bottom: 8px;
-  }
-
-  .manager-text p {
-    font-size: 13px;
-    color: var(--ink-mid);
-    font-weight: 300;
-    line-height: 1.85;
-  }
-
-  /* ── CTA ── */
-  .cta-block {
-    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-    border-radius: 12px;
-    padding: 48px 40px;
-    text-align: center;
-    color: var(--white);
-  }
-
-  .cta-block h3 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 12px;
-    letter-spacing: -0.01em;
-  }
-
-  .cta-block p {
-    font-size: 14px;
-    color: #eaf9ff;
-    font-weight: 300;
-    margin-bottom: 28px;
-  }
-
-  .cta-links {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .btn {
-    display: inline-block;
-    padding: 12px 28px;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: opacity 0.15s;
-  }
-
-  .btn:hover { opacity: 0.85; }
-
-  .btn-primary {
-    background: var(--accent);
-    color: var(--white);
-  }
-
-  .btn-ghost {
-    border: 1px solid var(--line);
-    color: var(--ink-mid);
-    background: var(--white);
-  }
-
-  .cta-block .btn-primary {
-    background: var(--white);
-    color: var(--accent-dark);
-  }
-
-  /* ── Footer ── */
-  footer {
-    text-align: center;
-    padding: 32px 20px;
-    font-size: 12px;
-    color: var(--ink-light);
-    border-top: 1px solid var(--line);
-    margin-top: 20px;
-  }
-
-  /* ── Registered Engineer Pool ── */
-  .pool-intro {
-    font-size: 14px;
-    color: var(--ink-mid);
-    font-weight: 300;
-    max-width: 640px;
-    margin: -16px 0 28px;
-    line-height: 1.85;
-  }
-
-  .pool-badge {
-    display: inline-block;
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.05em;
-    color: var(--ink-light);
-    background: var(--bg);
-    border: 1px solid var(--line);
-    border-radius: 4px;
-    padding: 2px 8px;
-    margin-left: 8px;
-    vertical-align: middle;
-  }
-
-  .card.card-pool {
-    border-style: dashed;
-    background: #fbfaf8;
-  }
-
-  .pool-empty {
-    background: var(--white);
-    border: 1px dashed var(--line);
-    border-radius: 12px;
-    padding: 32px;
-    text-align: center;
-    color: var(--ink-light);
-    font-size: 13px;
-    font-weight: 300;
-    margin-bottom: 48px;
-  }
 </style>
 </head>
-<body>
+<body class="font-sans bg-bg text-ink leading-relaxed">
 
-<header>
-  <div class="header-left">
-    <a href="#" style="text-decoration:none;"><span class="logo-text">Check <span>Lab</span></span></a>
+<header class="bg-white border-b border-line h-16 px-6 md:px-10 flex items-center justify-between sticky top-0 z-50 shadow-sm">
+  <div class="flex items-center gap-2">
+    <a href="#" class="no-underline"><span class="font-mono text-base font-medium text-ink tracking-wide">Check <span class="text-accent">Lab</span></span></a>
   </div>
-  <nav class="header-nav">
-    <a href="#company">会社概要</a>
-    <a href="#about">Check Labとは？</a>
-    <a href="#members">チームメンバー</a>
-    <a href="#works">制作実績</a>
-    <a href="mailto:kaneko@checkatoilet.com" class="header-contact">お問い合わせ</a>
+  <nav class="hidden md:flex items-center gap-7">
+    <a href="#company" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap">会社概要</a>
+    <a href="#about" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap">Check Labとは？</a>
+    <a href="#members" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap">チームメンバー</a>
+    <a href="#works" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap">制作実績</a>
+    <a href="mailto:kaneko@checkatoilet.com" class="bg-accent hover:bg-accent-dark text-white text-xs font-semibold px-4 py-2 rounded whitespace-nowrap">お問い合わせ</a>
   </nav>
 </header>
 
-<section class="hero" id="about" style="max-width:100%; padding:0; background:var(--white);">
+<section class="bg-white" id="about">
 
-  <div style="display:grid; grid-template-columns:1fr 1fr; min-height:480px;">
+  <div class="grid grid-cols-1 md:grid-cols-2 min-h-[30rem]">
 
     <!-- 左：テキスト -->
-    <div style="padding:64px 48px; display:flex; flex-direction:column; justify-content:center; max-width:560px; margin:0 auto;">
-      <p class="hero-label">Engineering Team</p>
-      <h1 style="font-size:clamp(24px,3vw,38px); font-weight:700; line-height:1.3; letter-spacing:-0.02em; margin-bottom:24px;">
-        設計・開発・デザイン <em style="font-style:normal; color:var(--accent);">+</em> QA、<br>フルリモートで一貫対応します。
+    <div class="px-6 py-10 md:px-12 md:py-16 flex flex-col justify-center max-w-xl mx-auto">
+      <p class="font-mono text-xs tracking-widest text-accent uppercase mb-5">Engineering Team</p>
+      <h1 class="text-2xl md:text-4xl font-bold leading-snug tracking-tight mb-6">
+        設計・開発・デザイン <em class="not-italic text-accent">+</em> QA、<br>フルリモートで一貫対応します。
       </h1>
-      <p style="font-size:15px; color:var(--ink-mid); line-height:1.9; margin-bottom:16px;">
+      <p class="text-base text-ink-mid leading-loose mb-4">
         Check Labは、SESを中心に受託開発・準委任まで対応するフルリモートチームです。要件定義から設計・開発・デザイン・品質管理まで、チーム内で完結します。
       </p>
-      <p style="font-size:15px; color:var(--ink-mid); line-height:1.9; margin-bottom:16px;">
+      <p class="text-base text-ink-mid leading-loose mb-4">
         自社サービス（Check A Toilet・Check A Golf など）の実運用で培った実践力を、お客様の開発課題に活かします。「作って終わり」ではなく、運用を見据えた設計・実装をご提供します。
       </p>
-      <p style="font-size:15px; color:var(--ink-mid); line-height:1.9; margin-bottom:32px;">
+      <p class="text-base text-ink-mid leading-loose mb-8">
         Next.js / React / AWS 対応。レガシーシステムの保守改修から、モダンスタックでの新規開発まで幅広く承ります。
       </p>
-      <div style="display:flex; gap:12px; flex-wrap:wrap;">
-        <a href="#members" class="btn btn-primary" style="text-decoration:none;">チームメンバーを見る</a>
-        <a href="#service" class="btn btn-ghost" style="text-decoration:none;">受託開発について</a>
+      <div class="flex gap-3 flex-wrap">
+        <a href="#members" class="no-underline inline-block px-7 py-3 rounded-md text-sm font-medium transition-opacity hover:opacity-85 bg-accent text-white">チームメンバーを見る</a>
+        <a href="#service" class="no-underline inline-block px-7 py-3 rounded-md text-sm font-medium transition-opacity hover:opacity-85 border border-line text-ink-mid bg-white">受託開発について</a>
       </div>
     </div>
 
     <!-- 右：スライドショー -->
-    <div style="position:relative; overflow:hidden; background:#0f172a;" id="hero-slideshow">
-      <div class="hero-slide active" style="position:absolute; inset:0; opacity:1; transition:opacity 0.8s ease;">
-        <img src="images/svc1.png" alt="Check A Toilet" style="width:100%; height:100%; object-fit:cover; object-position:top;">
-        <div style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(15,23,42,0.85)); padding:20px 24px;">
-          <div style="font-size:11px; color:#38bdf8; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:4px;">自社サービス</div>
-          <div style="font-size:15px; font-weight:700; color:#fff;">Check A Toilet</div>
-          <div style="font-size:12px; color:#94a3b8;">多機能トイレ情報 72,850件掲載</div>
+    <div class="relative overflow-hidden bg-ink min-h-64 md:min-h-0" id="hero-slideshow">
+      <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-700 ease-in-out">
+        <img src="images/svc1.png" alt="Check A Toilet" class="w-full h-full object-cover object-top">
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[rgba(15,23,42,0.85)] to-transparent px-6 py-5">
+          <div class="text-xs text-sky-400 tracking-wide uppercase mb-1">自社サービス</div>
+          <div class="text-base font-bold text-white">Check A Toilet</div>
+          <div class="text-xs text-slate-400">多機能トイレ情報 72,850件掲載</div>
         </div>
       </div>
-      <div class="hero-slide" style="position:absolute; inset:0; opacity:0; transition:opacity 0.8s ease;">
-        <img src="images/svc2.png" alt="Check A Food" style="width:100%; height:100%; object-fit:cover; object-position:top;">
-        <div style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(15,23,42,0.85)); padding:20px 24px;">
-          <div style="font-size:11px; color:#38bdf8; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:4px;">自社サービス</div>
-          <div style="font-size:15px; font-weight:700; color:#fff;">Check A Food</div>
-          <div style="font-size:12px; color:#94a3b8;">アレルギー対応・食事制限の飲食店検索</div>
+      <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
+        <img src="images/svc2.png" alt="Check A Food" class="w-full h-full object-cover object-top">
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[rgba(15,23,42,0.85)] to-transparent px-6 py-5">
+          <div class="text-xs text-sky-400 tracking-wide uppercase mb-1">自社サービス</div>
+          <div class="text-base font-bold text-white">Check A Food</div>
+          <div class="text-xs text-slate-400">アレルギー対応・食事制限の飲食店検索</div>
         </div>
       </div>
-      <div class="hero-slide" style="position:absolute; inset:0; opacity:0; transition:opacity 0.8s ease;">
-        <img src="images/svc3.png" alt="Check A Golf" style="width:100%; height:100%; object-fit:cover; object-position:top;">
-        <div style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(15,23,42,0.85)); padding:20px 24px;">
-          <div style="font-size:11px; color:#38bdf8; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:4px;">自社サービス</div>
-          <div style="font-size:15px; font-weight:700; color:#fff;">Check A Golf</div>
-          <div style="font-size:12px; color:#94a3b8;">世界19,081件のゴルフ場を検索</div>
+      <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
+        <img src="images/svc3.png" alt="Check A Golf" class="w-full h-full object-cover object-top">
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[rgba(15,23,42,0.85)] to-transparent px-6 py-5">
+          <div class="text-xs text-sky-400 tracking-wide uppercase mb-1">自社サービス</div>
+          <div class="text-base font-bold text-white">Check A Golf</div>
+          <div class="text-xs text-slate-400">世界19,081件のゴルフ場を検索</div>
         </div>
       </div>
-      <div class="hero-slide" style="position:absolute; inset:0; opacity:0; transition:opacity 0.8s ease;">
-        <img src="images/svc4.png" alt="World Booking.jp" style="width:100%; height:100%; object-fit:cover; object-position:top;">
-        <div style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(15,23,42,0.85)); padding:20px 24px;">
-          <div style="font-size:11px; color:#38bdf8; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:4px;">自社サービス</div>
-          <div style="font-size:15px; font-weight:700; color:#fff;">World Booking.jp</div>
-          <div style="font-size:12px; color:#94a3b8;">世界の体験ツアーを検索・予約</div>
+      <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
+        <img src="images/svc4.png" alt="World Booking.jp" class="w-full h-full object-cover object-top">
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[rgba(15,23,42,0.85)] to-transparent px-6 py-5">
+          <div class="text-xs text-sky-400 tracking-wide uppercase mb-1">自社サービス</div>
+          <div class="text-base font-bold text-white">World Booking.jp</div>
+          <div class="text-xs text-slate-400">世界の体験ツアーを検索・予約</div>
         </div>
       </div>
 
       <!-- ドット -->
-      <div style="position:absolute; bottom:16px; right:16px; display:flex; gap:6px;" id="hero-dots">
-        <div class="hero-dot active" style="width:8px; height:8px; border-radius:50%; background:#38bdf8; cursor:pointer;" onclick="goSlide(0)"></div>
-        <div class="hero-dot" style="width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,0.4); cursor:pointer;" onclick="goSlide(1)"></div>
-        <div class="hero-dot" style="width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,0.4); cursor:pointer;" onclick="goSlide(2)"></div>
-        <div class="hero-dot" style="width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,0.4); cursor:pointer;" onclick="goSlide(3)"></div>
+      <div class="absolute bottom-4 right-4 flex gap-1.5" id="hero-dots">
+        <div class="hero-dot w-2 h-2 rounded-full bg-sky-400 cursor-pointer" onclick="goSlide(0)"></div>
+        <div class="hero-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer" onclick="goSlide(1)"></div>
+        <div class="hero-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer" onclick="goSlide(2)"></div>
+        <div class="hero-dot w-2 h-2 rounded-full bg-white/40 cursor-pointer" onclick="goSlide(3)"></div>
       </div>
     </div>
 
@@ -589,283 +165,273 @@
 
 </section>
 
-<style>
-@media (max-width: 768px) {
-  #about > div { grid-template-columns: 1fr !important; }
-  #about > div > div:first-child { padding: 40px 24px !important; }
-  #hero-slideshow { min-height: 260px !important; position: relative !important; }
-}
-</style>
+<div class="max-w-4xl mx-auto px-5 sm:px-10 pb-20" id="members">
+  <p class="font-mono text-xs tracking-widest text-ink-light uppercase mb-8 pb-3 border-b border-line pt-12 sm:pt-0">Members</p>
 
-<div class="section" id="members">
-  <p class="section-label">Members</p>
-
-  <div class="team-grid">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
 
     <!-- M.S. -->
-    <div class="card">
-      <span class="card-role role-pm">● 組込み／SE・PM</span>
-      <div class="card-initial">M.S.</div>
-      <div class="card-meta">男性・48歳　／　フルリモート対応</div>
-      <p class="card-summary">
+    <div class="card-fade bg-white border border-line rounded-xl p-8">
+      <span class="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide px-2.5 py-1 rounded mb-5 bg-tag-pm text-tag-pm-text">● 組込み／SE・PM</span>
+      <div class="font-mono text-4xl font-medium tracking-tight text-ink mb-1">M.S.</div>
+      <div class="text-sm text-ink-light mb-5">男性・48歳　／　フルリモート対応</div>
+      <p class="text-sm text-ink-mid leading-loose mb-6 font-light">
         医療用超音波診断装置のソフトウェア開発に約20年従事。C++・C・C#・Javaを用いた組込み・制御系開発に精通し、アプリケーション層からハードウェア制御層まで幅広く対応。PL／PMとして30名以上の開発組織で工程管理・外注管理を経験。復職後は自動車部品DX・プリンタ制御・ECサイト開発にも対応。
       </p>
-      <div class="skill-list">
-        <span class="skill">C++ / C</span>
-        <span class="skill">C# / Java</span>
-        <span class="skill">SQL Server</span>
-        <span class="skill">組込み・制御系</span>
-        <span class="skill">Redmine / Jenkins</span>
-        <span class="skill">GitHub / Coverity</span>
-        <span class="skill">要件定義・設計</span>
-        <span class="skill">基本情報技術者</span>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">C++ / C</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">C# / Java</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">SQL Server</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">組込み・制御系</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Redmine / Jenkins</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">GitHub / Coverity</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">要件定義・設計</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">基本情報技術者</span>
       </div>
-      <a class="card-cv-link" href="https://drive.google.com/file/d/1H56NNx6i4JA6pUDzBbBy9gb3ffS6Ihw0/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
-      <a class="card-cv-link" href="https://drive.google.com/file/d/1SCxOCLApViDvdtKHdF9tYqjULd42iZT1/view?usp=sharing" target="_blank">サマリを見る →</a>
-      <a class="card-cv-link" href="https://drive.google.com/file/d/1NSumZu5G6iLwkrhj_UrSqqUJegRPJUaO/view?usp=sharing" target="_blank">スキルシートを見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1H56NNx6i4JA6pUDzBbBy9gb3ffS6Ihw0/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1SCxOCLApViDvdtKHdF9tYqjULd42iZT1/view?usp=sharing" target="_blank">サマリを見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1NSumZu5G6iLwkrhj_UrSqqUJegRPJUaO/view?usp=sharing" target="_blank">スキルシートを見る →</a>
     </div>
 
     <!-- K.K. -->
-
-    <div class="card">
-      <span class="card-role role-dev">● Backend / Web Engineer</span>
-      <div class="card-initial">K.K.</div>
-      <div class="card-meta">男性・37歳　／　フルリモート対応</div>
-      <p class="card-summary">
+    <div class="card-fade bg-white border border-line rounded-xl p-8">
+      <span class="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide px-2.5 py-1 rounded mb-5 bg-tag-dev text-tag-dev-text">● Backend / Web Engineer</span>
+      <div class="font-mono text-4xl font-medium tracking-tight text-ink mb-1">K.K.</div>
+      <div class="text-sm text-ink-light mb-5">男性・37歳　／　フルリモート対応</div>
+      <p class="text-sm text-ink-mid leading-loose mb-6 font-light">
         前職でExcelVBA＋Pythonによる自動化ツールを開発し、6人月相当の作業を1人月に圧縮した実績を持つ。現在はLaravel・Vue.js・FastAPI・React・AWSを用いたWebアプリを独学で複数開発・デプロイ。自走力と課題解決力が強み。
       </p>
-      <div class="skill-list">
-        <span class="skill">PHP / Laravel</span>
-        <span class="skill">Python / FastAPI</span>
-        <span class="skill">Vue.js / React</span>
-        <span class="skill">MySQL</span>
-        <span class="skill">AWS</span>
-        <span class="skill">Docker</span>
-        <span class="skill">GitHub Actions</span>
-        <span class="skill">TypeScript</span>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">PHP / Laravel</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Python / FastAPI</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Vue.js / React</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">MySQL</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">AWS</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Docker</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">GitHub Actions</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">TypeScript</span>
       </div>
-      <a class="card-cv-link" href="https://drive.google.com/file/d/1S5ibP55BosD1Cs84GKDgeg87AquOSAov/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
-      <a class="card-cv-link" href="https://drive.google.com/file/d/1Hdhq99fhSRiRc8cUrhEcNZmelzuRiSTs/view?usp=sharing" target="_blank">サマリを見る →</a>
-      <a class="card-cv-link" href="https://drive.google.com/file/d/1cmmCRTUqgrfvTzZ9EybQKqU4BB0KFB_8/view?usp=sharing" target="_blank">スキルシートを見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1S5ibP55BosD1Cs84GKDgeg87AquOSAov/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1Hdhq99fhSRiRc8cUrhEcNZmelzuRiSTs/view?usp=sharing" target="_blank">サマリを見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1cmmCRTUqgrfvTzZ9EybQKqU4BB0KFB_8/view?usp=sharing" target="_blank">スキルシートを見る →</a>
     </div>
 
     <!-- H.K. -->
-    <div class="card">
-      <span class="card-role role-dev">● Web Engineer / Full-Stack</span>
-      <div class="card-initial">H.K.</div>
-      <div class="card-meta">男性・27歳　／　フルリモート対応</div>
-      <p class="card-summary">
+    <div class="card-fade bg-white border border-line rounded-xl p-8">
+      <span class="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide px-2.5 py-1 rounded mb-5 bg-tag-dev text-tag-dev-text">● Web Engineer / Full-Stack</span>
+      <div class="font-mono text-4xl font-medium tracking-tight text-ink mb-1">H.K.</div>
+      <div class="text-sm text-ink-light mb-5">男性・27歳　／　フルリモート対応</div>
+      <p class="text-sm text-ink-mid leading-loose mb-6 font-light">
         PHP／Laravel／GCP／Dockerを中心に、不動産クラウドファンディングシステムの開発でリーダーとして6名チームを牽引。フロントエンドからバックエンド・API設計・クラウド構築まで一貫対応。kintone・AppSheetによる業務システム構築、WordPress・LP制作・Google広告運用にも対応できる自走力の高いエンジニア。
       </p>
-      <div class="skill-list">
-        <span class="skill">PHP / Laravel</span>
-        <span class="skill">Vue.js / JavaScript</span>
-        <span class="skill">GCP / Docker</span>
-        <span class="skill">WordPress</span>
-        <span class="skill">kintone / AppSheet</span>
-        <span class="skill">API設計・開発</span>
-        <span class="skill">Google広告運用</span>
-        <span class="skill">GCP認定資格</span>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">PHP / Laravel</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Vue.js / JavaScript</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">GCP / Docker</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">WordPress</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">kintone / AppSheet</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">API設計・開発</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Google広告運用</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">GCP認定資格</span>
       </div>
-      <a class="card-cv-link" href="https://drive.google.com/file/d/19SqUR4XBbCF1R_dClzJwLjlh244ieZOQ/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
-      <a class="card-cv-link" href="https://drive.google.com/file/d/1HxQWphTEJC9apWR3LbiuQ_H7iK84oXxW/view?usp=sharing" target="_blank">サマリを見る →</a>
-      <a class="card-cv-link" href="https://drive.google.com/file/d/1W7VUJC9jAKYRnW1DndEql3O8qtTRQlW5/view?usp=sharing" target="_blank">スキルシートを見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/19SqUR4XBbCF1R_dClzJwLjlh244ieZOQ/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1HxQWphTEJC9apWR3LbiuQ_H7iK84oXxW/view?usp=sharing" target="_blank">サマリを見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1W7VUJC9jAKYRnW1DndEql3O8qtTRQlW5/view?usp=sharing" target="_blank">スキルシートを見る →</a>
     </div>
 
     <!-- K.I. -->
-    <div class="card">
-      <span class="card-role role-design">● Graphic / Web Designer</span>
-      <div class="card-initial">K.I.</div>
-      <div class="card-meta">女性・53歳　／　フルリモート対応</div>
-      <p class="card-summary">
+    <div class="card-fade bg-white border border-line rounded-xl p-8">
+      <span class="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide px-2.5 py-1 rounded mb-5 bg-tag-design text-tag-design-text">● Graphic / Web Designer</span>
+      <div class="font-mono text-4xl font-medium tracking-tight text-ink mb-1">K.I.</div>
+      <div class="text-sm text-ink-light mb-5">女性・53歳　／　フルリモート対応</div>
+      <p class="text-sm text-ink-mid leading-loose mb-6 font-light">
         編集プロダクション・出版社・デザイン事務所を経て、30年以上のデザイン実務経験を持つ。紙媒体からWeb広告・イラスト・電子書籍・動画まで幅広く対応。Adobe製品全般（Illustrator・Photoshop・XD・Premiere・After Effects）を使いこなす即戦力デザイナー。
       </p>
-      <div class="skill-list">
-        <span class="skill">Illustrator</span>
-        <span class="skill">Photoshop</span>
-        <span class="skill">Adobe XD</span>
-        <span class="skill">Premiere / AE</span>
-        <span class="skill">Web広告デザイン</span>
-        <span class="skill">イラスト制作</span>
-        <span class="skill">DTP / 入稿</span>
-        <span class="skill">SEO設定</span>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Illustrator</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Photoshop</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Adobe XD</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Premiere / AE</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Web広告デザイン</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">イラスト制作</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">DTP / 入稿</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">SEO設定</span>
       </div>
-      <a class="card-cv-link" href="https://drive.google.com/file/d/18qDMctPkje3Gr2SAgVgK3F6yUXxOo9_i/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
-      <a class="card-cv-link" href="https://www.foriio.com/atelierclover" target="_blank">ポートフォリオを見る →</a>
-      <a class="card-cv-link" href="https://drive.google.com/file/d/1pSXO_KWcaXM0hFvYCWYBzgi_lqDAR8Gc/view?usp=sharing" target="_blank">サマリを見る →</a>
-      <a class="card-cv-link" href="https://drive.google.com/file/d/1N0C0xy_tbqadXi0gLdG9Y4ybVmntPXjD/view?usp=sharing" target="_blank">スキルシートを見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/18qDMctPkje3Gr2SAgVgK3F6yUXxOo9_i/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://www.foriio.com/atelierclover" target="_blank">ポートフォリオを見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1pSXO_KWcaXM0hFvYCWYBzgi_lqDAR8Gc/view?usp=sharing" target="_blank">サマリを見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1N0C0xy_tbqadXi0gLdG9Y4ybVmntPXjD/view?usp=sharing" target="_blank">スキルシートを見る →</a>
     </div>
 
     <!-- E.H. -->
-    <div class="card">
-      <span class="card-role role-qa">● QA / Tester</span>
-      <div class="card-initial">E.H.</div>
-      <div class="card-meta">女性・48歳　／　フルリモート対応</div>
-      <p class="card-summary">
+    <div class="card-fade bg-white border border-line rounded-xl p-8">
+      <span class="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide px-2.5 py-1 rounded mb-5 bg-tag-qa text-tag-qa-text">● QA / Tester</span>
+      <div class="font-mono text-4xl font-medium tracking-tight text-ink mb-1">E.H.</div>
+      <div class="text-sm text-ink-light mb-5">女性・48歳　／　フルリモート対応</div>
+      <p class="text-sm text-ink-mid leading-loose mb-6 font-light">
         Webシステム・スマホアプリ・API・業務系システムのテストに豊富な実績。医療・航空・公共など品質が厳しい領域での経験を持ち、テストケース作成から不具合報告・品質改善提案まで一貫して対応可能。JSTQB Foundation Level取得。
       </p>
-      <div class="skill-list">
-        <span class="skill">テストケース作成</span>
-        <span class="skill">不具合報告</span>
-        <span class="skill">リグレッションテスト</span>
-        <span class="skill">Jira / Backlog</span>
-        <span class="skill">JSTQB FL</span>
-        <span class="skill">品質改善提案</span>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">テストケース作成</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">不具合報告</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">リグレッションテスト</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Jira / Backlog</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">JSTQB FL</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">品質改善提案</span>
       </div>
-      <a class="card-cv-link" href="https://drive.google.com/file/d/1JT9FNA8G_3LZ6V_hTHE6KnuLJD5M4Q0E/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
-      <a class="card-cv-link" href="https://drive.google.com/file/d/1zPGMmD_89hgHh3jo-xgm02bmCnZoLXov/view?usp=sharing" target="_blank">サマリを見る →</a>
-      <a class="card-cv-link" href="https://drive.google.com/file/d/1DbxPM0BahqIS8PJyXfBnI5z-XEX95Vyr/view?usp=sharing" target="_blank">スキルシートを見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1JT9FNA8G_3LZ6V_hTHE6KnuLJD5M4Q0E/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1zPGMmD_89hgHh3jo-xgm02bmCnZoLXov/view?usp=sharing" target="_blank">サマリを見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1DbxPM0BahqIS8PJyXfBnI5z-XEX95Vyr/view?usp=sharing" target="_blank">スキルシートを見る →</a>
     </div>
 
     <!-- Y.Y. -->
-    <div class="card">
-      <span class="card-role role-ai">● Frontend Engineer / AI-Driven Dev</span>
-      <div class="card-initial">Y.Y.</div>
-      <div class="card-meta">男性・28歳　／　フルリモート対応</div>
-      <p class="card-summary">
+    <div class="card-fade bg-white border border-line rounded-xl p-8">
+      <span class="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide px-2.5 py-1 rounded mb-5 bg-tag-ai text-tag-ai-text">● Frontend Engineer / AI-Driven Dev</span>
+      <div class="font-mono text-4xl font-medium tracking-tight text-ink mb-1">Y.Y.</div>
+      <div class="text-sm text-ink-light mb-5">男性・28歳　／　フルリモート対応</div>
+      <p class="text-sm text-ink-mid leading-loose mb-6 font-light">
         IT業界で約6年の実務経験を持つWebアプリケーションエンジニア。官公庁・鉄道・銀行・EC・社内システムなど幅広い開発経験を持つ。React・TypeScript・Next.jsによるモダンフロントエンド開発と、Java・Spring Boot・C#・ASP.NETによるバックエンド開発の両面に対応でき、Claude CodeなどのAI開発支援ツールを活用した開発にも取り組む柔軟性の高いエンジニア。
       </p>
-      <div class="skill-list">
-        <span class="skill">React / TypeScript</span>
-        <span class="skill">Next.js</span>
-        <span class="skill">Java / Spring Boot</span>
-        <span class="skill">C# / ASP.NET</span>
-        <span class="skill">MySQL / Cloud Spanner</span>
-        <span class="skill">Git / GitHub</span>
-        <span class="skill">Claude Code</span>
-        <span class="skill">既存改修・データ移行</span>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">React / TypeScript</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Next.js</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Java / Spring Boot</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">C# / ASP.NET</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">MySQL / Cloud Spanner</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Git / GitHub</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Claude Code</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">既存改修・データ移行</span>
       </div>
-      <a class="card-cv-link" href="https://drive.google.com/file/d/196QeS0dBt9kKxJ-4nIXsIUy2k7VAu9E_/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
-      <a class="card-cv-link" href="https://drive.google.com/file/d/1ymrOJ7RFouCQVBL-2xYYcRbxLea8QKl9/view?usp=sharing" target="_blank">サマリを見る →</a>
-      <a class="card-cv-link" href="https://drive.google.com/file/d/1HIKURDJtRuYGrlZj72aGOonvUyBM3WUo/view?usp=sharing" target="_blank">スキルシートを見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/196QeS0dBt9kKxJ-4nIXsIUy2k7VAu9E_/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1ymrOJ7RFouCQVBL-2xYYcRbxLea8QKl9/view?usp=sharing" target="_blank">サマリを見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1HIKURDJtRuYGrlZj72aGOonvUyBM3WUo/view?usp=sharing" target="_blank">スキルシートを見る →</a>
     </div>
 
   </div>
 
   <!-- Regional Engineer -->
-  <p class="section-label">地方在住　登録エンジニア（週40時間・フルリモート）</p>
-  <p class="pool-intro">地方在住のフルリモート対応エンジニアです。週40時間のフルタイム稼働が可能で、首都圏と同等のパフォーマンスをリモートで発揮します。</p>
+  <p class="font-mono text-xs tracking-widest text-ink-light uppercase mb-8 pb-3 border-b border-line">地方在住　登録エンジニア（週40時間・フルリモート）</p>
+  <p class="text-sm text-ink-mid font-light max-w-2xl -mt-4 mb-7 leading-loose">地方在住のフルリモート対応エンジニアです。週40時間のフルタイム稼働が可能で、首都圏と同等のパフォーマンスをリモートで発揮します。</p>
 
-  <div class="team-grid">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
 
     <!-- K.I. (Web Engineer / 38) -->
-    <div class="card card-pool">
-      <span class="card-role role-dev">● Web Engineer / Full-Stack<span class="pool-badge">週40h・札幌</span></span>
-      <div class="card-initial">K.I.</div>
-      <div class="card-meta">男性・38歳　／　札幌またはフルリモート対応</div>
-      <p class="card-summary">
+    <div class="card-fade bg-[#fbfaf8] border border-dashed border-line rounded-xl p-8">
+      <span class="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide px-2.5 py-1 rounded mb-5 bg-tag-dev text-tag-dev-text">● Web Engineer / Full-Stack<span class="inline-block font-mono text-xs tracking-wide text-ink-light bg-bg border border-line rounded px-2 py-0.5 ml-2 align-middle">週40h・札幌</span></span>
+      <div class="font-mono text-4xl font-medium tracking-tight text-ink mb-1">K.I.</div>
+      <div class="text-sm text-ink-light mb-5">男性・38歳　／　札幌またはフルリモート対応</div>
+      <p class="text-sm text-ink-mid leading-loose mb-6 font-light">
         メーカー技術職から30代でIT業界へ未経験転職し、約5年間Web系開発に従事。PHP・JavaScript・Pythonを中心に、Laravel・React・Vueを用いた開発に対応。外資系カフェチェーン・カラオケチェーンなど複数のBtoC全国チェーン店のブランドサイト開発・運用保守、自動車メーカー向け品質管理システムのフロントエンド開発、独立行政法人向けシステム開発補助を経験。TOEIC 950点。未経験技術への高いキャッチアップ力を持つエンジニア。
       </p>
-      <div class="skill-list">
-        <span class="skill">PHP / Laravel</span>
-        <span class="skill">JavaScript / TypeScript</span>
-        <span class="skill">React / Vue.js</span>
-        <span class="skill">Python</span>
-        <span class="skill">MySQL</span>
-        <span class="skill">AWS</span>
-        <span class="skill">Docker</span>
-        <span class="skill">AWS Certified CP</span>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">PHP / Laravel</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">JavaScript / TypeScript</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">React / Vue.js</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Python</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">MySQL</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">AWS</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Docker</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">AWS Certified CP</span>
       </div>
     </div>
 
   </div>
 
   <!-- Registered Engineer Pool -->
-  <p class="section-label">登録エンジニア（時短勤務希望）</p>
-  <p class="pool-intro">上記6名のコアチームに加え、時短勤務を希望する登録エンジニアです。案件のスポット対応や、稼働時間を抑えた形でのご参画が可能です。稼働条件はお問い合わせ時にご相談ください。</p>
+  <p class="font-mono text-xs tracking-widest text-ink-light uppercase mb-8 pb-3 border-b border-line">登録エンジニア（時短勤務希望）</p>
+  <p class="text-sm text-ink-mid font-light max-w-2xl -mt-4 mb-7 leading-loose">上記6名のコアチームに加え、時短勤務を希望する登録エンジニアです。案件のスポット対応や、稼働時間を抑えた形でのご参画が可能です。稼働条件はお問い合わせ時にご相談ください。</p>
 
-  <div class="team-grid">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
 
     <!-- T.U. -->
-    <div class="card card-pool">
-      <span class="card-role role-dev">● Web System Engineer<span class="pool-badge">時短勤務希望</span></span>
-      <div class="card-initial">T.U.</div>
-      <div class="card-meta">男性・45歳　／　PHP・Java開発／業務システム保守・改修</div>
-      <p class="card-summary">
+    <div class="card-fade bg-[#fbfaf8] border border-dashed border-line rounded-xl p-8">
+      <span class="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide px-2.5 py-1 rounded mb-5 bg-tag-dev text-tag-dev-text">● Web System Engineer<span class="inline-block font-mono text-xs tracking-wide text-ink-light bg-bg border border-line rounded px-2 py-0.5 ml-2 align-middle">時短勤務希望</span></span>
+      <div class="font-mono text-4xl font-medium tracking-tight text-ink mb-1">T.U.</div>
+      <div class="text-sm text-ink-light mb-5">男性・45歳　／　PHP・Java開発／業務システム保守・改修</div>
+      <p class="text-sm text-ink-mid leading-loose mb-6 font-light">
         Webシステム開発、業務システム開発、既存システム改修、保守運用を中心に長年の開発経験を持つシステムエンジニア。証券取引、オンラインゲーム、アンケート集計、EC、施設管理など多様な領域のシステム開発に携わり、基本設計からテスト・保守まで一貫対応可能。リーダー・サブリーダー経験もあり、既存システムの機能追加・不具合修正に強み。
       </p>
-      <div class="skill-list">
-        <span class="skill">Java</span>
-        <span class="skill">PHP</span>
-        <span class="skill">JavaScript / Vue.js</span>
-        <span class="skill">Visual Basic / Python</span>
-        <span class="skill">Oracle / MySQL</span>
-        <span class="skill">SQL Server / DB2</span>
-        <span class="skill">AWS / WordPress</span>
-        <span class="skill">既存システム保守・改修</span>
+      <div class="flex flex-wrap gap-1.5">
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Java</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">PHP</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">JavaScript / Vue.js</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Visual Basic / Python</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Oracle / MySQL</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">SQL Server / DB2</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">AWS / WordPress</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">既存システム保守・改修</span>
       </div>
-      <a class="card-cv-link" href="https://drive.google.com/file/d/1ABYLz28EqG8HjDhxgIZFhTlSEDgHY3md/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
-      <a class="card-cv-link" href="https://drive.google.com/file/d/11j769hp1LTk42VszuGlbp6oOtf2Xyz0o/view?usp=sharing" target="_blank">サマリを見る →</a>
-      <a class="card-cv-link" href="https://drive.google.com/file/d/1SNSY-z7DFUvc559eaFkxJ76DoikQjhe2/view?usp=sharing" target="_blank">スキルシートを見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1ABYLz28EqG8HjDhxgIZFhTlSEDgHY3md/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/11j769hp1LTk42VszuGlbp6oOtf2Xyz0o/view?usp=sharing" target="_blank">サマリを見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1SNSY-z7DFUvc559eaFkxJ76DoikQjhe2/view?usp=sharing" target="_blank">スキルシートを見る →</a>
     </div>
-
 
   </div>
 
 
-  <div id="company" style="padding-top:16px;">
-    <p class="section-label">Company</p>
-    <h2 style="font-size:1.5rem; font-weight:800; margin-bottom:28px; letter-spacing:-0.01em;">会社概要</h2>
+  <div id="company" class="pt-4">
+    <p class="font-mono text-xs tracking-widest text-ink-light uppercase mb-8 pb-3 border-b border-line">Company</p>
+    <h2 class="text-2xl font-extrabold mb-7 tracking-tight">会社概要</h2>
 
-    <table style="width:100%; max-width:680px; border-collapse:collapse; font-size:0.9rem; margin-bottom:60px;">
-      <tr style="border-bottom:1px solid var(--line);">
-        <td style="padding:14px 0; font-weight:700; color:var(--ink-mid); width:28%;">会社名</td>
-        <td style="padding:14px 0;">Check Lab株式会社</td>
+    <table class="w-full max-w-2xl border-collapse text-sm mb-16">
+      <tr class="border-b border-line">
+        <td class="py-3.5 font-bold text-ink-mid w-1/4">会社名</td>
+        <td class="py-3.5">Check Lab株式会社</td>
       </tr>
-      <tr style="border-bottom:1px solid var(--line);">
-        <td style="padding:14px 0; font-weight:700; color:var(--ink-mid);">設立</td>
-        <td style="padding:14px 0;">2003年（平成15年）10月1日<br><span style="font-size:0.8rem; color:var(--ink-light);">※商号変更：2017年（平成29年）6月</span></td>
+      <tr class="border-b border-line">
+        <td class="py-3.5 font-bold text-ink-mid">設立</td>
+        <td class="py-3.5">2003年（平成15年）10月1日<br><span class="text-xs text-ink-light">※商号変更：2017年（平成29年）6月</span></td>
       </tr>
-      <tr style="border-bottom:1px solid var(--line);">
-        <td style="padding:14px 0; font-weight:700; color:var(--ink-mid);">資本金</td>
-        <td style="padding:14px 0;">金400万円</td>
+      <tr class="border-b border-line">
+        <td class="py-3.5 font-bold text-ink-mid">資本金</td>
+        <td class="py-3.5">金400万円</td>
       </tr>
-      <tr style="border-bottom:1px solid var(--line);">
-        <td style="padding:14px 0; font-weight:700; color:var(--ink-mid);">所在地</td>
-        <td style="padding:14px 0;">東京都世田谷区等々力四丁目7番10号</td>
+      <tr class="border-b border-line">
+        <td class="py-3.5 font-bold text-ink-mid">所在地</td>
+        <td class="py-3.5">東京都世田谷区等々力四丁目7番10号</td>
       </tr>
-      <tr style="border-bottom:1px solid var(--line);">
-        <td style="padding:14px 0; font-weight:700; color:var(--ink-mid);">代表取締役</td>
-        <td style="padding:14px 0;">
+      <tr class="border-b border-line">
+        <td class="py-3.5 font-bold text-ink-mid align-top">代表取締役</td>
+        <td class="py-3.5">
           金子 健二<br>
-          <span style="font-size:0.85rem; color:var(--ink-mid); line-height:1.8; display:block; margin-top:6px;">人材派遣会社にて約80名規模の在宅障害者チームを10年以上マネジメントした経験を持つ。継続就労・在宅勤務支援のノウハウを活かし、発注側の負担を最小化するチーム運営を行っている。2008年から、NPO法人Checkとして多機能トイレ情報共有サービス「Check A Toilet」（登録72,000件）も運営。</span>
+          <span class="text-sm text-ink-mid leading-relaxed block mt-1.5">人材派遣会社にて約80名規模の在宅障害者チームを10年以上マネジメントした経験を持つ。継続就労・在宅勤務支援のノウハウを活かし、発注側の負担を最小化するチーム運営を行っている。2008年から、NPO法人Checkとして多機能トイレ情報共有サービス「Check A Toilet」（登録72,000件）も運営。</span>
         </td>
       </tr>
-      <tr style="border-bottom:1px solid var(--line);">
-        <td style="padding:14px 0; font-weight:700; color:var(--ink-mid);">従業員数</td>
-        <td style="padding:14px 0;">5名（2026年8月現在）</td>
+      <tr class="border-b border-line">
+        <td class="py-3.5 font-bold text-ink-mid">従業員数</td>
+        <td class="py-3.5">5名（2026年8月現在）</td>
       </tr>
-      <tr style="border-bottom:1px solid var(--line);">
-        <td style="padding:14px 0; font-weight:700; color:var(--ink-mid);">主な事業</td>
-        <td style="padding:14px 0;">システム開発・運用／SES／障害者雇用・労務管理事業</td>
+      <tr class="border-b border-line">
+        <td class="py-3.5 font-bold text-ink-mid">主な事業</td>
+        <td class="py-3.5">システム開発・運用／SES／障害者雇用・労務管理事業</td>
       </tr>
-      <tr style="border-bottom:1px solid var(--line);">
-        <td style="padding:14px 0; font-weight:700; color:var(--ink-mid);">ミッション</td>
-        <td style="padding:14px 0; font-weight:700;">誰もが気兼ねなく外出できる社会の実現</td>
+      <tr class="border-b border-line">
+        <td class="py-3.5 font-bold text-ink-mid">ミッション</td>
+        <td class="py-3.5 font-bold">誰もが気兼ねなく外出できる社会の実現</td>
       </tr>
       <tr>
-        <td style="padding:14px 0; font-weight:700; color:var(--ink-mid);">Web</td>
-        <td style="padding:14px 0;"><a href="https://checklab.net/" target="_blank" style="color:var(--accent);">checklab.net</a></td>
+        <td class="py-3.5 font-bold text-ink-mid">Web</td>
+        <td class="py-3.5"><a href="https://checklab.net/" target="_blank" class="text-accent">checklab.net</a></td>
       </tr>
     </table>
 
   <!-- Service -->
-  <div id="service" style="margin-top:80px; padding-top:16px;">
-    <p class="section-label">受託開発</p>
+  <div id="service" class="mt-20 pt-4">
+    <p class="font-mono text-xs tracking-widest text-ink-light uppercase mb-8 pb-3 border-b border-line">受託開発</p>
 
-    <h2 style="font-size:1.5rem; font-weight:800; margin-bottom:16px; letter-spacing:-0.01em;">
+    <h2 class="text-2xl font-extrabold mb-4 tracking-tight">
       デザイン・開発・インフラを<br>ワンチームでお受けします。
     </h2>
-    <p style="font-size:0.92rem; color:#555; line-height:1.9; max-width:680px; margin-bottom:48px;">
+    <p class="text-sm text-[#555] leading-loose max-w-2xl mb-12">
       「WordPressでは対応が難しい」「API連携やミニゲームを実装したい」「デザインから開発まで一社にまとめたい」——そのご要望に、Check Labのエンジニア・デザイナーチームがお応えします。Next.js / React によるモダン構成と、Git管理による分散開発で、品質と納期を両立した受託開発が可能です。
     </p>
 
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px; margin-bottom:48px;">
+    <div class="grid gap-6 mb-12" style="grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));">
 
-      <div style="border:1px solid #e5e5e5; padding:28px 24px;">
-        <div style="font-size:1.4rem; margin-bottom:12px;">🌐</div>
-        <h4 style="font-size:0.95rem; font-weight:800; margin-bottom:10px;">Web系開発</h4>
-        <ul style="font-size:0.85rem; color:#555; line-height:2; padding-left:1em;">
+      <div class="border border-[#e5e5e5] p-7 px-6">
+        <div class="text-2xl mb-3">🌐</div>
+        <h4 class="text-sm font-extrabold mb-2.5">Web系開発</h4>
+        <ul class="text-sm text-[#555] leading-loose pl-4 list-disc">
           <li>WordPress カスタム開発・プラグイン開発</li>
           <li>Next.js / React による Webアプリ・SPA開発</li>
           <li>PHP / Laravel による Webシステム開発</li>
@@ -874,10 +440,10 @@
         </ul>
       </div>
 
-      <div style="border:1px solid #e5e5e5; padding:28px 24px;">
-        <div style="font-size:1.4rem; margin-bottom:12px;">☁️</div>
-        <h4 style="font-size:0.95rem; font-weight:800; margin-bottom:10px;">クラウド / インフラ</h4>
-        <ul style="font-size:0.85rem; color:#555; line-height:2; padding-left:1em;">
+      <div class="border border-[#e5e5e5] p-7 px-6">
+        <div class="text-2xl mb-3">☁️</div>
+        <h4 class="text-sm font-extrabold mb-2.5">クラウド / インフラ</h4>
+        <ul class="text-sm text-[#555] leading-loose pl-4 list-disc">
           <li>AWS 構築・運用（EC2・S3・Lambda・CloudFront）</li>
           <li>GCP 構築・運用</li>
           <li>Docker 環境構築・CI/CD 整備</li>
@@ -885,10 +451,10 @@
         </ul>
       </div>
 
-      <div style="border:1px solid #e5e5e5; padding:28px 24px;">
-        <div style="font-size:1.4rem; margin-bottom:12px;">🔗</div>
-        <h4 style="font-size:0.95rem; font-weight:800; margin-bottom:10px;">API / 外部連携</h4>
-        <ul style="font-size:0.85rem; color:#555; line-height:2; padding-left:1em;">
+      <div class="border border-[#e5e5e5] p-7 px-6">
+        <div class="text-2xl mb-3">🔗</div>
+        <h4 class="text-sm font-extrabold mb-2.5">API / 外部連携</h4>
+        <ul class="text-sm text-[#555] leading-loose pl-4 list-disc">
           <li>X（Twitter）API 連携・ハッシュタグ表示</li>
           <li>Google API 連携（Maps・Analytics 等）</li>
           <li>kintone / AppSheet 業務システム構築</li>
@@ -896,10 +462,10 @@
         </ul>
       </div>
 
-      <div style="border:1px solid #e5e5e5; padding:28px 24px;">
-        <div style="font-size:1.4rem; margin-bottom:12px;">🎮</div>
-        <h4 style="font-size:0.95rem; font-weight:800; margin-bottom:10px;">インタラクティブ / エンタメ系</h4>
-        <ul style="font-size:0.85rem; color:#555; line-height:2; padding-left:1em;">
+      <div class="border border-[#e5e5e5] p-7 px-6">
+        <div class="text-2xl mb-3">🎮</div>
+        <h4 class="text-sm font-extrabold mb-2.5">インタラクティブ / エンタメ系</h4>
+        <ul class="text-sm text-[#555] leading-loose pl-4 list-disc">
           <li>ミニゲーム・おみくじ・抽選機能</li>
           <li>アニメーション・カルーセル実装</li>
           <li>SNS シェア機能・OGP 対応</li>
@@ -907,10 +473,10 @@
         </ul>
       </div>
 
-      <div style="border:1px solid #e5e5e5; padding:28px 24px;">
-        <div style="font-size:1.4rem; margin-bottom:12px;">🎨</div>
-        <h4 style="font-size:0.95rem; font-weight:800; margin-bottom:10px;">デザイン込みのワンストップ対応</h4>
-        <ul style="font-size:0.85rem; color:#555; line-height:2; padding-left:1em;">
+      <div class="border border-[#e5e5e5] p-7 px-6">
+        <div class="text-2xl mb-3">🎨</div>
+        <h4 class="text-sm font-extrabold mb-2.5">デザイン込みのワンストップ対応</h4>
+        <ul class="text-sm text-[#555] leading-loose pl-4 list-disc">
           <li>UI/UX デザイン〜実装まで一貫対応</li>
           <li>バナー・OGP・キャラクター合成</li>
           <li>SP / PC レスポンシブ対応</li>
@@ -918,20 +484,20 @@
         </ul>
       </div>
 
-      <div style="border:1px solid #e5e5e5; padding:28px 24px;">
-        <div style="font-size:1.4rem; margin-bottom:12px;">🏭</div>
-        <h4 style="font-size:0.95rem; font-weight:800; margin-bottom:10px;">組込み / 業務システム系</h4>
-        <ul style="font-size:0.85rem; color:#555; line-height:2; padding-left:1em;">
+      <div class="border border-[#e5e5e5] p-7 px-6">
+        <div class="text-2xl mb-3">🏭</div>
+        <h4 class="text-sm font-extrabold mb-2.5">組込み / 業務システム系</h4>
+        <ul class="text-sm text-[#555] leading-loose pl-4 list-disc">
           <li>C++ / C# による組込み・制御系開発</li>
           <li>業務システムの保守・改修</li>
           <li>製造業向け DX システム開発</li>
         </ul>
       </div>
 
-      <div style="border:1px solid #e5e5e5; padding:28px 24px;">
-        <div style="font-size:1.4rem; margin-bottom:12px;">🏢</div>
-        <h4 style="font-size:0.95rem; font-weight:800; margin-bottom:10px;">エンタープライズ / 保守・改修</h4>
-        <ul style="font-size:0.85rem; color:#555; line-height:2; padding-left:1em;">
+      <div class="border border-[#e5e5e5] p-7 px-6">
+        <div class="text-2xl mb-3">🏢</div>
+        <h4 class="text-sm font-extrabold mb-2.5">エンタープライズ / 保守・改修</h4>
+        <ul class="text-sm text-[#555] leading-loose pl-4 list-disc">
           <li>Java / Spring Boot による業務システム開発</li>
           <li>Oracle / SQL Server / DB2 対応</li>
           <li>Visual Basic・レガシーシステムの保守・改修</li>
@@ -941,103 +507,103 @@
 
     </div>
 
-    <div style="background:#f7f7f5; border-left:3px solid #1a1a1a; padding:24px 28px; max-width:680px;">
-      <p style="font-size:0.88rem; line-height:1.9; margin:0; color:#333;">
+    <div class="bg-[#f7f7f5] border-l-[3px] border-[#1a1a1a] p-6 px-7 max-w-2xl">
+      <p class="text-sm leading-loose m-0 text-[#333]">
         <strong>Check Lab の強み：</strong>デザイナーとエンジニアが一体となって動くフルリモートチームです。Git を活用した複数メンバーによる並行開発で、品質と納期を両立します。WordPressでは対応が難しい要件も、Next.js / React によるモダン構成でお応えします。
       </p>
     </div>
   </div>
 
   <!-- Works -->
-  <div id="works" style="margin-top:80px; padding-top:16px;">
-    <p class="section-label">制作実績</p>
-    <h2 style="font-size:1.5rem; font-weight:800; margin-bottom:8px; letter-spacing:-0.01em;">自社・受託で培った開発実績</h2>
-    <p style="font-size:0.92rem; color:#555; line-height:1.9; max-width:680px; margin-bottom:32px;">
+  <div id="works" class="mt-20 pt-4">
+    <p class="font-mono text-xs tracking-widest text-ink-light uppercase mb-8 pb-3 border-b border-line">制作実績</p>
+    <h2 class="text-2xl font-extrabold mb-2 tracking-tight">自社・受託で培った開発実績</h2>
+    <p class="text-sm text-[#555] leading-loose max-w-2xl mb-8">
       自社サービスの開発・運用から受託開発まで、実運用を見据えた設計・実装を行っています。
     </p>
 
     <!-- タブ -->
-    <div style="display:flex; gap:0; margin-bottom:32px; border-bottom:2px solid #e5e5e5;">
+    <div class="flex mb-8 border-b-2 border-[#e5e5e5]">
       <button onclick="showTab('tab-own')" id="btn-own"
-        style="padding:10px 28px; font-size:0.9rem; font-weight:700; border:none; background:none; cursor:pointer; border-bottom:3px solid #0ea5e9; margin-bottom:-2px; color:#0ea5e9; font-family:'Noto Sans JP',sans-serif;">
+        class="px-7 py-2.5 text-sm font-bold border-0 bg-none cursor-pointer -mb-0.5 border-b-2 border-sky-500 text-sky-500 font-sans">
         自社サービス
       </button>
       <button onclick="showTab('tab-client')" id="btn-client"
-        style="padding:10px 28px; font-size:0.9rem; font-weight:700; border:none; background:none; cursor:pointer; border-bottom:3px solid transparent; margin-bottom:-2px; color:#94a3b8; font-family:'Noto Sans JP',sans-serif;">
+        class="px-7 py-2.5 text-sm font-bold border-0 bg-none cursor-pointer -mb-0.5 border-b-2 border-transparent text-slate-400 font-sans">
         受託・支援実績
       </button>
     </div>
 
     <!-- 自社サービス -->
     <div id="tab-own">
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
+      <div class="grid gap-6" style="grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));">
 
-        <a href="https://www.checkatoilet.com/" target="_blank" style="text-decoration:none; color:inherit;">
-          <div style="border:1px solid #e5e5e5; padding:28px 24px; transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
-            <div style="font-size:1.6rem; margin-bottom:12px;">🚻</div>
-            <h4 style="font-size:1rem; font-weight:800; margin-bottom:8px;">Check A Toilet</h4>
-            <p style="font-size:0.82rem; color:#666; line-height:1.8; margin-bottom:12px;">多機能トイレ情報共有サービス。全国72,000件以上を掲載。Google Maps・NAVITIME・Mapionと連携。</p>
-            <div style="display:flex; flex-wrap:wrap; gap:6px;">
-              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">PHP / Laravel</span>
-              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">Google Maps API</span>
-              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">AWS</span>
+        <a href="https://www.checkatoilet.com/" target="_blank" class="no-underline text-inherit">
+          <div class="border border-[#e5e5e5] p-7 px-6 transition-shadow hover:shadow-lg">
+            <div class="text-2xl mb-3">🚻</div>
+            <h4 class="text-base font-extrabold mb-2">Check A Toilet</h4>
+            <p class="text-sm text-[#666] leading-relaxed mb-3">多機能トイレ情報共有サービス。全国72,000件以上を掲載。Google Maps・NAVITIME・Mapionと連携。</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">PHP / Laravel</span>
+              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">Google Maps API</span>
+              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">AWS</span>
             </div>
-            <p style="font-size:0.78rem; color:#1a6bbf; margin-top:12px;">checkatoilet.com →</p>
+            <p class="text-xs text-[#1a6bbf] mt-3">checkatoilet.com →</p>
           </div>
         </a>
 
-        <a href="https://checkagolf.com/" target="_blank" style="text-decoration:none; color:inherit;">
-          <div style="border:1px solid #e5e5e5; padding:28px 24px; transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
-            <div style="font-size:1.6rem; margin-bottom:12px;">⛳</div>
-            <h4 style="font-size:1rem; font-weight:800; margin-bottom:8px;">Check A Golf</h4>
-            <p style="font-size:0.82rem; color:#666; line-height:1.8; margin-bottom:12px;">全世界19,000件以上のゴルフ施設を検索できるサービス。米国・英国・カナダ・オーストラリア対応。</p>
-            <div style="display:flex; flex-wrap:wrap; gap:6px;">
-              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">PHP / Laravel</span>
-              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">MySQL</span>
-              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">地図API</span>
+        <a href="https://checkagolf.com/" target="_blank" class="no-underline text-inherit">
+          <div class="border border-[#e5e5e5] p-7 px-6 transition-shadow hover:shadow-lg">
+            <div class="text-2xl mb-3">⛳</div>
+            <h4 class="text-base font-extrabold mb-2">Check A Golf</h4>
+            <p class="text-sm text-[#666] leading-relaxed mb-3">全世界19,000件以上のゴルフ施設を検索できるサービス。米国・英国・カナダ・オーストラリア対応。</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">PHP / Laravel</span>
+              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">MySQL</span>
+              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">地図API</span>
             </div>
-            <p style="font-size:0.78rem; color:#1a6bbf; margin-top:12px;">Check A Golf →</p>
+            <p class="text-xs text-[#1a6bbf] mt-3">Check A Golf →</p>
           </div>
         </a>
 
-        <a href="https://check.or.jp/" target="_blank" style="text-decoration:none; color:inherit;">
-          <div style="border:1px solid #e5e5e5; padding:28px 24px; transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
-            <div style="font-size:1.6rem; margin-bottom:12px;">♿</div>
-            <h4 style="font-size:1rem; font-weight:800; margin-bottom:8px;">NPO法人 Check</h4>
-            <p style="font-size:0.82rem; color:#666; line-height:1.8; margin-bottom:12px;">バリアフリー・ユニバーサルデザインに関する情報収集・発信を行うNPO法人の公式サイト。</p>
-            <div style="display:flex; flex-wrap:wrap; gap:6px;">
-              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">WordPress</span>
-              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">Web制作</span>
+        <a href="https://check.or.jp/" target="_blank" class="no-underline text-inherit">
+          <div class="border border-[#e5e5e5] p-7 px-6 transition-shadow hover:shadow-lg">
+            <div class="text-2xl mb-3">♿</div>
+            <h4 class="text-base font-extrabold mb-2">NPO法人 Check</h4>
+            <p class="text-sm text-[#666] leading-relaxed mb-3">バリアフリー・ユニバーサルデザインに関する情報収集・発信を行うNPO法人の公式サイト。</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">WordPress</span>
+              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">Web制作</span>
             </div>
-            <p style="font-size:0.78rem; color:#1a6bbf; margin-top:12px;">check.or.jp →</p>
+            <p class="text-xs text-[#1a6bbf] mt-3">check.or.jp →</p>
           </div>
         </a>
 
-        <a href="https://world-booking.jp/" target="_blank" style="text-decoration:none; color:inherit;">
-          <div style="border:1px solid #e5e5e5; padding:28px 24px; transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
-            <div style="font-size:1.6rem; margin-bottom:12px;">✈️</div>
-            <h4 style="font-size:1rem; font-weight:800; margin-bottom:8px;">World Booking.jp</h4>
-            <p style="font-size:0.82rem; color:#666; line-height:1.8; margin-bottom:12px;">ゴルフ・釣り等、世界の体験ツアーを検索・予約できる総合サイト。</p>
-            <div style="display:flex; flex-wrap:wrap; gap:6px;">
-              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">PHP</span>
-              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">予約システム</span>
-              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">多言語対応</span>
+        <a href="https://world-booking.jp/" target="_blank" class="no-underline text-inherit">
+          <div class="border border-[#e5e5e5] p-7 px-6 transition-shadow hover:shadow-lg">
+            <div class="text-2xl mb-3">✈️</div>
+            <h4 class="text-base font-extrabold mb-2">World Booking.jp</h4>
+            <p class="text-sm text-[#666] leading-relaxed mb-3">ゴルフ・釣り等、世界の体験ツアーを検索・予約できる総合サイト。</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">PHP</span>
+              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">予約システム</span>
+              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">多言語対応</span>
             </div>
-            <p style="font-size:0.78rem; color:#1a6bbf; margin-top:12px;">World Booking.jp →</p>
+            <p class="text-xs text-[#1a6bbf] mt-3">World Booking.jp →</p>
           </div>
         </a>
 
-        <a href="https://checkafood.com/" target="_blank" style="text-decoration:none; color:inherit;">
-          <div style="border:1px solid #e5e5e5; padding:28px 24px; transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
-            <div style="font-size:1.6rem; margin-bottom:12px;">🍽</div>
-            <h4 style="font-size:1rem; font-weight:800; margin-bottom:8px;">Check A Food</h4>
-            <p style="font-size:0.82rem; color:#666; line-height:1.8; margin-bottom:12px;">アレルギー対応・食事制限対応の飲食店検索サービス。食べられるお店をかんたんに探せる。</p>
-            <div style="display:flex; flex-wrap:wrap; gap:6px;">
-              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">PHP / Laravel</span>
-              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">飲食店検索</span>
-              <span style="font-size:0.72rem; background:#f0f0f0; padding:2px 8px; border-radius:2px;">アレルギー対応</span>
+        <a href="https://checkafood.com/" target="_blank" class="no-underline text-inherit">
+          <div class="border border-[#e5e5e5] p-7 px-6 transition-shadow hover:shadow-lg">
+            <div class="text-2xl mb-3">🍽</div>
+            <h4 class="text-base font-extrabold mb-2">Check A Food</h4>
+            <p class="text-sm text-[#666] leading-relaxed mb-3">アレルギー対応・食事制限対応の飲食店検索サービス。食べられるお店をかんたんに探せる。</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">PHP / Laravel</span>
+              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">飲食店検索</span>
+              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">アレルギー対応</span>
             </div>
-            <p style="font-size:0.78rem; color:#1a6bbf; margin-top:12px;">checkafood.com →</p>
+            <p class="text-xs text-[#1a6bbf] mt-3">checkafood.com →</p>
           </div>
         </a>
 
@@ -1045,11 +611,11 @@
     </div>
 
     <!-- 受託・支援実績 -->
-    <div id="tab-client" style="display:none;">
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
+    <div id="tab-client" class="hidden">
+      <div class="grid gap-6" style="grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));">
 
-        <div style="border:1px solid #e5e5e5; border-style:dashed; padding:28px 24px; display:flex; align-items:center; justify-content:center;">
-          <p style="font-size:0.88rem; color:#aaa; text-align:center; line-height:2;">
+        <div class="border border-dashed border-[#e5e5e5] p-7 px-6 flex items-center justify-center">
+          <p class="text-sm text-[#aaa] text-center leading-loose">
             掲載可能な実績を<br>順次追加予定
           </p>
         </div>
@@ -1062,32 +628,32 @@
   <script>
   function showTab(id) {
     ['tab-own','tab-client'].forEach(t => {
-      document.getElementById(t).style.display = 'none';
+      document.getElementById(t).classList.add('hidden');
     });
     ['btn-own','btn-client'].forEach(b => {
-      document.getElementById(b).style.borderBottomColor = 'transparent';
-      document.getElementById(b).style.color = '#94a3b8';
+      document.getElementById(b).classList.remove('border-sky-500','text-sky-500');
+      document.getElementById(b).classList.add('border-transparent','text-slate-400');
     });
-    document.getElementById(id).style.display = 'block';
+    document.getElementById(id).classList.remove('hidden');
     const btnId = 'btn-' + id.replace('tab-','');
-    document.getElementById(btnId).style.borderBottomColor = '#0ea5e9';
-    document.getElementById(btnId).style.color = '#0ea5e9';
+    document.getElementById(btnId).classList.remove('border-transparent','text-slate-400');
+    document.getElementById(btnId).classList.add('border-sky-500','text-sky-500');
   }
   </script>
 
   <!-- CTA -->
-  <div class="cta-block">
-    <h3>まずはお気軽にご相談ください</h3>
-    <p>30分程度のオンライン説明から承っております。</p>
-    <div class="cta-links">
-      <a href="mailto:kaneko@checkatoilet.com" class="btn btn-primary">メールで問い合わせる</a>
+  <div class="rounded-xl p-12 px-10 text-center text-white bg-gradient-to-br from-accent to-accent-dark">
+    <h3 class="text-xl font-bold mb-3 tracking-tight">まずはお気軽にご相談ください</h3>
+    <p class="text-sm text-[#eaf9ff] font-light mb-7">30分程度のオンライン説明から承っております。</p>
+    <div class="flex gap-3 justify-center flex-wrap">
+      <a href="mailto:kaneko@checkatoilet.com" class="inline-block px-7 py-3 rounded-md text-sm font-medium no-underline transition-opacity hover:opacity-85 bg-white text-accent-dark">メールで問い合わせる</a>
     </div>
   </div>
 
 </div>
 
-<footer>
-  © Check Lab株式会社　〒158-0082 東京都世田谷区等々力4-7-10　／　<a href="https://checklab.net/" style="color:inherit;">checklab.net</a>
+<footer class="text-center py-8 px-5 text-xs text-ink-light border-t border-line mt-5">
+  © Check Lab株式会社　〒158-0082 東京都世田谷区等々力4-7-10　／　<a href="https://checklab.net/" class="text-inherit">checklab.net</a>
 </footer>
 
 </body>
