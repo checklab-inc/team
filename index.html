@@ -493,16 +493,104 @@
   </nav>
 </header>
 
-<section class="hero" id="about">
-  <p class="hero-label">Team Introduction</p>
-  <h1>設計・開発・デザイン <em>+</em> QA、<br>フルリモートで一貫対応します。</h1>
-  <p class="hero-desc">Check Lab株式会社は、SESを中心に、要件定義・設計・開発・デザイン・品質管理まで対応できるフルリモートチームです。6名の専門家が連携し、小規模な保守から本格的なWebシステム・組込み開発、React/TypeScriptによるモダンフロントエンド開発、生成AIツールを活用した開発まで幅広くご支援します。チーム単位での受託開発・準委任にも対応しています。</p>
-  <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:32px;">
-    <a href="#members" class="btn btn-primary" style="text-decoration:none;">チームメンバーを見る ↓</a>
-    <a href="#service" class="btn btn-ghost" style="text-decoration:none;">受託開発の対応領域を見る ↓</a>
-    <a href="#works" class="btn btn-ghost" style="text-decoration:none;">制作実績を見る ↓</a>
+<section class="hero" id="about" style="max-width:100%; padding:0; background:var(--white);">
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; min-height:480px;">
+
+    <!-- 左：テキスト -->
+    <div style="padding:64px 48px; display:flex; flex-direction:column; justify-content:center; max-width:560px; margin:0 auto;">
+      <p class="hero-label">Engineering Team</p>
+      <h1 style="font-size:clamp(24px,3vw,38px); font-weight:700; line-height:1.3; letter-spacing:-0.02em; margin-bottom:24px;">
+        設計・開発・デザイン <em style="font-style:normal; color:var(--accent);">+</em> QA、<br>フルリモートで一貫対応します。
+      </h1>
+      <p style="font-size:15px; color:var(--ink-mid); line-height:1.9; margin-bottom:16px;">
+        Check Labは、SESを中心に受託開発・準委任まで対応するフルリモートチームです。要件定義から設計・開発・デザイン・品質管理まで、チーム内で完結します。
+      </p>
+      <p style="font-size:15px; color:var(--ink-mid); line-height:1.9; margin-bottom:16px;">
+        自社サービス（Check A Toilet・Check A Golf など）の実運用で培った実践力を、お客様の開発課題に活かします。「作って終わり」ではなく、運用を見据えた設計・実装をご提供します。
+      </p>
+      <p style="font-size:15px; color:var(--ink-mid); line-height:1.9; margin-bottom:32px;">
+        Next.js / React / AWS 対応。レガシーシステムの保守改修から、モダンスタックでの新規開発まで幅広く承ります。
+      </p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="#members" class="btn btn-primary" style="text-decoration:none;">チームメンバーを見る</a>
+        <a href="#service" class="btn btn-ghost" style="text-decoration:none;">受託開発について</a>
+      </div>
+    </div>
+
+    <!-- 右：スライドショー -->
+    <div style="position:relative; overflow:hidden; background:#0f172a;" id="hero-slideshow">
+      <div class="hero-slide active" style="position:absolute; inset:0; opacity:1; transition:opacity 0.8s ease;">
+        <img src="images/svc1.png" alt="Check A Toilet" style="width:100%; height:100%; object-fit:cover; object-position:top;">
+        <div style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(15,23,42,0.85)); padding:20px 24px;">
+          <div style="font-size:11px; color:#38bdf8; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:4px;">自社サービス</div>
+          <div style="font-size:15px; font-weight:700; color:#fff;">Check A Toilet</div>
+          <div style="font-size:12px; color:#94a3b8;">多機能トイレ情報 72,850件掲載</div>
+        </div>
+      </div>
+      <div class="hero-slide" style="position:absolute; inset:0; opacity:0; transition:opacity 0.8s ease;">
+        <img src="images/svc2.png" alt="Check A Food" style="width:100%; height:100%; object-fit:cover; object-position:top;">
+        <div style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(15,23,42,0.85)); padding:20px 24px;">
+          <div style="font-size:11px; color:#38bdf8; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:4px;">自社サービス</div>
+          <div style="font-size:15px; font-weight:700; color:#fff;">Check A Food</div>
+          <div style="font-size:12px; color:#94a3b8;">アレルギー対応・食事制限の飲食店検索</div>
+        </div>
+      </div>
+      <div class="hero-slide" style="position:absolute; inset:0; opacity:0; transition:opacity 0.8s ease;">
+        <img src="images/svc3.png" alt="Check A Golf" style="width:100%; height:100%; object-fit:cover; object-position:top;">
+        <div style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(15,23,42,0.85)); padding:20px 24px;">
+          <div style="font-size:11px; color:#38bdf8; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:4px;">自社サービス</div>
+          <div style="font-size:15px; font-weight:700; color:#fff;">Check A Golf</div>
+          <div style="font-size:12px; color:#94a3b8;">世界19,081件のゴルフ場を検索</div>
+        </div>
+      </div>
+      <div class="hero-slide" style="position:absolute; inset:0; opacity:0; transition:opacity 0.8s ease;">
+        <img src="images/svc4.png" alt="World Booking.jp" style="width:100%; height:100%; object-fit:cover; object-position:top;">
+        <div style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(15,23,42,0.85)); padding:20px 24px;">
+          <div style="font-size:11px; color:#38bdf8; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:4px;">自社サービス</div>
+          <div style="font-size:15px; font-weight:700; color:#fff;">World Booking.jp</div>
+          <div style="font-size:12px; color:#94a3b8;">世界の体験ツアーを検索・予約</div>
+        </div>
+      </div>
+
+      <!-- ドット -->
+      <div style="position:absolute; bottom:16px; right:16px; display:flex; gap:6px;" id="hero-dots">
+        <div class="hero-dot active" style="width:8px; height:8px; border-radius:50%; background:#38bdf8; cursor:pointer;" onclick="goSlide(0)"></div>
+        <div class="hero-dot" style="width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,0.4); cursor:pointer;" onclick="goSlide(1)"></div>
+        <div class="hero-dot" style="width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,0.4); cursor:pointer;" onclick="goSlide(2)"></div>
+        <div class="hero-dot" style="width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,0.4); cursor:pointer;" onclick="goSlide(3)"></div>
+      </div>
+    </div>
+
   </div>
+
+  <script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.hero-dot');
+
+  function goSlide(n) {
+    slides[currentSlide].style.opacity = '0';
+    dots[currentSlide].style.background = 'rgba(255,255,255,0.4)';
+    currentSlide = n;
+    slides[currentSlide].style.opacity = '1';
+    dots[currentSlide].style.background = '#38bdf8';
+  }
+
+  setInterval(() => {
+    goSlide((currentSlide + 1) % slides.length);
+  }, 4000);
+  </script>
+
 </section>
+
+<style>
+@media (max-width: 768px) {
+  #about > div { grid-template-columns: 1fr !important; }
+  #about > div > div:first-child { padding: 40px 24px !important; }
+  #hero-slideshow { min-height: 260px !important; position: relative !important; }
+}
+</style>
 
 <div class="section" id="members">
   <p class="section-label">Members</p>
@@ -711,15 +799,46 @@
 
 
   <div id="company" style="padding-top:16px;">
-  <p class="section-label">Management</p>
+    <p class="section-label">Company</p>
+    <h2 style="font-size:1.5rem; font-weight:800; margin-bottom:28px; letter-spacing:-0.01em;">会社概要</h2>
 
-  <div class="manager-block">
-    <span class="manager-label">Team Manager</span>
-    <div class="manager-text">
-      <h4>金子 健二　／　代表取締役</h4>
-      <p>人材派遣会社にて約80名規模の在宅障害者チームを10年以上マネジメントした経験を持つ。継続就労・在宅勤務支援のノウハウを活かし、発注側の負担を最小化するチーム運営を行っている。NPO法人Checkとして多機能トイレ情報共有サービス「Check A Toilet」（登録72,000件）も運営。</p>
-    </div>
-  </div>
+    <table style="width:100%; max-width:680px; border-collapse:collapse; font-size:0.9rem; margin-bottom:60px;">
+      <tr style="border-bottom:1px solid var(--line);">
+        <td style="padding:14px 0; font-weight:700; color:var(--ink-mid); width:28%;">会社名</td>
+        <td style="padding:14px 0;">Check Lab株式会社</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--line);">
+        <td style="padding:14px 0; font-weight:700; color:var(--ink-mid);">設立</td>
+        <td style="padding:14px 0;">2003年（平成15年）10月1日<br><span style="font-size:0.8rem; color:var(--ink-light);">※商号変更：2017年（平成29年）6月</span></td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--line);">
+        <td style="padding:14px 0; font-weight:700; color:var(--ink-mid);">資本金</td>
+        <td style="padding:14px 0;">金400万円</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--line);">
+        <td style="padding:14px 0; font-weight:700; color:var(--ink-mid);">所在地</td>
+        <td style="padding:14px 0;">東京都世田谷区等々力四丁目7番10号</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--line);">
+        <td style="padding:14px 0; font-weight:700; color:var(--ink-mid);">代表取締役</td>
+        <td style="padding:14px 0;">
+          金子 健二<br>
+          <span style="font-size:0.85rem; color:var(--ink-mid); line-height:1.8; display:block; margin-top:6px;">人材派遣会社にて約80名規模の在宅障害者チームを10年以上マネジメントした経験を持つ。継続就労・在宅勤務支援のノウハウを活かし、発注側の負担を最小化するチーム運営を行っている。NPO法人Checkとして多機能トイレ情報共有サービス「Check A Toilet」（登録72,000件）も運営。</span>
+        </td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--line);">
+        <td style="padding:14px 0; font-weight:700; color:var(--ink-mid);">主な事業</td>
+        <td style="padding:14px 0;">システム開発・運用／SES／障害者雇用・労務管理事業</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--line);">
+        <td style="padding:14px 0; font-weight:700; color:var(--ink-mid);">ミッション</td>
+        <td style="padding:14px 0; font-weight:700;">誰もが気兼ねなく外出できる社会の実現</td>
+      </tr>
+      <tr>
+        <td style="padding:14px 0; font-weight:700; color:var(--ink-mid);">Web</td>
+        <td style="padding:14px 0;"><a href="https://checklab.net/" target="_blank" style="color:var(--accent);">checklab.net</a></td>
+      </tr>
+    </table>
 
   <!-- Service -->
   <div id="service" style="margin-top:80px; padding-top:16px;">
@@ -831,16 +950,12 @@
     <!-- タブ -->
     <div style="display:flex; gap:0; margin-bottom:32px; border-bottom:2px solid #e5e5e5;">
       <button onclick="showTab('tab-own')" id="btn-own"
-        style="padding:10px 28px; font-size:0.9rem; font-weight:700; border:none; background:none; cursor:pointer; border-bottom:3px solid #1a1a1a; margin-bottom:-2px; color:#1a1a1a; font-family:'Noto Sans JP',sans-serif;">
+        style="padding:10px 28px; font-size:0.9rem; font-weight:700; border:none; background:none; cursor:pointer; border-bottom:3px solid #0ea5e9; margin-bottom:-2px; color:#0ea5e9; font-family:'Noto Sans JP',sans-serif;">
         自社サービス
       </button>
       <button onclick="showTab('tab-client')" id="btn-client"
-        style="padding:10px 28px; font-size:0.9rem; font-weight:700; border:none; background:none; cursor:pointer; border-bottom:3px solid transparent; margin-bottom:-2px; color:#999; font-family:'Noto Sans JP',sans-serif;">
+        style="padding:10px 28px; font-size:0.9rem; font-weight:700; border:none; background:none; cursor:pointer; border-bottom:3px solid transparent; margin-bottom:-2px; color:#94a3b8; font-family:'Noto Sans JP',sans-serif;">
         受託・支援実績
-      </button>
-      <button onclick="showTab('tab-company')" id="btn-company"
-        style="padding:10px 28px; font-size:0.9rem; font-weight:700; border:none; background:none; cursor:pointer; border-bottom:3px solid transparent; margin-bottom:-2px; color:#999; font-family:'Noto Sans JP',sans-serif;">
-        会社概要
       </button>
     </div>
 
@@ -933,52 +1048,14 @@
       </div>
     </div>
 
-    <!-- 会社概要 -->
-    <div id="tab-company" style="display:none;">
-      <table style="width:100%; max-width:680px; border-collapse:collapse; font-size:0.88rem;">
-        <tr style="border-bottom:1px solid #e5e5e5;">
-          <td style="padding:14px 0; font-weight:700; color:#555; width:28%;">会社名</td>
-          <td style="padding:14px 0;">Check Lab株式会社</td>
-        </tr>
-        <tr style="border-bottom:1px solid #e5e5e5;">
-          <td style="padding:14px 0; font-weight:700; color:#555;">設立</td>
-          <td style="padding:14px 0;">2003年（平成15年）10月1日<br><span style="font-size:0.8rem; color:#999;">※商号変更：2017年（平成29年）6月</span></td>
-        </tr>
-        <tr style="border-bottom:1px solid #e5e5e5;">
-          <td style="padding:14px 0; font-weight:700; color:#555;">資本金</td>
-          <td style="padding:14px 0;">金400万円</td>
-        </tr>
-        <tr style="border-bottom:1px solid #e5e5e5;">
-          <td style="padding:14px 0; font-weight:700; color:#555;">所在地</td>
-          <td style="padding:14px 0;">東京都世田谷区等々力四丁目7番10号</td>
-        </tr>
-        <tr style="border-bottom:1px solid #e5e5e5;">
-          <td style="padding:14px 0; font-weight:700; color:#555;">代表取締役</td>
-          <td style="padding:14px 0;">金子 健二</td>
-        </tr>
-        <tr style="border-bottom:1px solid #e5e5e5;">
-          <td style="padding:14px 0; font-weight:700; color:#555;">主な事業</td>
-          <td style="padding:14px 0;">システム開発・運用／SES／障害者雇用・労務管理事業</td>
-        </tr>
-        <tr style="border-bottom:1px solid #e5e5e5;">
-          <td style="padding:14px 0; font-weight:700; color:#555;">ミッション</td>
-          <td style="padding:14px 0; font-weight:700;">誰もが気兼ねなく外出できる社会の実現</td>
-        </tr>
-        <tr>
-          <td style="padding:14px 0; font-weight:700; color:#555;">Web</td>
-          <td style="padding:14px 0;"><a href="https://checklab.net/" target="_blank" style="color:#1a6bbf;">checklab.net</a></td>
-        </tr>
-      </table>
-    </div>
-
   </div>
 
   <script>
   function showTab(id) {
-    ['tab-own','tab-client','tab-company'].forEach(t => {
+    ['tab-own','tab-client'].forEach(t => {
       document.getElementById(t).style.display = 'none';
     });
-    ['btn-own','btn-client','btn-company'].forEach(b => {
+    ['btn-own','btn-client'].forEach(b => {
       document.getElementById(b).style.borderBottomColor = 'transparent';
       document.getElementById(b).style.color = '#94a3b8';
     });
