@@ -7,26 +7,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f0f4f8;
+    --bg: #f5faff;
     --white: #ffffff;
     --ink: #0f172a;
     --ink-mid: #475569;
     --ink-light: #94a3b8;
-    --accent: #0ea5e9;
-    --accent-dark: #0369a1;
-    --accent-soft: #e0f2fe;
+    --accent: #00b2f0;
+    --accent-dark: #0284c7;
+    --accent-soft: #d6f3ff;
     --line: #e2e8f0;
-    --tag-lead: #f0e6ff;
+    --tag-lead: #ecdcff;
     --tag-lead-text: #5a1a8a;
-    --tag-dev: #dceeff;
+    --tag-dev: #d0eaff;
     --tag-dev-text: #1a4a8a;
-    --tag-qa: #dcf5e8;
+    --tag-qa: #c9f5df;
     --tag-qa-text: #1a6b3c;
-    --tag-design: #fff0e0;
+    --tag-design: #ffe9cf;
     --tag-design-text: #8a4a00;
-    --tag-pm: #ffeaea;
+    --tag-pm: #ffdede;
     --tag-pm-text: #8a1a1a;
-    --tag-ai: #e6f9ff;
+    --tag-ai: #d3f7ff;
     --tag-ai-text: #006a8a;
   }
 
@@ -348,7 +348,6 @@
     .manager-block { flex-direction: column; gap: 16px; padding: 24px; }
     [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
   }
-  }
 
   .manager-label {
     font-family: 'DM Mono', monospace;
@@ -375,7 +374,7 @@
 
   /* ── CTA ── */
   .cta-block {
-    background: var(--ink);
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
     border-radius: 12px;
     padding: 48px 40px;
     text-align: center;
@@ -391,7 +390,7 @@
 
   .cta-block p {
     font-size: 14px;
-    color: #aaa;
+    color: #eaf9ff;
     font-weight: 300;
     margin-bottom: 28px;
   }
@@ -424,6 +423,11 @@
     border: 1px solid var(--line);
     color: var(--ink-mid);
     background: var(--white);
+  }
+
+  .cta-block .btn-primary {
+    background: var(--white);
+    color: var(--accent);
   }
 
   /* ── Footer ── */
@@ -820,10 +824,10 @@
         <td style="padding:14px 0;">東京都世田谷区等々力四丁目7番10号</td>
       </tr>
       <tr style="border-bottom:1px solid var(--line);">
-        <td style="padding:14px 0; font-weight:700; color:var(--ink-mid);">代表取締役</td>
-        <td style="padding:14px 0;">
+        <td style="padding:16px 0 20px; font-weight:700; color:var(--ink-mid); vertical-align:top;">代表取締役</td>
+        <td style="padding:16px 0 20px; vertical-align:top;">
           金子 健二<br>
-          <span style="font-size:0.85rem; color:var(--ink-mid); line-height:1.8; display:block; margin-top:6px;">人材派遣会社にて約80名規模の在宅障害者チームを10年以上マネジメントした経験を持つ。継続就労・在宅勤務支援のノウハウを活かし、発注側の負担を最小化するチーム運営を行っている。2008年から、NPO法人Checkとして多機能トイレ情報共有サービス「Check A Toilet」（登録72,000件）も運営。</span>
+          <span style="font-size:0.85rem; color:var(--ink-mid); line-height:1.9; display:block; margin-top:10px;">人材派遣会社にて約80名規模の在宅障害者チームを10年以上マネジメントした経験を持つ。継続就労・在宅勤務支援のノウハウを活かし、IT業界でエンジニアが働きやすい環境を提供している。2008年から、NPO法人Checkとして多機能トイレ情報共有サービス「Check A Toilet」（登録72,000件）も運営。</span>
         </td>
       </tr>
       <tr style="border-bottom:1px solid var(--line);">
