@@ -112,7 +112,7 @@
     <a href="#about" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap">Check Labとは？</a>
     <a href="#members" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap">チームメンバー</a>
     <a href="#works" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap">制作実績</a>
-    <a href="mailto:kaneko@checkatoilet.com" class="bg-accent hover:bg-accent-dark text-white text-xs font-semibold px-4 py-2 rounded whitespace-nowrap">お問い合わせ</a>
+    <a id="mailto-header" href="" class="bg-accent hover:bg-accent-dark text-white text-xs font-semibold px-4 py-2 rounded whitespace-nowrap">お問い合わせ</a>
   </nav>
 </header>
 
@@ -753,7 +753,7 @@
     <h3 class="text-xl font-bold mb-3 tracking-tight">まずはお気軽にご相談ください</h3>
     <p class="text-sm text-[#eaf9ff] font-light mb-7">30分程度のオンライン説明から承っております。</p>
     <div class="flex gap-3 justify-center flex-wrap">
-      <a href="mailto:kaneko@checkatoilet.com" class="inline-block px-7 py-3 rounded-md text-sm font-medium no-underline transition-opacity hover:opacity-85 bg-white text-accent">メールで問い合わせる</a>
+      <a id="mailto-cta" href="" class="inline-block px-7 py-3 rounded-md text-sm font-medium no-underline transition-opacity hover:opacity-85 bg-white text-accent">メールで問い合わせる</a>
     </div>
   </div>
 
@@ -762,6 +762,52 @@
 <footer class="text-center py-8 px-5 text-xs text-ink-light border-t border-line mt-5">
   © Check Lab株式会社　〒158-0082 東京都世田谷区等々力4-7-10　／　<a href="https://checklab.net/" class="text-inherit">checklab.net</a>
 </footer>
+
+<script>
+(function () {
+  const to = 'kaneko@checkatoilet.com';
+  const subject = 'お問い合わせ';
+  const body = `Check Lab株式会社
+ご担当者様
+
+初めてご連絡いたします。
+下記の通りお問い合わせいたします。
+
+────────────────────
+◆会社名・団体名：
+
+
+◆ご担当者名：
+
+
+◆電話番号：
+
+
+◆メールアドレス：
+
+
+◆ご相談内容（該当するものをご記入ください）
+　例）SES / 受託開発・準委任 / その他
+
+
+◆お問い合わせ詳細：
+
+
+
+────────────────────
+
+お忙しいところ恐れ入りますが、
+ご確認のほどよろしくお願いいたします。
+`;
+
+  const mailtoUrl = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  ['mailto-header', 'mailto-cta'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.href = mailtoUrl;
+  });
+})();
+</script>
 
 </body>
 </html>
