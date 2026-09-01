@@ -543,6 +543,7 @@
         <td class="py-3.5"><a href="https://checklab.net/" target="_blank" class="text-accent">checklab.net</a></td>
       </tr>
     </table>
+  </div>
 
   <!-- Service -->
   <div id="service" class="mt-20 pt-4">
@@ -785,51 +786,7 @@
   © Check Lab株式会社　〒158-0082 東京都世田谷区等々力4-7-10　／　<a href="https://checklab.net/" class="text-inherit">checklab.net</a>
 </footer>
 
-<script>
-(function () {
-  const to = 'kaneko@checkatoilet.com';
-  const subject = 'お問い合わせ';
-  const body = `Check Lab株式会社
-ご担当者様
-
-初めてご連絡いたします。
-下記の通りお問い合わせいたします。
-
-────────────────────
-◆会社名・団体名：
-
-
-◆ご担当者名：
-
-
-◆電話番号：
-
-
-◆メールアドレス：
-
-
-◆ご相談内容（該当するものをご記入ください）
-　例）SES / 受託開発・準委任 / その他
-
-
-◆お問い合わせ詳細：
-
-
-
-────────────────────
-
-お忙しいところ恐れ入りますが、
-ご確認のほどよろしくお願いいたします。
-`;
-
-  const mailtoUrl = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-  ['mailto-header', 'mailto-cta'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.href = mailtoUrl;
-  });
-})();
-</script>
+<script src="mailto.js"></script>
 
 </body>
 </html>
