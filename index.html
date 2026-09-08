@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -99,6 +99,9 @@
   @keyframes fadeUp {
     to { opacity: 1; transform: translateY(0); }
   }
+
+  html[data-lang="ja"] .lang-en { display: none !important; }
+  html[data-lang="en"] .lang-ja { display: none !important; }
 </style>
 </head>
 <body class="font-sans bg-bg text-ink leading-relaxed">
@@ -108,13 +111,14 @@
     <a href="https://checklab.net/" class="no-underline"><span class="font-mono text-base font-medium text-ink tracking-wide">Check <span class="text-accent">Lab</span></span></a>
   </div>
   <nav class="hidden md:flex items-center gap-7">
-    <a href="#company" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap">会社概要</a>
-    <a href="#about" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap">Check Labとは？</a>
-    <a href="#members" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap">チームメンバー</a>
-    <a href="engineers.html" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap">登録エンジニア</a>
-    <a href="#employment-support" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap">障害者雇用サポート</a>
-    <a href="#works" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap">制作実績</a>
-    <a id="mailto-header" href="" class="bg-accent hover:bg-accent-dark text-white text-xs font-semibold px-4 py-2 rounded whitespace-nowrap">お問い合わせ</a>
+    <a href="#company" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap"><span class="lang-ja">会社概要</span><span class="lang-en">Company</span></a>
+    <a href="#about" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap"><span class="lang-ja">Check Labとは？</span><span class="lang-en">About Us</span></a>
+    <a href="#members" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap"><span class="lang-ja">チームメンバー</span><span class="lang-en">Team</span></a>
+    <a href="engineers.html" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap"><span class="lang-ja">登録エンジニア</span><span class="lang-en">Registered Engineers</span></a>
+    <a href="#employment-support" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap"><span class="lang-ja">障害者雇用サポート</span><span class="lang-en">Employment Support</span></a>
+    <a href="#works" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap"><span class="lang-ja">制作実績</span><span class="lang-en">Portfolio</span></a>
+    <button type="button" data-lang-btn class="font-mono text-xs px-2.5 py-1 border border-line rounded text-ink-mid hover:text-accent hover:border-accent transition-colors bg-white cursor-pointer whitespace-nowrap">EN</button>
+    <a id="mailto-header" href="" class="bg-accent hover:bg-accent-dark text-white text-xs font-semibold px-4 py-2 rounded whitespace-nowrap"><span class="lang-ja">お問い合わせ</span><span class="lang-en">Contact</span></a>
   </nav>
 </header>
 
@@ -126,20 +130,20 @@
     <div class="px-6 py-10 md:px-12 md:py-16 flex flex-col justify-center max-w-xl mx-auto">
       <p class="font-mono text-xs tracking-widest text-accent uppercase mb-5">Engineering Team</p>
       <h1 class="text-2xl md:text-4xl font-bold leading-snug tracking-tight mb-6">
-        開発・<span class="text-accent">AI活用QA</span>・デザインの<br>ワンストップ体制で対応します。
+        <span class="lang-ja">開発・<span class="text-accent">AI活用QA</span>・デザインの<br>ワンストップ体制で対応します。</span><span class="lang-en">Development, <span class="text-accent">AI-Powered QA</span>, and Design.<br>One-stop delivery, one team.</span>
       </h1>
       <p class="text-base text-ink-mid leading-loose mb-4">
-        Check Labは、SESを中心に受託開発・準委任まで対応するフルリモートチームです。要件定義から設計・開発・デザイン・品質管理まで、チーム内で完結します。
+        <span class="lang-ja">Check Labは、SESを中心に受託開発・準委任まで対応するフルリモートチームです。要件定義から設計・開発・デザイン・品質管理まで、チーム内で完結します。</span><span class="lang-en">Check Lab is a fully remote team focused on SES staffing, with capabilities extending to contract development and quasi-delegation contracts. From requirements definition to design, development, and quality management, everything is handled in-house.</span>
       </p>
       <p class="text-base text-ink-mid leading-loose mb-4">
-        自社サービス（Check A Toilet・Check A Golf など）の実運用で培った実践力を、お客様の開発課題に活かします。「作って終わり」ではなく、運用を見据えた設計・実装をご提供します。
+        <span class="lang-ja">自社サービス（Check A Toilet・Check A Golf など）の実運用で培った実践力を、お客様の開発課題に活かします。「作って終わり」ではなく、運用を見据えた設計・実装をご提供します。</span><span class="lang-en">We bring practical expertise honed through operating our own services (Check A Toilet, Check A Golf, and others) to bear on your development challenges. Rather than simply building and walking away, we design and implement with long-term operation in mind.</span>
       </p>
       <p class="text-base text-ink-mid leading-loose mb-8">
-        Next.js / React / AWS 対応。レガシーシステムの保守改修から、モダンスタックでの新規開発まで幅広く承ります。
+        <span class="lang-ja">Next.js / React / AWS 対応。レガシーシステムの保守改修から、モダンスタックでの新規開発まで幅広く承ります。</span><span class="lang-en">We support Next.js / React / AWS. Our services range widely, from maintenance and modification of legacy systems to new development on modern stacks.</span>
       </p>
       <div class="flex gap-3 flex-wrap">
-        <a href="#members" class="no-underline inline-block px-7 py-3 rounded-md text-sm font-medium transition-opacity hover:opacity-85 bg-accent text-white">チームメンバーを見る</a>
-        <a href="#service" class="no-underline inline-block px-7 py-3 rounded-md text-sm font-medium transition-opacity hover:opacity-85 border border-line text-ink-mid bg-white">受託開発について</a>
+        <a href="#members" class="no-underline inline-block px-7 py-3 rounded-md text-sm font-medium transition-opacity hover:opacity-85 bg-accent text-white"><span class="lang-ja">チームメンバーを見る</span><span class="lang-en">View Team Members</span></a>
+        <a href="#service" class="no-underline inline-block px-7 py-3 rounded-md text-sm font-medium transition-opacity hover:opacity-85 border border-line text-ink-mid bg-white"><span class="lang-ja">受託開発について</span><span class="lang-en">About Our Contract Development</span></a>
       </div>
     </div>
 
@@ -159,9 +163,9 @@
           </div>
         </div>
         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[rgba(15,23,42,0.85)] to-transparent px-6 py-5">
-          <div class="text-xs text-sky-400 tracking-wide uppercase mb-1">自社サービス</div>
+          <div class="text-xs text-sky-400 tracking-wide uppercase mb-1"><span class="lang-ja">自社サービス</span><span class="lang-en">In-House Service</span></div>
           <div class="text-base font-bold text-white">Check A Toilet</div>
-          <div class="text-xs text-slate-400">多機能トイレ情報 72,850件掲載</div>
+          <div class="text-xs text-slate-400"><span class="lang-ja">多機能トイレ情報 72,850件掲載</span><span class="lang-en">72,850 accessible restroom listings</span></div>
         </div>
       </div>
       <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
@@ -178,9 +182,9 @@
           </div>
         </div>
         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[rgba(15,23,42,0.85)] to-transparent px-6 py-5">
-          <div class="text-xs text-sky-400 tracking-wide uppercase mb-1">自社サービス</div>
+          <div class="text-xs text-sky-400 tracking-wide uppercase mb-1"><span class="lang-ja">自社サービス</span><span class="lang-en">In-House Service</span></div>
           <div class="text-base font-bold text-white">Check A Food</div>
-          <div class="text-xs text-slate-400">アレルギー対応・食事制限の飲食店検索</div>
+          <div class="text-xs text-slate-400"><span class="lang-ja">アレルギー対応・食事制限の飲食店検索</span><span class="lang-en">Restaurant search for allergies and dietary restrictions</span></div>
         </div>
       </div>
       <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
@@ -197,9 +201,9 @@
           </div>
         </div>
         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[rgba(15,23,42,0.85)] to-transparent px-6 py-5">
-          <div class="text-xs text-sky-400 tracking-wide uppercase mb-1">自社サービス</div>
+          <div class="text-xs text-sky-400 tracking-wide uppercase mb-1"><span class="lang-ja">自社サービス</span><span class="lang-en">In-House Service</span></div>
           <div class="text-base font-bold text-white">Check A Golf</div>
-          <div class="text-xs text-slate-400">世界19,081件のゴルフ場を検索</div>
+          <div class="text-xs text-slate-400"><span class="lang-ja">世界19,081件のゴルフ場を検索</span><span class="lang-en">Search 19,081 golf courses worldwide</span></div>
         </div>
       </div>
       <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
@@ -216,9 +220,9 @@
           </div>
         </div>
         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[rgba(15,23,42,0.85)] to-transparent px-6 py-5">
-          <div class="text-xs text-sky-400 tracking-wide uppercase mb-1">自社サービス</div>
+          <div class="text-xs text-sky-400 tracking-wide uppercase mb-1"><span class="lang-ja">自社サービス</span><span class="lang-en">In-House Service</span></div>
           <div class="text-base font-bold text-white">World Booking.jp</div>
-          <div class="text-xs text-slate-400">世界の体験ツアーを検索・予約</div>
+          <div class="text-xs text-slate-400"><span class="lang-ja">世界の体験ツアーを検索・予約</span><span class="lang-en">Search and book experience tours worldwide</span></div>
         </div>
       </div>
 
@@ -262,56 +266,56 @@
     <div id="yy" class="card-fade bg-white border border-line rounded-xl p-8 scroll-mt-24">
       <span class="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide px-2.5 py-1 rounded mb-5 bg-tag-ai text-tag-ai-text">● Frontend Engineer / AI-Driven Dev</span>
       <div class="font-mono text-4xl font-medium tracking-tight text-ink mb-1">Y.Y.</div>
-      <div class="text-sm text-ink-light mb-5">男性・28歳　／　フルリモート対応</div>
+      <div class="text-sm text-ink-light mb-5"><span class="lang-ja">男性・28歳　／　フルリモート対応</span><span class="lang-en">Male, 28　／　Fully Remote</span></div>
       <p class="text-sm text-ink-mid leading-loose mb-6 font-light">
-        IT業界で約6年の実務経験を持つWebアプリケーションエンジニア。官公庁・鉄道・銀行・EC・社内システムなど幅広い開発経験を持ち、React・TypeScript・Next.jsによるフロントエンド開発、Java・Spring Bootによるバックエンド開発、REST API設計・実装に対応。直近では自社サービス「Check A Toilet」の基盤刷新に現場リーダーとして携わり、命名規則統一・外部キー化・複合index・FULLTEXT検索を含むDB設計刷新、GitHub ActionsによるLint/テスト/カバレッジ計測とデプロイ自動化のCI/CD構築、shadcn/ui・Tailwind CSSの整備やNext.js＋BFF＋Auth.jsの技術選定まで対応領域を拡大。Claude Code / Codexを仕様整理・実装方針検討・コード生成に活用し、Skill機能によるセルフレビュー・機密情報チェック・コーディング／テストルールの標準化をチームへ展開するなど、生成AIを活用した開発プロセス改善も推進している。
+        <span class="lang-ja">IT業界で約6年の実務経験を持つWebアプリケーションエンジニア。官公庁・鉄道・銀行・EC・社内システムなど幅広い開発経験を持ち、React・TypeScript・Next.jsによるフロントエンド開発、Java・Spring Bootによるバックエンド開発、REST API設計・実装に対応。直近では自社サービス「Check A Toilet」の基盤刷新に現場リーダーとして携わり、命名規則統一・外部キー化・複合index・FULLTEXT検索を含むDB設計刷新、GitHub ActionsによるLint/テスト/カバレッジ計測とデプロイ自動化のCI/CD構築、shadcn/ui・Tailwind CSSの整備やNext.js＋BFF＋Auth.jsの技術選定まで対応領域を拡大。Claude Code / Codexを仕様整理・実装方針検討・コード生成に活用し、Skill機能によるセルフレビュー・機密情報チェック・コーディング／テストルールの標準化をチームへ展開するなど、生成AIを活用した開発プロセス改善も推進している。</span><span class="lang-en">A web application engineer with roughly 6 years of professional experience in the IT industry. Broad development experience spanning government agencies, railways, banking, e-commerce, and in-house systems, covering frontend development with React, TypeScript, and Next.js; backend development with Java and Spring Boot; and REST API design and implementation. Most recently served as on-site lead for the platform overhaul of the in-house service "Check A Toilet," expanding into database design renewal (unifying naming conventions, introducing foreign keys, composite indexes, and FULLTEXT search), building CI/CD pipelines with GitHub Actions for lint/test/coverage measurement and automated deployment, maintaining shadcn/ui and Tailwind CSS, and selecting the Next.js + BFF + Auth.js technology stack. Also drives improvement of the development process through generative AI, using Claude Code / Codex for spec organization, implementation planning, and code generation, and rolling out team-wide standards for self-review, confidential-information checks, and coding/testing rules via the Skill feature.</span>
       </p>
       <div class="flex flex-wrap gap-1.5">
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">React / TypeScript</span>
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Next.js / BFF・Auth.js</span>
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Java / Spring Boot</span>
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">C# / ASP.NET</span>
-        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">DB設計 / index設計</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid"><span class="lang-ja">DB設計 / index設計</span><span class="lang-en">DB Design / Index Design</span></span>
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">GitHub Actions / CI/CD</span>
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">shadcn/ui / Tailwind CSS</span>
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Claude Code / Codex</span>
-        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">現場リーダー</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid"><span class="lang-ja">現場リーダー</span><span class="lang-en">On-Site Lead</span></span>
       </div>
-      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/196QeS0dBt9kKxJ-4nIXsIUy2k7VAu9E_/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
-      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1ymrOJ7RFouCQVBL-2xYYcRbxLea8QKl9/view?usp=sharing" target="_blank">サマリを見る →</a>
-      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1HIKURDJtRuYGrlZj72aGOonvUyBM3WUo/view?usp=sharing" target="_blank">スキルシートを見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/196QeS0dBt9kKxJ-4nIXsIUy2k7VAu9E_/view?usp=sharing" target="_blank"><span class="lang-ja">職務経歴書を見る →</span><span class="lang-en">View Resume →</span></a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1ymrOJ7RFouCQVBL-2xYYcRbxLea8QKl9/view?usp=sharing" target="_blank"><span class="lang-ja">サマリを見る →</span><span class="lang-en">View Summary →</span></a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1HIKURDJtRuYGrlZj72aGOonvUyBM3WUo/view?usp=sharing" target="_blank"><span class="lang-ja">スキルシートを見る →</span><span class="lang-en">View Skill Sheet →</span></a>
     </div>
 
     <!-- M.S. -->
     <div id="ms" class="card-fade bg-white border border-line rounded-xl p-8 scroll-mt-24">
-      <span class="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide px-2.5 py-1 rounded mb-5 bg-tag-pm text-tag-pm-text">● 組込み／SE・PM</span>
+      <span class="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide px-2.5 py-1 rounded mb-5 bg-tag-pm text-tag-pm-text">● <span class="lang-ja">組込み／SE・PM</span><span class="lang-en">Embedded Systems / SE・PM</span></span>
       <div class="font-mono text-4xl font-medium tracking-tight text-ink mb-1">M.S.</div>
-      <div class="text-sm text-ink-light mb-5">男性・48歳　／　フルリモート対応</div>
+      <div class="text-sm text-ink-light mb-5"><span class="lang-ja">男性・48歳　／　フルリモート対応</span><span class="lang-en">Male, 48　／　Fully Remote</span></div>
       <p class="text-sm text-ink-mid leading-loose mb-6 font-light">
-        医療用超音波診断装置のソフトウェア開発に約20年従事。C++（C++11／14／17／20）によるマルチスレッド設計を含む組込み・制御系開発に精通し、アプリケーション層からハードウェア制御層まで幅広く対応。PL／PMとして30名以上の開発組織で工程管理・外注管理を経験。復職後は自動車部品DX・プリンタ制御・ECサイト開発にも対応し、AI開発支援ツールも活用。
+        <span class="lang-ja">医療用超音波診断装置のソフトウェア開発に約20年従事。C++（C++11／14／17／20）によるマルチスレッド設計を含む組込み・制御系開発に精通し、アプリケーション層からハードウェア制御層まで幅広く対応。PL／PMとして30名以上の開発組織で工程管理・外注管理を経験。復職後は自動車部品DX・プリンタ制御・ECサイト開発にも対応し、AI開発支援ツールも活用。</span><span class="lang-en">Approximately 20 years of experience developing software for medical ultrasound diagnostic devices. Highly skilled in embedded and control system development, including multithreaded design in C++ (C++11/14/17/20), covering everything from the application layer to hardware control. Experienced as a PL/PM managing schedules and outsourcing for development organizations of 30+ members. Since returning to work, has also handled automotive parts DX, printer control, and e-commerce site development, leveraging AI development support tools as well.</span>
       </p>
       <div class="flex flex-wrap gap-1.5">
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">C++ (11/14/17/20)</span>
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">C / C# / Java</span>
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">SQL Server</span>
-        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">マルチスレッド設計</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid"><span class="lang-ja">マルチスレッド設計</span><span class="lang-en">Multithreaded Design</span></span>
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Redmine / Jenkins</span>
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">GitHub / Coverity</span>
-        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">AI活用（Claude Code等）</span>
-        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">基本情報技術者</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid"><span class="lang-ja">AI活用（Claude Code等）</span><span class="lang-en">AI Utilization (Claude Code, etc.)</span></span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid"><span class="lang-ja">基本情報技術者</span><span class="lang-en">Fundamental Information Technology Engineer (certification)</span></span>
       </div>
-      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1H56NNx6i4JA6pUDzBbBy9gb3ffS6Ihw0/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
-      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1SCxOCLApViDvdtKHdF9tYqjULd42iZT1/view?usp=sharing" target="_blank">サマリを見る →</a>
-      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1NSumZu5G6iLwkrhj_UrSqqUJegRPJUaO/view?usp=sharing" target="_blank">スキルシートを見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1H56NNx6i4JA6pUDzBbBy9gb3ffS6Ihw0/view?usp=sharing" target="_blank"><span class="lang-ja">職務経歴書を見る →</span><span class="lang-en">View Resume →</span></a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1SCxOCLApViDvdtKHdF9tYqjULd42iZT1/view?usp=sharing" target="_blank"><span class="lang-ja">サマリを見る →</span><span class="lang-en">View Summary →</span></a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1NSumZu5G6iLwkrhj_UrSqqUJegRPJUaO/view?usp=sharing" target="_blank"><span class="lang-ja">スキルシートを見る →</span><span class="lang-en">View Skill Sheet →</span></a>
     </div>
 
     <!-- K.K. -->
     <div id="kk" class="card-fade bg-white border border-line rounded-xl p-8 scroll-mt-24">
       <span class="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide px-2.5 py-1 rounded mb-5 bg-tag-dev text-tag-dev-text">● Backend / Web Engineer</span>
       <div class="font-mono text-4xl font-medium tracking-tight text-ink mb-1">K.K.</div>
-      <div class="text-sm text-ink-light mb-5">男性・37歳　／　フルリモート対応</div>
+      <div class="text-sm text-ink-light mb-5"><span class="lang-ja">男性・37歳　／　フルリモート対応</span><span class="lang-en">Male, 37　／　Fully Remote</span></div>
       <p class="text-sm text-ink-mid leading-loose mb-6 font-light">
-        前職でExcelVBA＋Pythonによる自動化ツールを開発し、6人月相当の作業を1人月に圧縮した実績を持つ。現在は自社システム開発でGitHub ActionsによるCIパイプライン構築やセキュリティ改善の自主提案を行うほか、Laravel・Vue.js・FastAPI・Reactを用いたWebアプリを独学で複数開発。個人開発ではAWS構成をVPC・セキュリティグループ・IAMのネットワーク／権限設計からTerraformによるIaC化、GitHub ActionsでのCI/CD構築まで一人で担当し、サーバーレス（Lambda/DynamoDB）とコンテナ（ECS/Fargate）を要件に応じて使い分け。CloudWatch Logsを用いた障害調査・復旧やコスト最適化にも取り組んでいる。
+        <span class="lang-ja">前職でExcelVBA＋Pythonによる自動化ツールを開発し、6人月相当の作業を1人月に圧縮した実績を持つ。現在は自社システム開発でGitHub ActionsによるCIパイプライン構築やセキュリティ改善の自主提案を行うほか、Laravel・Vue.js・FastAPI・Reactを用いたWebアプリを独学で複数開発。個人開発ではAWS構成をVPC・セキュリティグループ・IAMのネットワーク／権限設計からTerraformによるIaC化、GitHub ActionsでのCI/CD構築まで一人で担当し、サーバーレス（Lambda/DynamoDB）とコンテナ（ECS/Fargate）を要件に応じて使い分け。CloudWatch Logsを用いた障害調査・復旧やコスト最適化にも取り組んでいる。</span><span class="lang-en">At a previous job, developed an automation tool using Excel VBA and Python that compressed roughly 6 person-months of work into 1 person-month. Currently builds CI pipelines with GitHub Actions and proactively proposes security improvements for in-house system development, while also independently developing multiple web applications using Laravel, Vue.js, FastAPI, and React. In personal projects, single-handedly handles the entire AWS setup — from network and permission design with VPC, security groups, and IAM, to infrastructure-as-code with Terraform, to CI/CD with GitHub Actions — choosing between serverless (Lambda/DynamoDB) and containers (ECS/Fargate) as needed. Also works on incident investigation, recovery, and cost optimization using CloudWatch Logs.</span>
       </p>
       <div class="flex flex-wrap gap-1.5">
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">PHP / Laravel</span>
@@ -322,11 +326,11 @@
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">ECS / Fargate</span>
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Terraform / IaC</span>
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">GitHub Actions / CI</span>
-        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">セキュリティ改善提案</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid"><span class="lang-ja">セキュリティ改善提案</span><span class="lang-en">Security Improvement Proposals</span></span>
       </div>
-      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1S5ibP55BosD1Cs84GKDgeg87AquOSAov/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
-      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1Hdhq99fhSRiRc8cUrhEcNZmelzuRiSTs/view?usp=sharing" target="_blank">サマリを見る →</a>
-      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1cmmCRTUqgrfvTzZ9EybQKqU4BB0KFB_8/view?usp=sharing" target="_blank">スキルシートを見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1S5ibP55BosD1Cs84GKDgeg87AquOSAov/view?usp=sharing" target="_blank"><span class="lang-ja">職務経歴書を見る →</span><span class="lang-en">View Resume →</span></a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1Hdhq99fhSRiRc8cUrhEcNZmelzuRiSTs/view?usp=sharing" target="_blank"><span class="lang-ja">サマリを見る →</span><span class="lang-en">View Summary →</span></a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1cmmCRTUqgrfvTzZ9EybQKqU4BB0KFB_8/view?usp=sharing" target="_blank"><span class="lang-ja">スキルシートを見る →</span><span class="lang-en">View Skill Sheet →</span></a>
     </div>
 
   </div>
@@ -335,170 +339,171 @@
   <div class="mb-12 rounded-xl border border-dashed border-line bg-[#fbfaf8] p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
     <div>
       <p class="font-mono text-xs tracking-widest text-ink-light uppercase mb-2">Registered Engineers</p>
-      <p class="text-sm text-ink-mid font-light leading-loose">コアチームに加え、地方在住でのフルタイム稼働や時短勤務など、様々な形で参画する登録エンジニア・デザイナーもご紹介しています。</p>
+      <p class="text-sm text-ink-mid font-light leading-loose"><span class="lang-ja">コアチームに加え、地方在住でのフルタイム稼働や時短勤務など、様々な形で参画する登録エンジニア・デザイナーもご紹介しています。</span><span class="lang-en">In addition to our core team, we also introduce registered engineers and designers who participate in various ways — including full-time remote work from regional areas and shortened working hours.</span></p>
     </div>
-    <a href="engineers.html" class="no-underline shrink-0 inline-flex items-center gap-1.5 px-6 py-3 rounded-md text-sm font-medium transition-opacity hover:opacity-85 bg-accent text-white whitespace-nowrap">登録エンジニアはこちら →</a>
+    <a href="engineers.html" class="no-underline shrink-0 inline-flex items-center gap-1.5 px-6 py-3 rounded-md text-sm font-medium transition-opacity hover:opacity-85 bg-accent text-white whitespace-nowrap"><span class="lang-ja">登録エンジニアはこちら →</span><span class="lang-en">View Registered Engineers →</span></a>
   </div>
 
   <!-- Employment Support -->
   <div id="employment-support" class="pt-4 mb-20">
-    <p class="font-mono text-xs tracking-widest text-ink-light uppercase mb-8 pb-3 border-b border-line">Employment Support ／ 2026年7月法改正対応</p>
-    <h2 class="text-2xl font-extrabold mb-4 tracking-tight">在宅×障害者雇用で、法定雇用率と本業の両立を</h2>
-    <p class="text-sm text-ink-mid font-light leading-loose max-w-2xl mb-14">通勤なし・在宅勤務だからこそ実現できる、安定した障害者雇用のかたち。求人から労務管理までCheck Labが伴走します。</p>
+    <p class="font-mono text-xs tracking-widest text-ink-light uppercase mb-8 pb-3 border-b border-line"><span class="lang-ja">Employment Support ／ 2026年7月法改正対応</span><span class="lang-en">Employment Support ／ July 2026 Law Amendment</span></p>
+    <h2 class="text-2xl font-extrabold mb-4 tracking-tight"><span class="lang-ja">在宅×障害者雇用で、法定雇用率と本業の両立を</span><span class="lang-en">Work-from-Home × Disability Employment: Balancing Statutory Employment Rates with Your Core Business</span></h2>
+    <p class="text-sm text-ink-mid font-light leading-loose max-w-2xl mb-14"><span class="lang-ja">通勤なし・在宅勤務だからこそ実現できる、安定した障害者雇用のかたち。求人から労務管理までCheck Labが伴走します。</span><span class="lang-en">A stable form of disability employment made possible precisely because there's no commute — just remote work. Check Lab supports you every step of the way, from recruitment to labor management.</span></p>
 
-    <h3 class="text-lg font-bold mb-6">障害者雇用、放置していませんか？</h3>
+    <h3 class="text-lg font-bold mb-6"><span class="lang-ja">障害者雇用、放置していませんか？</span><span class="lang-en">Is Your Disability Employment Obligation Being Left Unaddressed?</span></h3>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
       <div class="border border-line rounded-xl p-7">
-        <p class="font-mono text-xs text-ink-light uppercase tracking-wide mb-2">法定雇用率</p>
-        <p class="text-lg font-extrabold text-accent-dark mb-3">2.7%の雇用義務</p>
-        <p class="text-sm text-ink-mid leading-loose font-light">2026年7月1日より、法定雇用率は2.5%から2.7%へ引き上げられました。対象となる企業規模も常時雇用労働者数「40.0人以上」から「37.5人以上」へ拡大し、義務の対象企業が増えています。</p>
+        <p class="font-mono text-xs text-ink-light uppercase tracking-wide mb-2"><span class="lang-ja">法定雇用率</span><span class="lang-en">Statutory Employment Rate</span></p>
+        <p class="text-lg font-extrabold text-accent-dark mb-3"><span class="lang-ja">2.7%の雇用義務</span><span class="lang-en">2.7% Employment Obligation</span></p>
+        <p class="text-sm text-ink-mid leading-loose font-light"><span class="lang-ja">2026年7月1日より、法定雇用率は2.5%から2.7%へ引き上げられました。対象となる企業規模も常時雇用労働者数「40.0人以上」から「37.5人以上」へ拡大し、義務の対象企業が増えています。</span><span class="lang-en">As of July 1, 2026, the statutory employment rate was raised from 2.5% to 2.7%. The scope of applicable companies has also expanded, from those with 40.0 or more regular employees to those with 37.5 or more, increasing the number of companies subject to this obligation.</span></p>
       </div>
       <div class="border border-line rounded-xl p-7">
-        <p class="font-mono text-xs text-ink-light uppercase tracking-wide mb-2">未達成の場合</p>
-        <p class="text-lg font-extrabold text-accent-dark mb-3">納付金 月5万円／人</p>
-        <p class="text-sm text-ink-mid leading-loose font-light">法定雇用障害者数に不足する人数に応じて、1人につき月額50,000円の障害者雇用納付金の納付義務が生じます。</p>
+        <p class="font-mono text-xs text-ink-light uppercase tracking-wide mb-2"><span class="lang-ja">未達成の場合</span><span class="lang-en">If the Quota Is Not Met</span></p>
+        <p class="text-lg font-extrabold text-accent-dark mb-3"><span class="lang-ja">納付金 月5万円／人</span><span class="lang-en">Levy: JPY 50,000/month per person</span></p>
+        <p class="text-sm text-ink-mid leading-loose font-light"><span class="lang-ja">法定雇用障害者数に不足する人数に応じて、1人につき月額50,000円の障害者雇用納付金の納付義務が生じます。</span><span class="lang-en">Companies falling short of the statutory number of employees with disabilities are required to pay a disability employment levy of JPY 50,000 per month for each person short of the quota.</span></p>
       </div>
       <div class="border border-line rounded-xl p-7">
-        <p class="font-mono text-xs text-ink-light uppercase tracking-wide mb-2">改善しない場合</p>
-        <p class="text-lg font-extrabold text-accent-dark mb-3">最終的に企業名を公表</p>
-        <p class="text-sm text-ink-mid leading-loose font-light">企業訪問・計画書提出・呼出指導・局長勧告と段階が進み、最終的には企業名公表というペナルティに至ります。</p>
+        <p class="font-mono text-xs text-ink-light uppercase tracking-wide mb-2"><span class="lang-ja">改善しない場合</span><span class="lang-en">If Not Improved</span></p>
+        <p class="text-lg font-extrabold text-accent-dark mb-3"><span class="lang-ja">最終的に企業名を公表</span><span class="lang-en">Company Name Publicly Disclosed</span></p>
+        <p class="text-sm text-ink-mid leading-loose font-light"><span class="lang-ja">企業訪問・計画書提出・呼出指導・局長勧告と段階が進み、最終的には企業名公表というペナルティに至ります。</span><span class="lang-en">The process escalates through company visits, submission of improvement plans, summoned guidance, and director recommendations, ultimately resulting in the penalty of public disclosure of the company's name.</span></p>
       </div>
     </div>
 
     <div class="rounded-xl bg-accent-soft border border-[#c5d2ff] p-8 md:p-10 mb-14">
-      <h3 class="text-base font-bold mb-4">「通勤」「人間関係」が離職の1番の原因</h3>
-      <p class="text-sm text-ink-mid leading-loose font-light">Check Labは2016年5月から、約4,000人規模の人材派遣会社における障害者雇用のマネジメント・労務管理を10年間展開し、のべ100名の労務管理を行ってきた実績があります。身体・聴覚・精神障害の方を問わず、通勤と人間関係という離職理由を取り除き、専門のカウンセラーを入れて定期面談を行うことで、安定した長期就業を実現しています。仕事のやり取りは電話を避け、チャットワークを基本とすることで、負担なくコミュニケーションが取れる環境を整えています。</p>
+      <h3 class="text-base font-bold mb-4"><span class="lang-ja">「通勤」「人間関係」が離職の1番の原因</span><span class="lang-en">"Commuting" and "Interpersonal Relationships" Are the Top Reasons for Turnover</span></h3>
+      <p class="text-sm text-ink-mid leading-loose font-light"><span class="lang-ja">Check Labは2016年5月から、約4,000人規模の人材派遣会社における障害者雇用のマネジメント・労務管理を10年間展開し、のべ100名の労務管理を行ってきた実績があります。身体・聴覚・精神障害の方を問わず、通勤と人間関係という離職理由を取り除き、専門のカウンセラーを入れて定期面談を行うことで、安定した長期就業を実現しています。仕事のやり取りは電話を避け、チャットワークを基本とすることで、負担なくコミュニケーションが取れる環境を整えています。</span><span class="lang-en">Since May 2016, Check Lab has managed disability employment and labor management for a staffing company with roughly 4,000 employees over a period of 10 years, having handled labor management for a cumulative total of 100 people. Regardless of physical, hearing, or mental disabilities, we eliminate the turnover factors of commuting and interpersonal relationships, and achieve stable long-term employment by bringing in specialized counselors for regular interviews. We avoid phone calls for work communication, using chat tools such as Chatwork as the standard, to create a low-burden communication environment.</span></p>
     </div>
 
-    <h3 class="text-lg font-bold mb-6">Check Labが選ばれる理由</h3>
+    <h3 class="text-lg font-bold mb-6"><span class="lang-ja">Check Labが選ばれる理由</span><span class="lang-en">Why Check Lab Is Chosen</span></h3>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
       <div class="flex gap-4">
         <p class="font-mono text-xs text-accent pt-0.5 shrink-0">01</p>
         <div>
-          <h4 class="text-sm font-bold mb-2">求人から面接まで代行、または弊社からの紹介で障害者雇用の達成</h4>
-          <p class="text-sm text-ink-mid leading-loose font-light">貴社での在宅勤務部門の立ち上げから求人票作成、募集、オンライン面接まで一括代行。さらにCheck Lab在籍の登録エンジニアを直接ご紹介することで、採用活動を経ずスピーディに法定雇用率を達成することも可能です。</p>
+          <h4 class="text-sm font-bold mb-2"><span class="lang-ja">求人から面接まで代行、または弊社からの紹介で障害者雇用の達成</span><span class="lang-en">We Handle Everything from Recruitment to Interviews — or Introduce Candidates Directly</span></h4>
+          <p class="text-sm text-ink-mid leading-loose font-light"><span class="lang-ja">貴社での在宅勤務部門の立ち上げから求人票作成、募集、オンライン面接まで一括代行。さらにCheck Lab在籍の登録エンジニアを直接ご紹介することで、採用活動を経ずスピーディに法定雇用率を達成することも可能です。</span><span class="lang-en">We handle everything on your behalf, from launching a remote work department at your company to creating job listings, recruiting, and conducting online interviews. We can also directly introduce registered engineers affiliated with Check Lab, making it possible to quickly achieve the statutory employment rate without going through the hiring process yourself.</span></p>
         </div>
       </div>
       <div class="flex gap-4">
         <p class="font-mono text-xs text-accent pt-0.5 shrink-0">02</p>
         <div>
-          <h4 class="text-sm font-bold mb-2">仕事がなくても対応可</h4>
-          <p class="text-sm text-ink-mid leading-loose font-light">社内に任せる業務がない場合は、コンサルティング費用（月額5万円）またはCheck Labへの派遣契約（月額5万円）により、スタッフの管理・実作業をご提供。あわせて社外からSES案件を確保することで、スタッフからの安定した収益を実現します。</p>
+          <h4 class="text-sm font-bold mb-2"><span class="lang-ja">仕事がなくても対応可</span><span class="lang-en">We Can Help Even Without In-House Work Available</span></h4>
+          <p class="text-sm text-ink-mid leading-loose font-light"><span class="lang-ja">社内に任せる業務がない場合は、コンサルティング費用（月額5万円）またはCheck Labへの派遣契約（月額5万円）により、スタッフの管理・実作業をご提供。あわせて社外からSES案件を確保することで、スタッフからの安定した収益を実現します。</span><span class="lang-en">If there is no in-house work to assign, we provide staff management and hands-on work through a consulting fee (JPY 50,000/month) or a dispatch contract with Check Lab (JPY 50,000/month). We also secure SES projects from outside the company, achieving stable revenue from the staff member.</span></p>
         </div>
       </div>
       <div class="flex gap-4">
         <p class="font-mono text-xs text-accent pt-0.5 shrink-0">03</p>
         <div>
-          <h4 class="text-sm font-bold mb-2">カウンセラーによる定期面談</h4>
-          <p class="text-sm text-ink-mid leading-loose font-light">専門カウンセラーが1名につき月1回（30分・7,500円）の定期面談を実施。当事者の心のケアを行い、面談内容を文字化してレポートをご提出します。</p>
-          <p class="text-xs text-ink-light leading-loose mt-2">※担当カウンセラーの資格情報：民間資格（心理カウンセラー・キャリアカウンセラー・行動心理士・産業メンタルカウンセラー・自殺防止ゲートキーパーなど）／20年以上のメンタルケア従事</p>
+          <h4 class="text-sm font-bold mb-2"><span class="lang-ja">カウンセラーによる定期面談</span><span class="lang-en">Regular Interviews by a Counselor</span></h4>
+          <p class="text-sm text-ink-mid leading-loose font-light"><span class="lang-ja">専門カウンセラーが1名につき月1回（30分・7,500円）の定期面談を実施。当事者の心のケアを行い、面談内容を文字化してレポートをご提出します。</span><span class="lang-en">A specialized counselor conducts a regular interview once a month per person (30 minutes, JPY 7,500). The counselor provides mental care for the individual and submits a transcribed report of the interview.</span></p>
+          <p class="text-xs text-ink-light leading-loose mt-2"><span class="lang-ja">※担当カウンセラーの資格情報：民間資格（心理カウンセラー・キャリアカウンセラー・行動心理士・産業メンタルカウンセラー・自殺防止ゲートキーパーなど）／20年以上のメンタルケア従事</span><span class="lang-en">*Counselor qualifications: Private certifications (Psychological Counselor, Career Counselor, Behavioral Psychologist, Industrial Mental Health Counselor, Suicide Prevention Gatekeeper, etc.) / Over 20 years of experience in mental health care.</span></p>
         </div>
       </div>
     </div>
 
-    <h3 class="text-lg font-bold mb-2">2つの導入モデル</h3>
-    <p class="text-sm text-ink-mid leading-loose font-light mb-6">「社内に仕事があるか」によって、最適な委託モデルをご提案します。</p>
+    <h3 class="text-lg font-bold mb-2"><span class="lang-ja">2つの導入モデル</span><span class="lang-en">Two Implementation Models</span></h3>
+    <p class="text-sm text-ink-mid leading-loose font-light mb-6"><span class="lang-ja">「社内に仕事があるか」によって、最適な委託モデルをご提案します。</span><span class="lang-en">We propose the optimal outsourcing model depending on whether your company has in-house work available.</span></p>
 
     <div class="border border-line rounded-xl p-7 mb-6">
-      <p class="font-mono text-xs text-ink-light uppercase tracking-wide mb-3">導入費用（共通）</p>
+      <p class="font-mono text-xs text-ink-light uppercase tracking-wide mb-3"><span class="lang-ja">導入費用（共通）</span><span class="lang-en">Setup Costs (Common)</span></p>
       <table class="w-full text-sm border-collapse">
-        <tr class="border-t border-line"><td class="py-2.5 text-ink-mid">導入費用</td><td class="py-2.5 text-right font-medium">50,000円</td></tr>
-        <tr class="border-t border-line"><td class="py-2.5 text-ink-mid">採用代行</td><td class="py-2.5 text-right font-medium">1人目 200,000円／2人目以降 50,000円</td></tr>
-        <tr class="border-t border-line"><td class="py-2.5 text-ink-mid">人材紹介（1名）</td><td class="py-2.5 text-right font-medium">年収の30〜35%</td></tr>
-        <tr class="border-t border-b border-line"><td class="py-2.5 text-ink-mid">定期面談（月1回）</td><td class="py-2.5 text-right font-medium">7,500円</td></tr>
+        <tr class="border-t border-line"><td class="py-2.5 text-ink-mid"><span class="lang-ja">導入費用</span><span class="lang-en">Setup fee</span></td><td class="py-2.5 text-right font-medium"><span class="lang-ja">50,000円</span><span class="lang-en">JPY 50,000</span></td></tr>
+        <tr class="border-t border-line"><td class="py-2.5 text-ink-mid"><span class="lang-ja">採用代行</span><span class="lang-en">Recruitment agency service</span></td><td class="py-2.5 text-right font-medium"><span class="lang-ja">1人目 200,000円／2人目以降 50,000円</span><span class="lang-en">1st hire: JPY 200,000 / 2nd hire onward: JPY 50,000</span></td></tr>
+        <tr class="border-t border-line"><td class="py-2.5 text-ink-mid"><span class="lang-ja">人材紹介（1名）</span><span class="lang-en">Recruitment referral (per hire)</span></td><td class="py-2.5 text-right font-medium"><span class="lang-ja">年収の30〜35%</span><span class="lang-en">30-35% of annual salary</span></td></tr>
+        <tr class="border-t border-b border-line"><td class="py-2.5 text-ink-mid"><span class="lang-ja">定期面談（月1回）</span><span class="lang-en">Regular interview (monthly)</span></td><td class="py-2.5 text-right font-medium"><span class="lang-ja">7,500円</span><span class="lang-en">JPY 7,500</span></td></tr>
       </table>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
       <div class="border border-line rounded-xl p-7">
-        <p class="font-mono text-xs text-ink-light uppercase tracking-wide mb-3">社内に仕事があるケース</p>
-        <p class="text-sm text-ink-mid leading-loose font-light">就業時間・障害の配慮、定期通院など、気をつけるポイントを事前にお伝えします。フルリモート環境であれば、安定してお仕事を続けられます。※定期面談を入れておけば、さらに安定して仕事ができます。</p>
+        <p class="font-mono text-xs text-ink-light uppercase tracking-wide mb-3"><span class="lang-ja">社内に仕事があるケース</span><span class="lang-en">When Your Company Has In-House Work</span></p>
+        <p class="text-sm text-ink-mid leading-loose font-light"><span class="lang-ja">就業時間・障害の配慮、定期通院など、気をつけるポイントを事前にお伝えします。フルリモート環境であれば、安定してお仕事を続けられます。※定期面談を入れておけば、さらに安定して仕事ができます。</span><span class="lang-en">We provide advance guidance on key considerations such as working hours, disability accommodations, and regular hospital visits. A fully remote environment enables stable, continued work. *Adding regular interviews allows for even more stable employment.</span></p>
       </div>
       <div class="border border-line rounded-xl p-7">
-        <p class="font-mono text-xs text-ink-light uppercase tracking-wide mb-3">社内に仕事がないケース（エンジニア採用として）</p>
-        <p class="text-sm text-ink-mid leading-loose font-light mb-5">在宅の障害者エンジニアを、法定雇用率達成のための「採用」として受け入れ。Check Labがスタッフの管理・実作業をご提供し、あわせて社外からSES案件を確保することで、スタッフからの安定した収益を実現します。</p>
+        <p class="font-mono text-xs text-ink-light uppercase tracking-wide mb-3"><span class="lang-ja">社内に仕事がないケース（エンジニア採用として）</span><span class="lang-en">When Your Company Has No In-House Work (As an Engineer Hire)</span></p>
+        <p class="text-sm text-ink-mid leading-loose font-light mb-5"><span class="lang-ja">在宅の障害者エンジニアを、法定雇用率達成のための「採用」として受け入れ。Check Labがスタッフの管理・実作業をご提供し、あわせて社外からSES案件を確保することで、スタッフからの安定した収益を実現します。</span><span class="lang-en">Bring on a remote engineer with a disability as a "hire" to help achieve the statutory employment rate. Check Lab provides staff management and hands-on work, while also securing SES projects from outside the company to achieve stable revenue from the staff member.</span></p>
         <table class="w-full text-sm border-collapse">
-          <tr class="border-t border-line"><td class="py-2.5 text-ink-mid">コンサルティング費用</td><td class="py-2.5 text-right font-medium">月額5万円</td></tr>
-          <tr class="border-t border-b border-line"><td class="py-2.5 text-ink-mid">または 派遣契約</td><td class="py-2.5 text-right font-medium">月額5万円</td></tr>
+          <tr class="border-t border-line"><td class="py-2.5 text-ink-mid"><span class="lang-ja">コンサルティング費用</span><span class="lang-en">Consulting fee</span></td><td class="py-2.5 text-right font-medium"><span class="lang-ja">月額5万円</span><span class="lang-en">JPY 50,000/month</span></td></tr>
+          <tr class="border-t border-b border-line"><td class="py-2.5 text-ink-mid"><span class="lang-ja">または 派遣契約</span><span class="lang-en">Or dispatch contract</span></td><td class="py-2.5 text-right font-medium"><span class="lang-ja">月額5万円</span><span class="lang-en">JPY 50,000/month</span></td></tr>
         </table>
-        <p class="text-xs text-ink-light mt-3">※カウンセラーの月1回面談も含まれます。</p>
-        <a href="#revenue-model" class="text-xs text-accent font-medium mt-2 inline-block">→ 詳しい収益モデルはこちら</a>
+        <p class="text-xs text-ink-light mt-3"><span class="lang-ja">※カウンセラーの月1回面談も含まれます。</span><span class="lang-en">*Includes one counselor interview per month.</span></p>
+        <a href="#revenue-model" class="text-xs text-accent font-medium mt-2 inline-block"><span class="lang-ja">→ 詳しい収益モデルはこちら</span><span class="lang-en">→ See the detailed revenue model</span></a>
       </div>
     </div>
     <p class="text-xs text-ink-light leading-loose mb-14">
-      ※障害者雇用の達成には、ハローワークからの求人票作成、応募が必要となります。<br>
-      ※各種助成金（特定求職者雇用開発助成金やトライアル雇用助成金など）は、ハローワークや民間の職業紹介事業者等の「紹介」を経由して雇い入れる必要があります。
+      <span class="lang-ja">※障害者雇用の達成には、ハローワークからの求人票作成、応募が必要となります。<br>
+      ※各種助成金（特定求職者雇用開発助成金やトライアル雇用助成金など）は、ハローワークや民間の職業紹介事業者等の「紹介」を経由して雇い入れる必要があります。</span><span class="lang-en">*Achieving disability employment requires creating a job listing through Hello Work and receiving applications.<br>
+      *Various subsidies (such as the Specified Job Seekers Employment Development Subsidy and Trial Employment Subsidy) require hiring through a "referral" from Hello Work or a private job placement provider.</span>
     </p>
 
     <div id="revenue-model" class="scroll-mt-24">
-      <p class="font-mono text-xs tracking-widest text-ink-light uppercase mb-3">Continued — 「社内に仕事がないケース」を詳しく</p>
-      <h3 class="text-lg font-bold mb-2">在宅障害者エンジニア導入モデル</h3>
-      <p class="text-sm text-ink-mid leading-loose font-light mb-8 max-w-2xl">障害者雇用を「コスト」ではなく「収益」に変える、Check Labならではの仕組みです。在宅の障害者エンジニアを雇用、または人材派遣として受け入れ、Check LabがSES案件を確保・管理することで、法定雇用率の達成と同時に売上を生み出します。社内にIT業務がない企業様でも、障害者雇用そのものが収益源になります。</p>
+      <p class="font-mono text-xs tracking-widest text-ink-light uppercase mb-3"><span class="lang-ja">Continued — 「社内に仕事がないケース」を詳しく</span><span class="lang-en">Continued — Details on "When Your Company Has No In-House Work"</span></p>
+      <h3 class="text-lg font-bold mb-2"><span class="lang-ja">在宅障害者エンジニア導入モデル</span><span class="lang-en">Work-from-Home Engineer with Disabilities Program</span></h3>
+      <p class="text-sm text-ink-mid leading-loose font-light mb-8 max-w-2xl"><span class="lang-ja">障害者雇用を「コスト」ではなく「収益」に変える、Check Labならではの仕組みです。在宅の障害者エンジニアを雇用、または人材派遣として受け入れ、Check LabがSES案件を確保・管理することで、法定雇用率の達成と同時に売上を生み出します。社内にIT業務がない企業様でも、障害者雇用そのものが収益源になります。</span><span class="lang-en">This is Check Lab's unique mechanism for turning disability employment from a "cost" into "revenue." By hiring a remote engineer with a disability, or accepting one through staff dispatch, and having Check Lab secure and manage SES projects, you generate revenue while simultaneously achieving the statutory employment rate. Even companies with no in-house IT work can turn disability employment itself into a source of revenue.</span></p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
         <div class="border border-line rounded-xl p-7">
-          <p class="font-mono text-xs text-ink-light uppercase tracking-wide mb-3">対象となる人材</p>
-          <p class="text-sm text-ink-mid leading-loose font-light">ITスキルを持つ在宅障害者エンジニア。ハローワークからフルリモートで募集をかけることにより、地方並びに関東近辺の精神障害のエンジニアを採用します。通勤がない、フルリモート環境であれば、安定して働いてもらえます。</p>
+          <p class="font-mono text-xs text-ink-light uppercase tracking-wide mb-3"><span class="lang-ja">対象となる人材</span><span class="lang-en">Target Talent</span></p>
+          <p class="text-sm text-ink-mid leading-loose font-light"><span class="lang-ja">ITスキルを持つ在宅障害者エンジニア。ハローワークからフルリモートで募集をかけることにより、地方並びに関東近辺の精神障害のエンジニアを採用します。通勤がない、フルリモート環境であれば、安定して働いてもらえます。</span><span class="lang-en">Remote engineers with disabilities who have IT skills. By recruiting fully remotely through Hello Work, we hire engineers with mental disabilities from regional areas as well as the greater Kanto area. A fully remote environment with no commute enables them to work stably.</span></p>
         </div>
         <div class="border border-line rounded-xl p-7">
-          <p class="font-mono text-xs text-ink-light uppercase tracking-wide mb-3">収益が生まれる仕組み</p>
-          <p class="text-sm text-ink-mid leading-loose font-light">貴社で雇用（または派遣受け入れ）した障害者エンジニアを、Check Labが管理しながら社外のSES案件へアサイン。契約が成立した時点で売上が発生します。法定雇用率の達成コストを、収益で相殺・上回ることも可能です。</p>
+          <p class="font-mono text-xs text-ink-light uppercase tracking-wide mb-3"><span class="lang-ja">収益が生まれる仕組み</span><span class="lang-en">How Revenue Is Generated</span></p>
+          <p class="text-sm text-ink-mid leading-loose font-light"><span class="lang-ja">貴社で雇用（または派遣受け入れ）した障害者エンジニアを、Check Labが管理しながら社外のSES案件へアサイン。契約が成立した時点で売上が発生します。法定雇用率の達成コストを、収益で相殺・上回ることも可能です。</span><span class="lang-en">Check Lab manages the engineer with a disability whom your company employs (or accepts via dispatch) and assigns them to an external SES project. Revenue is generated once the contract is finalized. It is possible for this revenue to offset, or even exceed, the cost of achieving the statutory employment rate.</span></p>
         </div>
       </div>
 
-      <h4 class="text-base font-bold mb-2">導入方法</h4>
-      <p class="text-sm text-ink-mid leading-loose font-light mb-8 max-w-2xl">雇用（部門立ち上げ）／派遣、どちらでも導入可能です。貴社内に在宅障害者エンジニア部門を立ち上げて直接雇用いただく形、またはCheck Lab在籍の障害者エンジニアを派遣として受け入れていただく形、どちらでもご利用いただけます。</p>
+      <h4 class="text-base font-bold mb-2"><span class="lang-ja">導入方法</span><span class="lang-en">How to Get Started</span></h4>
+      <p class="text-sm text-ink-mid leading-loose font-light mb-8 max-w-2xl"><span class="lang-ja">雇用（部門立ち上げ）／派遣、どちらでも導入可能です。貴社内に在宅障害者エンジニア部門を立ち上げて直接雇用いただく形、またはCheck Lab在籍の障害者エンジニアを派遣として受け入れていただく形、どちらでもご利用いただけます。</span><span class="lang-en">Available either as direct hiring (setting up a new department) or as staff dispatch. You can choose to launch a work-from-home engineer department within your company for direct hiring, or accept an engineer with a disability affiliated with Check Lab through staff dispatch — either option is available.</span></p>
 
       <div class="border border-line rounded-xl p-7 mb-3">
         <table class="w-full text-sm border-collapse">
           <tr class="border-t border-line">
-            <td class="py-2.5 text-ink-mid w-2/5">管理料（SES決定時）</td>
-            <td class="py-2.5 text-ink-mid">Check Lab 60%／貴社40%（例：利益25万円の場合、貴社10万円）</td>
+            <td class="py-2.5 text-ink-mid w-2/5"><span class="lang-ja">管理料（SES決定時）</span><span class="lang-en">Management fee (once SES is confirmed)</span></td>
+            <td class="py-2.5 text-ink-mid"><span class="lang-ja">Check Lab 60%／貴社40%（例：利益25万円の場合、貴社10万円）</span><span class="lang-en">Check Lab 60% / Your company 40% (e.g., if profit is JPY 250,000, your company receives JPY 100,000)</span></td>
           </tr>
-          <tr class="border-t border-line"><td class="py-2.5 text-ink-mid">管理料（SES未決定時）</td><td class="py-2.5 text-ink-mid">1名 月額5万円</td></tr>
-          <tr class="border-t border-line"><td class="py-2.5 text-ink-mid">SES想定単価</td><td class="py-2.5 text-ink-mid">月額40万円〜70万円（案件内容・スキルレベルにより変動）</td></tr>
-          <tr class="border-t border-b border-line"><td class="py-2.5 text-ink-mid">売上予想（1名あたり）</td><td class="py-2.5 font-medium">年間480万円〜840万円（月額40万円〜70万円 × 12ヶ月で試算）</td></tr>
+          <tr class="border-t border-line"><td class="py-2.5 text-ink-mid"><span class="lang-ja">管理料（SES未決定時）</span><span class="lang-en">Management fee (before SES is confirmed)</span></td><td class="py-2.5 text-ink-mid"><span class="lang-ja">1名 月額5万円</span><span class="lang-en">JPY 50,000/month per person</span></td></tr>
+          <tr class="border-t border-line"><td class="py-2.5 text-ink-mid"><span class="lang-ja">SES想定単価</span><span class="lang-en">Estimated SES unit price</span></td><td class="py-2.5 text-ink-mid"><span class="lang-ja">月額40万円〜70万円（案件内容・スキルレベルにより変動）</span><span class="lang-en">JPY 400,000-700,000/month (varies by project content and skill level)</span></td></tr>
+          <tr class="border-t border-b border-line"><td class="py-2.5 text-ink-mid"><span class="lang-ja">売上予想（1名あたり）</span><span class="lang-en">Projected revenue (per person)</span></td><td class="py-2.5 font-medium"><span class="lang-ja">年間480万円〜840万円（月額40万円〜70万円 × 12ヶ月で試算）</span><span class="lang-en">JPY 4.8M-8.4M per year (based on JPY 400,000-700,000/month × 12 months)</span></td></tr>
         </table>
       </div>
-      <p class="text-xs text-ink-light leading-loose mb-2">例）SES売上60万円 = 人件費35万円 + 管理料15万円（Check Lab）+ 利益10万円（貴社）</p>
-      <p class="text-xs text-ink-light leading-loose mb-1">※派遣で受け入れる場合は、貴社が労働者派遣事業の許可（派遣免許）を取得している必要があります。</p>
-      <p class="text-xs text-ink-light leading-loose mb-14">※単価は案件のスキル要件、稼働時間、契約形態により異なります。詳細はご相談ください。</p>
+      <p class="text-xs text-ink-light leading-loose mb-2"><span class="lang-ja">例）SES売上60万円 = 人件費35万円 + 管理料15万円（Check Lab）+ 利益10万円（貴社）</span><span class="lang-en">Example: SES revenue JPY 600,000 = Personnel cost JPY 350,000 + Management fee JPY 150,000 (Check Lab) + Profit JPY 100,000 (your company)</span></p>
+      <p class="text-xs text-ink-light leading-loose mb-1"><span class="lang-ja">※派遣で受け入れる場合は、貴社が労働者派遣事業の許可（派遣免許）を取得している必要があります。</span><span class="lang-en">*If accepting via dispatch, your company must hold a worker dispatch business license.</span></p>
+      <p class="text-xs text-ink-light leading-loose mb-14"><span class="lang-ja">※単価は案件のスキル要件、稼働時間、契約形態により異なります。詳細はご相談ください。</span><span class="lang-en">*Unit prices vary depending on project skill requirements, working hours, and contract type. Please contact us for details.</span></p>
     </div>
 
-    <h3 class="text-lg font-bold mb-2">ご相談から入社・運用開始まで</h3>
-    <p class="text-sm text-ink-mid leading-loose font-light mb-6">面倒な採用実務はCheck Labが代行。貴社の対応はハローワーク窓口と最終確認のみです。</p>
+    <h3 class="text-lg font-bold mb-2"><span class="lang-ja">ご相談から入社・運用開始まで</span><span class="lang-en">From Consultation to Onboarding and Operation</span></h3>
+    <p class="text-sm text-ink-mid leading-loose font-light mb-6"><span class="lang-ja">面倒な採用実務はCheck Labが代行。貴社の対応はハローワーク窓口と最終確認のみです。</span><span class="lang-en">Check Lab handles the tedious recruitment work on your behalf. Your company's involvement is limited to the Hello Work counter and final confirmation.</span></p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-3">
       <div class="border border-line rounded-xl p-7">
-        <p class="font-mono text-xs text-ink-light uppercase tracking-wide mb-4">採用代行の場合</p>
+        <p class="font-mono text-xs text-ink-light uppercase tracking-wide mb-4"><span class="lang-ja">採用代行の場合</span><span class="lang-en">For Recruitment Agency Service</span></p>
         <ol class="text-sm text-ink-mid leading-loose font-light space-y-1.5">
-          <li><span class="font-mono text-accent mr-2">01</span>指導・採用計画の要望を確認</li>
-          <li><span class="font-mono text-accent mr-2">02</span>［Check Lab対応］求人票作成、募集開始</li>
-          <li><span class="font-mono text-accent mr-2">03</span>ハローワーク経由で応募</li>
-          <li><span class="font-mono text-accent mr-2">04</span>［Check Lab対応］書類選考・面接サポート</li>
-          <li><span class="font-mono text-accent mr-2">05</span>応募者へ合否伝達</li>
-          <li><span class="font-mono text-accent mr-2">06</span>採用者の入社書類等手続き</li>
-          <li><span class="font-mono text-accent mr-2">07</span>ハローワークに採用を通知</li>
+          <li><span class="font-mono text-accent mr-2">01</span><span class="lang-ja">指導・採用計画の要望を確認</span><span class="lang-en">Confirm guidance and recruitment plan requirements</span></li>
+          <li><span class="font-mono text-accent mr-2">02</span><span class="lang-ja">［Check Lab対応］求人票作成、募集開始</span><span class="lang-en">[Handled by Check Lab] Create job listing, begin recruiting</span></li>
+          <li><span class="font-mono text-accent mr-2">03</span><span class="lang-ja">ハローワーク経由で応募</span><span class="lang-en">Receive applications via Hello Work</span></li>
+          <li><span class="font-mono text-accent mr-2">04</span><span class="lang-ja">［Check Lab対応］書類選考・面接サポート</span><span class="lang-en">[Handled by Check Lab] Document screening and interview support</span></li>
+          <li><span class="font-mono text-accent mr-2">05</span><span class="lang-ja">応募者へ合否伝達</span><span class="lang-en">Notify applicants of results</span></li>
+          <li><span class="font-mono text-accent mr-2">06</span><span class="lang-ja">採用者の入社書類等手続き</span><span class="lang-en">Process hired candidate's onboarding paperwork</span></li>
+          <li><span class="font-mono text-accent mr-2">07</span><span class="lang-ja">ハローワークに採用を通知</span><span class="lang-en">Notify Hello Work of the hire</span></li>
         </ol>
       </div>
       <div class="border border-line rounded-xl p-7">
-        <p class="font-mono text-xs text-ink-light uppercase tracking-wide mb-4">人材紹介の場合</p>
+        <p class="font-mono text-xs text-ink-light uppercase tracking-wide mb-4"><span class="lang-ja">人材紹介の場合</span><span class="lang-en">For Recruitment Referral Service</span></p>
         <ol class="text-sm text-ink-mid leading-loose font-light space-y-1.5">
-          <li><span class="font-mono text-accent mr-2">01</span>貴社の採用要件をヒアリング</li>
-          <li><span class="font-mono text-accent mr-2">02</span>［Check Lab対応］登録人材から適性のある候補者を選定・ご紹介</li>
-          <li><span class="font-mono text-accent mr-2">03</span>ハローワークで求人票作成</li>
-          <li><span class="font-mono text-accent mr-2">04</span>候補者に求人票を公開して、応募</li>
-          <li><span class="font-mono text-accent mr-2">05</span>面接（オンライン）</li>
-          <li><span class="font-mono text-accent mr-2">06</span>入社日・雇用の確定</li>
-          <li><span class="font-mono text-accent mr-2">07</span>入社後のフォローアップ</li>
+          <li><span class="font-mono text-accent mr-2">01</span><span class="lang-ja">貴社の採用要件をヒアリング</span><span class="lang-en">Hear your company's hiring requirements</span></li>
+          <li><span class="font-mono text-accent mr-2">02</span><span class="lang-ja">［Check Lab対応］登録人材から適性のある候補者を選定・ご紹介</span><span class="lang-en">[Handled by Check Lab] Select and introduce a suitable candidate from registered talent</span></li>
+          <li><span class="font-mono text-accent mr-2">03</span><span class="lang-ja">ハローワークで求人票作成</span><span class="lang-en">Create job listing at Hello Work</span></li>
+          <li><span class="font-mono text-accent mr-2">04</span><span class="lang-ja">候補者に求人票を公開して、応募</span><span class="lang-en">Publish job listing to candidate and receive application</span></li>
+          <li><span class="font-mono text-accent mr-2">05</span><span class="lang-ja">面接（オンライン）</span><span class="lang-en">Interview (online)</span></li>
+          <li><span class="font-mono text-accent mr-2">06</span><span class="lang-ja">入社日・雇用の確定</span><span class="lang-en">Confirm start date and employment</span></li>
+          <li><span class="font-mono text-accent mr-2">07</span><span class="lang-ja">入社後のフォローアップ</span><span class="lang-en">Post-onboarding follow-up</span></li>
         </ol>
       </div>
     </div>
-    <p class="text-xs text-ink-light leading-loose mb-14">→ 求人票作成には、初めての場合（事業所登録の書類：雇用保険事業所番号、法人登記簿謄本、賃貸借契約書などを用意して、最寄りのハローワークで登録）</p>
+    <p class="text-xs text-ink-light leading-loose mb-14"><span class="lang-ja">→ 求人票作成には、初めての場合（事業所登録の書類：雇用保険事業所番号、法人登記簿謄本、賃貸借契約書などを用意して、最寄りのハローワークで登録）</span><span class="lang-en">→ For first-time job listing creation (business registration documents: employment insurance business number, corporate registry certificate, lease agreement, etc. — prepare these and register at your nearest Hello Work)</span></p>
 
     <div class="rounded-xl p-10 md:p-12 bg-ink text-white">
-      <h3 class="text-lg font-bold mb-4">まとめ</h3>
-      <p class="text-sm text-slate-300 leading-loose font-light mb-8 max-w-3xl">法定雇用率の未達成は、納付金の負担にとどまらず、段階的な行政指導の末に企業名公表というレピュテーションリスクにもつながります。Check Labの在宅障害者雇用・労務管理事業は、求人から日々の労務管理までをワンストップで代行し、貴社の負担を最小限に、雇用の利益を最大化します。まずは貴社の現状に合った導入モデルのご提案から、お気軽にご相談ください。</p>
+      <h3 class="text-lg font-bold mb-4"><span class="lang-ja">まとめ</span><span class="lang-en">Summary</span></h3>
+      <p class="text-sm text-slate-300 leading-loose font-light mb-8 max-w-3xl"><span class="lang-ja">法定雇用率の未達成は、納付金の負担にとどまらず、段階的な行政指導の末に企業名公表というレピュテーションリスクにもつながります。Check Labの在宅障害者雇用・労務管理事業は、求人から日々の労務管理までをワンストップで代行し、貴社の負担を最小限に、雇用の利益を最大化します。まずは貴社の現状に合った導入モデルのご提案から、お気軽にご相談ください。</span><span class="lang-en">Failing to meet the statutory employment rate not only means bearing the levy burden, but also carries reputational risk, ultimately leading to public disclosure of your company's name after a series of administrative guidance steps. Check Lab's work-from-home disability employment and labor management service handles everything from recruitment to day-to-day labor management on a one-stop basis, minimizing your company's burden while maximizing the benefits of employment. Please feel free to contact us — we'll start by proposing the implementation model best suited to your company's current situation.</span></p>
       <div class="flex flex-wrap gap-x-8 gap-y-2 text-sm text-slate-300">
         <span>WEB：<a href="https://checklab.net/" class="text-white underline">checklab.net</a></span>
         <span>EMAIL：<a href="mailto:saiyo@check.or.jp" class="text-white underline">saiyo@check.or.jp</a></span>
@@ -511,43 +516,43 @@
 
   <div id="company" class="pt-4">
     <p class="font-mono text-xs tracking-widest text-ink-light uppercase mb-8 pb-3 border-b border-line">Company</p>
-    <h2 class="text-2xl font-extrabold mb-7 tracking-tight">会社概要</h2>
+    <h2 class="text-2xl font-extrabold mb-7 tracking-tight"><span class="lang-ja">会社概要</span><span class="lang-en">Company Overview</span></h2>
 
     <table class="w-full max-w-2xl border-collapse text-sm mb-16">
       <tr class="border-b border-line">
-        <td class="py-3.5 font-bold text-ink-mid w-1/4">会社名</td>
-        <td class="py-3.5">Check Lab株式会社</td>
+        <td class="py-3.5 font-bold text-ink-mid w-1/4"><span class="lang-ja">会社名</span><span class="lang-en">Company Name</span></td>
+        <td class="py-3.5"><span class="lang-ja">Check Lab株式会社</span><span class="lang-en">Check Lab Co., Ltd.</span></td>
       </tr>
       <tr class="border-b border-line">
-        <td class="py-3.5 font-bold text-ink-mid">設立</td>
-        <td class="py-3.5">2003年（平成15年）10月1日<br><span class="text-xs text-ink-light">※商号変更：2017年（平成29年）6月</span></td>
+        <td class="py-3.5 font-bold text-ink-mid"><span class="lang-ja">設立</span><span class="lang-en">Founded</span></td>
+        <td class="py-3.5"><span class="lang-ja">2003年（平成15年）10月1日<br><span class="text-xs text-ink-light">※商号変更：2017年（平成29年）6月</span></span><span class="lang-en">October 1, 2003 (Heisei 15)<br><span class="text-xs text-ink-light">*Company name changed: June 2017 (Heisei 29)</span></span></td>
       </tr>
       <tr class="border-b border-line">
-        <td class="py-3.5 font-bold text-ink-mid">資本金</td>
-        <td class="py-3.5">金400万円</td>
+        <td class="py-3.5 font-bold text-ink-mid"><span class="lang-ja">資本金</span><span class="lang-en">Capital</span></td>
+        <td class="py-3.5"><span class="lang-ja">金400万円</span><span class="lang-en">JPY 4,000,000</span></td>
       </tr>
       <tr class="border-b border-line">
-        <td class="py-3.5 font-bold text-ink-mid">所在地</td>
-        <td class="py-3.5">東京都世田谷区等々力四丁目7番10号</td>
+        <td class="py-3.5 font-bold text-ink-mid"><span class="lang-ja">所在地</span><span class="lang-en">Address</span></td>
+        <td class="py-3.5"><span class="lang-ja">東京都世田谷区等々力四丁目7番10号</span><span class="lang-en">4-7-10 Todoroki, Setagaya-ku, Tokyo</span></td>
       </tr>
       <tr class="border-b border-line">
-        <td class="py-3.5 font-bold text-ink-mid align-top">代表取締役</td>
+        <td class="py-3.5 font-bold text-ink-mid align-top"><span class="lang-ja">代表取締役</span><span class="lang-en">Representative Director</span></td>
         <td class="py-3.5">
-          金子 健二<br>
-          <span class="text-sm text-ink-mid leading-relaxed block mt-1.5">人材派遣会社にて約80名規模の在宅障害者チームを10年以上マネジメントした経験を持つ。継続就労・在宅勤務支援のノウハウを活かし、IT業界でエンジニアが働きやすい環境を提供している。2008年から、NPO法人Checkとして多機能トイレ情報共有サービス「Check A Toilet」（登録72,000件）も運営。</span>
+          <span class="lang-ja">金子 健二</span><span class="lang-en">Kenji Kaneko</span><br>
+          <span class="text-sm text-ink-mid leading-relaxed block mt-1.5"><span class="lang-ja">人材派遣会社にて約80名規模の在宅障害者チームを10年以上マネジメントした経験を持つ。継続就労・在宅勤務支援のノウハウを活かし、IT業界でエンジニアが働きやすい環境を提供している。2008年から、NPO法人Checkとして多機能トイレ情報共有サービス「Check A Toilet」（登録72,000件）も運営。</span><span class="lang-en">Has over 10 years of experience managing a team of approximately 80 work-from-home employees with disabilities at a staffing company. Leveraging expertise in continued employment and remote work support, he provides an environment where engineers in the IT industry can work comfortably. Since 2008, he has also operated the multi-purpose restroom information sharing service "Check A Toilet" (72,000 registered listings) as the NPO Check.</span></span>
         </td>
       </tr>
       <tr class="border-b border-line">
-        <td class="py-3.5 font-bold text-ink-mid">従業員数</td>
-        <td class="py-3.5">4名（2026年9月現在）</td>
+        <td class="py-3.5 font-bold text-ink-mid"><span class="lang-ja">従業員数</span><span class="lang-en">Number of Employees</span></td>
+        <td class="py-3.5"><span class="lang-ja">4名（2026年9月現在）</span><span class="lang-en">4 (as of September 2026)</span></td>
       </tr>
       <tr class="border-b border-line">
-        <td class="py-3.5 font-bold text-ink-mid">主な事業</td>
-        <td class="py-3.5">システム開発・運用／SES／障害者雇用・労務管理事業</td>
+        <td class="py-3.5 font-bold text-ink-mid"><span class="lang-ja">主な事業</span><span class="lang-en">Main Business</span></td>
+        <td class="py-3.5"><span class="lang-ja">システム開発・運用／SES／障害者雇用・労務管理事業</span><span class="lang-en">System development and operation / SES staffing / Disability employment and labor management services</span></td>
       </tr>
       <tr class="border-b border-line">
-        <td class="py-3.5 font-bold text-ink-mid">ミッション</td>
-        <td class="py-3.5 font-bold">誰もが気兼ねなく外出できる社会の実現</td>
+        <td class="py-3.5 font-bold text-ink-mid"><span class="lang-ja">ミッション</span><span class="lang-en">Mission</span></td>
+        <td class="py-3.5 font-bold"><span class="lang-ja">誰もが気兼ねなく外出できる社会の実現</span><span class="lang-en">Realizing a society where everyone can go out without hesitation</span></td>
       </tr>
       <tr>
         <td class="py-3.5 font-bold text-ink-mid">Web</td>
@@ -558,91 +563,91 @@
 
   <!-- Service -->
   <div id="service" class="mt-20 pt-4">
-    <p class="font-mono text-xs tracking-widest text-ink-light uppercase mb-8 pb-3 border-b border-line">受託開発</p>
+    <p class="font-mono text-xs tracking-widest text-ink-light uppercase mb-8 pb-3 border-b border-line"><span class="lang-ja">受託開発</span><span class="lang-en">Contract Development</span></p>
 
     <h2 class="text-2xl font-extrabold mb-4 tracking-tight">
-      開発 <em class="not-italic text-accent">×</em> AI活用QA <em class="not-italic text-accent">×</em> デザイン<br>ワンチームでお受けします。
+      <span class="lang-ja">開発 <em class="not-italic text-accent">×</em> AI活用QA <em class="not-italic text-accent">×</em> デザイン<br>ワンチームでお受けします。</span><span class="lang-en">Development <em class="not-italic text-accent">×</em> AI-Powered QA <em class="not-italic text-accent">×</em> Design<br>One team handles it all.</span>
     </h2>
     <p class="text-sm text-[#555] leading-loose max-w-2xl mb-12">
-      「WordPressでは対応が難しい」「API連携やミニゲームを実装したい」「デザインから開発まで一社にまとめたい」——そのご要望に、Check Labのエンジニア・デザイナーチームがお応えします。Next.js / React によるモダン構成と、Git管理による分散開発で、品質と納期を両立した受託開発が可能です。
+      <span class="lang-ja">「WordPressでは対応が難しい」「API連携やミニゲームを実装したい」「デザインから開発まで一社にまとめたい」——そのご要望に、Check Labのエンジニア・デザイナーチームがお応えします。Next.js / React によるモダン構成と、Git管理による分散開発で、品質と納期を両立した受託開発が可能です。</span><span class="lang-en">"WordPress can't handle it," "I want to implement API integrations or mini-games," "I want one company to handle everything from design to development" — Check Lab's team of engineers and designers responds to these requests. With a modern Next.js / React architecture and distributed development managed through Git, we deliver contract development that balances quality and deadlines.</span>
     </p>
 
     <div class="grid gap-6 mb-12" style="grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));">
 
       <div class="border border-[#e5e5e5] p-7 px-6">
         <div class="text-2xl mb-3">🌐</div>
-        <h4 class="text-sm font-extrabold mb-2.5">Web系開発</h4>
+        <h4 class="text-sm font-extrabold mb-2.5"><span class="lang-ja">Web系開発</span><span class="lang-en">Web Development</span></h4>
         <ul class="text-sm text-[#555] leading-loose pl-4 list-disc">
-          <li>WordPress カスタム開発・プラグイン開発</li>
-          <li>Next.js / React による Webアプリ・SPA開発</li>
-          <li>PHP / Laravel による Webシステム開発</li>
-          <li>LP・コーポレートサイト制作</li>
-          <li>キャンペーンサイト・特設ページ制作</li>
+          <li><span class="lang-ja">WordPress カスタム開発・プラグイン開発</span><span class="lang-en">WordPress custom development and plugin development</span></li>
+          <li><span class="lang-ja">Next.js / React による Webアプリ・SPA開発</span><span class="lang-en">Web app / SPA development with Next.js / React</span></li>
+          <li><span class="lang-ja">PHP / Laravel による Webシステム開発</span><span class="lang-en">Web system development with PHP / Laravel</span></li>
+          <li><span class="lang-ja">LP・コーポレートサイト制作</span><span class="lang-en">Landing page and corporate site production</span></li>
+          <li><span class="lang-ja">キャンペーンサイト・特設ページ制作</span><span class="lang-en">Campaign site and special page production</span></li>
         </ul>
       </div>
 
       <div class="border border-[#e5e5e5] p-7 px-6">
         <div class="text-2xl mb-3">☁️</div>
-        <h4 class="text-sm font-extrabold mb-2.5">クラウド / インフラ</h4>
+        <h4 class="text-sm font-extrabold mb-2.5"><span class="lang-ja">クラウド / インフラ</span><span class="lang-en">Cloud / Infrastructure</span></h4>
         <ul class="text-sm text-[#555] leading-loose pl-4 list-disc">
-          <li>AWS 構築・運用（EC2・S3・Lambda・CloudFront）</li>
-          <li>GCP 構築・運用</li>
-          <li>Docker 環境構築・CI/CD 整備</li>
-          <li>サーバーレス構成の設計・実装</li>
+          <li><span class="lang-ja">AWS 構築・運用（EC2・S3・Lambda・CloudFront）</span><span class="lang-en">AWS setup and operation (EC2, S3, Lambda, CloudFront)</span></li>
+          <li><span class="lang-ja">GCP 構築・運用</span><span class="lang-en">GCP setup and operation</span></li>
+          <li><span class="lang-ja">Docker 環境構築・CI/CD 整備</span><span class="lang-en">Docker environment setup and CI/CD implementation</span></li>
+          <li><span class="lang-ja">サーバーレス構成の設計・実装</span><span class="lang-en">Serverless architecture design and implementation</span></li>
         </ul>
       </div>
 
       <div class="border border-[#e5e5e5] p-7 px-6">
         <div class="text-2xl mb-3">🔗</div>
-        <h4 class="text-sm font-extrabold mb-2.5">API / 外部連携</h4>
+        <h4 class="text-sm font-extrabold mb-2.5"><span class="lang-ja">API / 外部連携</span><span class="lang-en">API / External Integration</span></h4>
         <ul class="text-sm text-[#555] leading-loose pl-4 list-disc">
-          <li>X（Twitter）API 連携・ハッシュタグ表示</li>
-          <li>Google API 連携（Maps・Analytics 等）</li>
-          <li>kintone / AppSheet 業務システム構築</li>
-          <li>各種 Webhook・外部サービス連携</li>
+          <li><span class="lang-ja">X（Twitter）API 連携・ハッシュタグ表示</span><span class="lang-en">X (Twitter) API integration and hashtag display</span></li>
+          <li><span class="lang-ja">Google API 連携（Maps・Analytics 等）</span><span class="lang-en">Google API integration (Maps, Analytics, etc.)</span></li>
+          <li><span class="lang-ja">kintone / AppSheet 業務システム構築</span><span class="lang-en">kintone / AppSheet business system development</span></li>
+          <li><span class="lang-ja">各種 Webhook・外部サービス連携</span><span class="lang-en">Webhooks and other external service integrations</span></li>
         </ul>
       </div>
 
       <div class="border border-[#e5e5e5] p-7 px-6">
         <div class="text-2xl mb-3">🎮</div>
-        <h4 class="text-sm font-extrabold mb-2.5">インタラクティブ / エンタメ系</h4>
+        <h4 class="text-sm font-extrabold mb-2.5"><span class="lang-ja">インタラクティブ / エンタメ系</span><span class="lang-en">Interactive / Entertainment</span></h4>
         <ul class="text-sm text-[#555] leading-loose pl-4 list-disc">
-          <li>ミニゲーム・おみくじ・抽選機能</li>
-          <li>アニメーション・カルーセル実装</li>
-          <li>SNS シェア機能・OGP 対応</li>
-          <li>インタラクティブコンテンツ全般</li>
+          <li><span class="lang-ja">ミニゲーム・おみくじ・抽選機能</span><span class="lang-en">Mini-games, fortune-telling, and lottery features</span></li>
+          <li><span class="lang-ja">アニメーション・カルーセル実装</span><span class="lang-en">Animation and carousel implementation</span></li>
+          <li><span class="lang-ja">SNS シェア機能・OGP 対応</span><span class="lang-en">Social sharing features and OGP support</span></li>
+          <li><span class="lang-ja">インタラクティブコンテンツ全般</span><span class="lang-en">Interactive content in general</span></li>
         </ul>
       </div>
 
       <div class="border border-[#e5e5e5] p-7 px-6">
         <div class="text-2xl mb-3">🎨</div>
-        <h4 class="text-sm font-extrabold mb-2.5">デザイン込みのワンストップ対応</h4>
+        <h4 class="text-sm font-extrabold mb-2.5"><span class="lang-ja">デザイン込みのワンストップ対応</span><span class="lang-en">One-Stop Support Including Design</span></h4>
         <ul class="text-sm text-[#555] leading-loose pl-4 list-disc">
-          <li>UI/UX デザイン〜実装まで一貫対応</li>
-          <li>バナー・OGP・キャラクター合成</li>
-          <li>SP / PC レスポンシブ対応</li>
-          <li>動画編集・ビジュアル制作</li>
+          <li><span class="lang-ja">UI/UX デザイン〜実装まで一貫対応</span><span class="lang-en">Consistent support from UI/UX design through implementation</span></li>
+          <li><span class="lang-ja">バナー・OGP・キャラクター合成</span><span class="lang-en">Banner, OGP, and character composite design</span></li>
+          <li><span class="lang-ja">SP / PC レスポンシブ対応</span><span class="lang-en">Responsive support for mobile and PC</span></li>
+          <li><span class="lang-ja">動画編集・ビジュアル制作</span><span class="lang-en">Video editing and visual production</span></li>
         </ul>
       </div>
 
       <div class="border border-[#e5e5e5] p-7 px-6">
         <div class="text-2xl mb-3">🏭</div>
-        <h4 class="text-sm font-extrabold mb-2.5">組込み / 業務システム系</h4>
+        <h4 class="text-sm font-extrabold mb-2.5"><span class="lang-ja">組込み / 業務システム系</span><span class="lang-en">Embedded / Business Systems</span></h4>
         <ul class="text-sm text-[#555] leading-loose pl-4 list-disc">
-          <li>C++ / C# による組込み・制御系開発</li>
-          <li>業務システムの保守・改修</li>
-          <li>製造業向け DX システム開発</li>
+          <li><span class="lang-ja">C++ / C# による組込み・制御系開発</span><span class="lang-en">Embedded and control system development with C++ / C#</span></li>
+          <li><span class="lang-ja">業務システムの保守・改修</span><span class="lang-en">Maintenance and modification of business systems</span></li>
+          <li><span class="lang-ja">製造業向け DX システム開発</span><span class="lang-en">DX system development for manufacturing</span></li>
         </ul>
       </div>
 
       <div class="border border-[#e5e5e5] p-7 px-6">
         <div class="text-2xl mb-3">🏢</div>
-        <h4 class="text-sm font-extrabold mb-2.5">エンタープライズ / 保守・改修</h4>
+        <h4 class="text-sm font-extrabold mb-2.5"><span class="lang-ja">エンタープライズ / 保守・改修</span><span class="lang-en">Enterprise / Maintenance &amp; Modification</span></h4>
         <ul class="text-sm text-[#555] leading-loose pl-4 list-disc">
-          <li>Java / Spring Boot による業務システム開発</li>
-          <li>Oracle / SQL Server / DB2 対応</li>
-          <li>Visual Basic・レガシーシステムの保守・改修</li>
-          <li>証券・EC・施設管理など多業種の既存システム対応</li>
+          <li><span class="lang-ja">Java / Spring Boot による業務システム開発</span><span class="lang-en">Business system development with Java / Spring Boot</span></li>
+          <li><span class="lang-ja">Oracle / SQL Server / DB2 対応</span><span class="lang-en">Support for Oracle, SQL Server, DB2</span></li>
+          <li><span class="lang-ja">Visual Basic・レガシーシステムの保守・改修</span><span class="lang-en">Maintenance and modification of Visual Basic and legacy systems</span></li>
+          <li><span class="lang-ja">証券・EC・施設管理など多業種の既存システム対応</span><span class="lang-en">Support for existing systems across industries, including securities, e-commerce, and facility management</span></li>
         </ul>
       </div>
 
@@ -650,28 +655,28 @@
 
     <div class="bg-[#f7f7f5] border-l-[3px] border-[#1a1a1a] p-6 px-7 max-w-2xl">
       <p class="text-sm leading-loose m-0 text-[#333]">
-        <strong>Check Lab の強み：</strong>デザイナーとエンジニアが一体となって動くフルリモートチームです。Git を活用した複数メンバーによる並行開発と、AIを活用した品質チェック体制で、品質と納期を両立します。WordPressでは対応が難しい要件も、Next.js / React によるモダン構成でお応えします。
+        <span class="lang-ja"><strong>Check Lab の強み：</strong>デザイナーとエンジニアが一体となって動くフルリモートチームです。Git を活用した複数メンバーによる並行開発と、AIを活用した品質チェック体制で、品質と納期を両立します。WordPressでは対応が難しい要件も、Next.js / React によるモダン構成でお応えします。</span><span class="lang-en"><strong>Check Lab's Strength:</strong> We are a fully remote team where designers and engineers work as one. Through parallel development by multiple members using Git, combined with an AI-powered quality check system, we balance quality and deadlines. We can meet requirements that are difficult for WordPress to handle, using a modern Next.js / React architecture.</span>
       </p>
     </div>
   </div>
 
   <!-- Works -->
   <div id="works" class="mt-20 pt-4">
-    <p class="font-mono text-xs tracking-widest text-ink-light uppercase mb-8 pb-3 border-b border-line">制作実績</p>
-    <h2 class="text-2xl font-extrabold mb-2 tracking-tight">自社・受託で培った開発実績</h2>
+    <p class="font-mono text-xs tracking-widest text-ink-light uppercase mb-8 pb-3 border-b border-line"><span class="lang-ja">制作実績</span><span class="lang-en">Portfolio</span></p>
+    <h2 class="text-2xl font-extrabold mb-2 tracking-tight"><span class="lang-ja">自社・受託で培った開発実績</span><span class="lang-en">Development Track Record Built Through In-House and Contract Work</span></h2>
     <p class="text-sm text-[#555] leading-loose max-w-2xl mb-8">
-      自社サービスの開発・運用から受託開発まで、実運用を見据えた設計・実装を行っています。
+      <span class="lang-ja">自社サービスの開発・運用から受託開発まで、実運用を見据えた設計・実装を行っています。</span><span class="lang-en">From developing and operating our own services to contract development, we design and implement with real-world operation in mind.</span>
     </p>
 
     <!-- タブ -->
     <div class="flex mb-8 border-b-2 border-[#e5e5e5]">
       <button onclick="showTab('tab-own')" id="btn-own"
         class="px-7 py-2.5 text-sm font-bold border-0 bg-none cursor-pointer -mb-0.5 border-b-2 border-sky-500 text-sky-500 font-sans">
-        自社サービス
+        <span class="lang-ja">自社サービス</span><span class="lang-en">In-House Services</span>
       </button>
       <button onclick="showTab('tab-client')" id="btn-client"
         class="px-7 py-2.5 text-sm font-bold border-0 bg-none cursor-pointer -mb-0.5 border-b-2 border-transparent text-slate-400 font-sans">
-        受託・支援実績
+        <span class="lang-ja">受託・支援実績</span><span class="lang-en">Contract &amp; Support Track Record</span>
       </button>
     </div>
 
@@ -683,7 +688,7 @@
           <div class="border border-[#e5e5e5] p-7 px-6 transition-shadow hover:shadow-lg">
             <div class="text-2xl mb-3">🚻</div>
             <h4 class="text-base font-extrabold mb-2">Check A Toilet</h4>
-            <p class="text-sm text-[#666] leading-relaxed mb-3">多機能トイレ情報共有サービス。全国72,000件以上を掲載。Google Maps・NAVITIME・Mapionと連携。</p>
+            <p class="text-sm text-[#666] leading-relaxed mb-3"><span class="lang-ja">多機能トイレ情報共有サービス。全国72,000件以上を掲載。Google Maps・NAVITIME・Mapionと連携。</span><span class="lang-en">A multi-purpose restroom information sharing service featuring over 72,000 listings nationwide. Integrated with Google Maps, NAVITIME, and Mapion.</span></p>
             <div class="flex flex-wrap gap-1.5">
               <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">PHP / Laravel</span>
               <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">Google Maps API</span>
@@ -697,11 +702,11 @@
           <div class="border border-[#e5e5e5] p-7 px-6 transition-shadow hover:shadow-lg">
             <div class="text-2xl mb-3">⛳</div>
             <h4 class="text-base font-extrabold mb-2">Check A Golf</h4>
-            <p class="text-sm text-[#666] leading-relaxed mb-3">全世界19,000件以上のゴルフ施設を検索できるサービス。米国・英国・カナダ・オーストラリア対応。</p>
+            <p class="text-sm text-[#666] leading-relaxed mb-3"><span class="lang-ja">全世界19,000件以上のゴルフ施設を検索できるサービス。米国・英国・カナダ・オーストラリア対応。</span><span class="lang-en">A service for searching over 19,000 golf facilities worldwide. Covers the US, UK, Canada, and Australia.</span></p>
             <div class="flex flex-wrap gap-1.5">
               <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">PHP / Laravel</span>
               <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">MySQL</span>
-              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">地図API</span>
+              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm"><span class="lang-ja">地図API</span><span class="lang-en">Map API</span></span>
             </div>
             <p class="text-xs text-[#1a6bbf] mt-3">Check A Golf →</p>
           </div>
@@ -711,10 +716,10 @@
           <div class="border border-[#e5e5e5] p-7 px-6 transition-shadow hover:shadow-lg">
             <div class="text-2xl mb-3">♿</div>
             <h4 class="text-base font-extrabold mb-2">NPO法人 Check</h4>
-            <p class="text-sm text-[#666] leading-relaxed mb-3">バリアフリー・ユニバーサルデザインに関する情報収集・発信を行うNPO法人の公式サイト。</p>
+            <p class="text-sm text-[#666] leading-relaxed mb-3"><span class="lang-ja">バリアフリー・ユニバーサルデザインに関する情報収集・発信を行うNPO法人の公式サイト。</span><span class="lang-en">The official website of an NPO organization that collects and disseminates information related to barrier-free access and universal design.</span></p>
             <div class="flex flex-wrap gap-1.5">
               <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">WordPress</span>
-              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">Web制作</span>
+              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm"><span class="lang-ja">Web制作</span><span class="lang-en">Web Development</span></span>
             </div>
             <p class="text-xs text-[#1a6bbf] mt-3">check.or.jp →</p>
           </div>
@@ -724,11 +729,11 @@
           <div class="border border-[#e5e5e5] p-7 px-6 transition-shadow hover:shadow-lg">
             <div class="text-2xl mb-3">✈️</div>
             <h4 class="text-base font-extrabold mb-2">World Booking.jp</h4>
-            <p class="text-sm text-[#666] leading-relaxed mb-3">ゴルフ・釣り等、世界の体験ツアーを検索・予約できる総合サイト。</p>
+            <p class="text-sm text-[#666] leading-relaxed mb-3"><span class="lang-ja">ゴルフ・釣り等、世界の体験ツアーを検索・予約できる総合サイト。</span><span class="lang-en">A comprehensive site for searching and booking experience tours worldwide, including golf, fishing, and more.</span></p>
             <div class="flex flex-wrap gap-1.5">
               <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">PHP</span>
-              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">予約システム</span>
-              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">多言語対応</span>
+              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm"><span class="lang-ja">予約システム</span><span class="lang-en">Booking System</span></span>
+              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm"><span class="lang-ja">多言語対応</span><span class="lang-en">Multilingual Support</span></span>
             </div>
             <p class="text-xs text-[#1a6bbf] mt-3">World Booking.jp →</p>
           </div>
@@ -738,11 +743,11 @@
           <div class="border border-[#e5e5e5] p-7 px-6 transition-shadow hover:shadow-lg">
             <div class="text-2xl mb-3">🍽</div>
             <h4 class="text-base font-extrabold mb-2">Check A Food</h4>
-            <p class="text-sm text-[#666] leading-relaxed mb-3">アレルギー対応・食事制限対応の飲食店検索サービス。食べられるお店をかんたんに探せる。</p>
+            <p class="text-sm text-[#666] leading-relaxed mb-3"><span class="lang-ja">アレルギー対応・食事制限対応の飲食店検索サービス。食べられるお店をかんたんに探せる。</span><span class="lang-en">A restaurant search service for those with allergies and dietary restrictions. Easily find places where you can eat safely.</span></p>
             <div class="flex flex-wrap gap-1.5">
               <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">PHP / Laravel</span>
-              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">飲食店検索</span>
-              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm">アレルギー対応</span>
+              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm"><span class="lang-ja">飲食店検索</span><span class="lang-en">Restaurant Search</span></span>
+              <span class="text-xs bg-[#f0f0f0] px-2 py-0.5 rounded-sm"><span class="lang-ja">アレルギー対応</span><span class="lang-en">Allergy Support</span></span>
             </div>
             <p class="text-xs text-[#1a6bbf] mt-3">checkafood.com →</p>
           </div>
@@ -757,7 +762,7 @@
 
         <div class="border border-dashed border-[#e5e5e5] p-7 px-6 flex items-center justify-center">
           <p class="text-sm text-[#aaa] text-center leading-loose">
-            掲載可能な実績を<br>順次追加予定
+            <span class="lang-ja">掲載可能な実績を<br>順次追加予定</span><span class="lang-en">Publishable case studies<br>will be added soon</span>
           </p>
         </div>
 
@@ -784,10 +789,10 @@
 
   <!-- CTA -->
   <div class="rounded-xl p-12 px-10 text-center text-white bg-gradient-to-br from-accent to-accent-dark">
-    <h3 class="text-xl font-bold mb-3 tracking-tight">まずはお気軽にご相談ください</h3>
-    <p class="text-sm text-[#eaf9ff] font-light mb-7">30分程度のオンライン説明から承っております。</p>
+    <h3 class="text-xl font-bold mb-3 tracking-tight"><span class="lang-ja">まずはお気軽にご相談ください</span><span class="lang-en">Feel Free to Reach Out for a Consultation</span></h3>
+    <p class="text-sm text-[#eaf9ff] font-light mb-7"><span class="lang-ja">30分程度のオンライン説明から承っております。</span><span class="lang-en">We're happy to start with a roughly 30-minute online briefing.</span></p>
     <div class="flex gap-3 justify-center flex-wrap">
-      <a id="mailto-cta" href="" class="inline-block px-7 py-3 rounded-md text-sm font-medium no-underline transition-opacity hover:opacity-85 bg-white text-accent">メールで問い合わせる</a>
+      <a id="mailto-cta" href="" class="inline-block px-7 py-3 rounded-md text-sm font-medium no-underline transition-opacity hover:opacity-85 bg-white text-accent"><span class="lang-ja">メールで問い合わせる</span><span class="lang-en">Contact Us by Email</span></a>
     </div>
   </div>
 
@@ -798,6 +803,7 @@
 </footer>
 
 <script src="mailto.js"></script>
+<script src="i18n.js"></script>
 
 </body>
 </html>

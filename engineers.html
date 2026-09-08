@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,6 +75,9 @@
   @keyframes fadeUp {
     to { opacity: 1; transform: translateY(0); }
   }
+
+  html[data-lang="ja"] .lang-en { display: none !important; }
+  html[data-lang="en"] .lang-ja { display: none !important; }
 </style>
 </head>
 <body class="font-sans bg-bg text-ink leading-relaxed">
@@ -84,49 +87,51 @@
     <a href="https://checklab.net/" class="no-underline"><span class="font-mono text-base font-medium text-ink tracking-wide">Check <span class="text-accent">Lab</span></span></a>
   </div>
   <nav class="hidden md:flex items-center gap-7">
-    <a href="index.html#company" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap">会社概要</a>
-    <a href="index.html#about" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap">Check Labとは？</a>
-    <a href="index.html#members" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap">チームメンバー</a>
-    <a href="engineers.html" class="text-sm text-accent font-medium whitespace-nowrap">登録エンジニア</a>
-    <a href="index.html#works" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap">制作実績</a>
-    <a id="mailto-header" href="" class="bg-accent hover:bg-accent-dark text-white text-xs font-semibold px-4 py-2 rounded whitespace-nowrap">お問い合わせ</a>
+    <a href="index.html#company" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap"><span class="lang-ja">会社概要</span><span class="lang-en">Company</span></a>
+    <a href="index.html#about" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap"><span class="lang-ja">Check Labとは？</span><span class="lang-en">About Us</span></a>
+    <a href="index.html#members" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap"><span class="lang-ja">チームメンバー</span><span class="lang-en">Team</span></a>
+    <a href="engineers.html" class="text-sm text-accent font-medium whitespace-nowrap"><span class="lang-ja">登録エンジニア</span><span class="lang-en">Registered Engineers</span></a>
+    <a href="index.html#works" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap"><span class="lang-ja">制作実績</span><span class="lang-en">Portfolio</span></a>
+    <button type="button" data-lang-btn class="font-mono text-xs px-2.5 py-1 border border-line rounded text-ink-mid hover:text-accent hover:border-accent transition-colors bg-white cursor-pointer whitespace-nowrap">EN</button>
+    <a id="mailto-header" href="" class="bg-accent hover:bg-accent-dark text-white text-xs font-semibold px-4 py-2 rounded whitespace-nowrap"><span class="lang-ja">お問い合わせ</span><span class="lang-en">Contact</span></a>
   </nav>
 </header>
 
 <div class="max-w-4xl mx-auto px-5 sm:px-10 pb-20">
 
   <div class="pt-12 sm:pt-14 pb-4">
-    <a href="index.html#members" class="inline-flex items-center gap-1.5 text-sm text-ink-mid hover:text-accent transition-colors no-underline">← チームメンバー一覧に戻る</a>
+    <a href="index.html#members" class="inline-flex items-center gap-1.5 text-sm text-ink-mid hover:text-accent transition-colors no-underline">← <span class="lang-ja">チームメンバー一覧に戻る</span><span class="lang-en">Back to Team Members</span></a>
   </div>
 
-  <p class="font-mono text-xs tracking-widest text-ink-light uppercase mb-8 pb-3 border-b border-line">登録エンジニア</p>
-  <h1 class="text-2xl font-extrabold mb-4 tracking-tight">登録エンジニア・デザイナーのご紹介</h1>
-  <p class="text-sm text-ink-mid font-light max-w-2xl mb-10 leading-loose">コアチームに加え、様々な形で参画する登録エンジニア・デザイナーです。地方在住でのフルタイム稼働から、時短勤務を希望するメンバーまで、案件のスポット対応も可能です。稼働条件はお問い合わせ時にご相談ください。</p>
+  <p class="font-mono text-xs tracking-widest text-ink-light uppercase mb-8 pb-3 border-b border-line"><span class="lang-ja">登録エンジニア</span><span class="lang-en">Registered Engineers</span></p>
+  <h1 class="text-2xl font-extrabold mb-4 tracking-tight"><span class="lang-ja">登録エンジニア・デザイナーのご紹介</span><span class="lang-en">Introducing Our Registered Engineers &amp; Designers</span></h1>
+  <p class="text-sm text-ink-mid font-light max-w-2xl mb-10 leading-loose"><span class="lang-ja">コアチームに加え、様々な形で参画する登録エンジニア・デザイナーです。地方在住でのフルタイム稼働から、時短勤務を希望するメンバーまで、案件のスポット対応も可能です。稼働条件はお問い合わせ時にご相談ください。</span><span class="lang-en">In addition to our core team, these are registered engineers and designers who participate in a variety of ways — from full-time members based outside Tokyo to those who prefer shorter working hours. Spot support for projects is also available. Please contact us to discuss working conditions.</span></p>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
 
     <!-- V.K. -->
     <div id="vk" class="card-fade bg-[#fbfaf8] border border-dashed border-line rounded-xl p-8 scroll-mt-24">
-      <span class="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide px-2.5 py-1 rounded mb-5 bg-tag-dev text-tag-dev-text">● Senior Backend Developer<span class="inline-block font-mono text-xs tracking-wide text-ink-light bg-bg border border-line rounded px-2 py-0.5 ml-2 align-middle">週28h・東京</span></span>
+      <span class="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide px-2.5 py-1 rounded mb-5 bg-tag-dev text-tag-dev-text">● Senior Backend Developer<span class="inline-block font-mono text-xs tracking-wide text-ink-light bg-bg border border-line rounded px-2 py-0.5 ml-2 align-middle"><span class="lang-ja">週28h・東京</span><span class="lang-en">28h/week · Tokyo</span></span></span>
       <div class="font-mono text-4xl font-medium tracking-tight text-ink mb-1">V.K.</div>
-      <div class="text-sm text-ink-light mb-5">男性・32歳　／　東京都在住・フルリモート希望</div>
+      <div class="text-sm text-ink-light mb-5"><span class="lang-ja">男性・32歳　／　東京都在住・フルリモート希望</span><span class="lang-en">Male, 32 / Based in Tokyo · Prefers full remote work</span></div>
       <p class="text-sm text-ink-mid leading-loose mb-6 font-light">
-        Java / Spring Bootを中心に、C# / .NETやAzureも含めたバックエンド開発を7年以上経験。要件定義から設計・実装・テスト・レビュー・リリース・運用まで一連の工程を独立して対応可能。直近約3年間はTeam Leadとしてタスク管理・コードレビュー・技術サポートを担当し、OpenAI APIやCursor IDEを活用したAI開発の実務経験も持つ。家族の事情により来日し、日本で長期的にエンジニアとしてキャリアを築きたいという意向。
+        <span class="lang-ja">Java / Spring Bootを中心に、C# / .NETやAzureも含めたバックエンド開発を7年以上経験。要件定義から設計・実装・テスト・レビュー・リリース・運用まで一連の工程を独立して対応可能。直近約3年間はTeam Leadとしてタスク管理・コードレビュー・技術サポートを担当し、OpenAI APIやCursor IDEを活用したAI開発の実務経験も持つ。家族の事情により来日し、日本で長期的にエンジニアとしてキャリアを築きたいという意向。</span><span class="lang-en">Over 7 years of backend development experience centered on Java / Spring Boot, including C# / .NET and Azure. Able to independently handle the full development cycle — requirements definition, design, implementation, testing, review, release, and operations. For the past 3 years, served as Team Lead, managing tasks, code reviews, and technical support, with hands-on AI development experience using the OpenAI API and Cursor IDE. Relocated to Japan for family reasons and hopes to build a long-term career as an engineer in Japan.</span>
       </p>
       <div class="flex flex-wrap gap-1.5">
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Java / Spring Boot</span>
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">C# / .NET Core</span>
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">MS SQL Server</span>
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">JPA / Hibernate / Redis</span>
-        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">REST API / マイクロサービス</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid"><span class="lang-ja">REST API / マイクロサービス</span><span class="lang-en">REST API / Microservices</span></span>
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Azure</span>
-        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">CI/CD（Jenkins・Azure DevOps等）</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid"><span class="lang-ja">CI/CD（Jenkins・Azure DevOps等）</span><span class="lang-en">CI/CD (Jenkins, Azure DevOps, etc.)</span></span>
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">OpenAI API / Cursor IDE</span>
-        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Team Lead経験</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid"><span class="lang-ja">Team Lead経験</span><span class="lang-en">Team Lead Experience</span></span>
       </div>
       <p class="text-xs text-ink-light leading-loose mt-4">
-        ※日本語：JLPT N5（業務コミュニケーションには本人も自信なしと申告）／英語：ビジネスレベル<br>
-        ※稼働時間：本人申告で週28時間まで（現在は日本語学校に在籍中の学生ビザ）。フルタイム案件確定次第、日本語学校を退学し在留資格変更にも対応可能とのこと。
+        <span class="lang-ja">※日本語：JLPT N5（業務コミュニケーションには本人も自信なしと申告）／英語：ビジネスレベル<br>
+        ※稼働時間：本人申告で週28時間まで（現在は日本語学校に在籍中の学生ビザ）。フルタイム案件確定次第、日本語学校を退学し在留資格変更にも対応可能とのこと。</span><span class="lang-en">*Japanese: JLPT N5 (self-reported as not fully confident in business communication) / English: Business level<br>
+        *Working hours: Self-reported availability of up to 28 hours/week (currently enrolled in a Japanese language school on a student visa). States that once a full-time position is confirmed, he can withdraw from the language school and proceed with a change of residence status.</span>
       </p>
       <div class="flex flex-wrap gap-x-3 gap-y-1 mt-4">
         <a class="inline-flex items-center gap-1.5 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/11lEGGiPOtyhTolLMSYQe4Wzz2Q-cPBUT/view?usp=sharing" target="_blank">職務経歴書（日本語）→</a>
@@ -144,11 +149,11 @@
 
     <!-- K.I. (Web Engineer / 38) -->
     <div id="ki-engineer" class="card-fade bg-[#fbfaf8] border border-dashed border-line rounded-xl p-8 scroll-mt-24">
-      <span class="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide px-2.5 py-1 rounded mb-5 bg-tag-dev text-tag-dev-text">● Web Engineer / Full-Stack<span class="inline-block font-mono text-xs tracking-wide text-ink-light bg-bg border border-line rounded px-2 py-0.5 ml-2 align-middle">週40h・札幌</span></span>
+      <span class="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide px-2.5 py-1 rounded mb-5 bg-tag-dev text-tag-dev-text">● Web Engineer / Full-Stack<span class="inline-block font-mono text-xs tracking-wide text-ink-light bg-bg border border-line rounded px-2 py-0.5 ml-2 align-middle"><span class="lang-ja">週40h・札幌</span><span class="lang-en">40h/week · Sapporo</span></span></span>
       <div class="font-mono text-4xl font-medium tracking-tight text-ink mb-1">K.I.</div>
-      <div class="text-sm text-ink-light mb-5">男性・38歳　／　札幌またはフルリモート対応</div>
+      <div class="text-sm text-ink-light mb-5"><span class="lang-ja">男性・38歳　／　札幌またはフルリモート対応</span><span class="lang-en">Male, 38 / Based in Sapporo or fully remote</span></div>
       <p class="text-sm text-ink-mid leading-loose mb-6 font-light">
-        メーカー技術職から30代でIT業界へ未経験転職し、約5年間Web系開発に従事。PHP・JavaScript・Pythonを中心に、Laravel・React・Vueを用いた開発に対応。外資系カフェチェーン・カラオケチェーンなど複数のBtoC全国チェーン店のブランドサイト開発・運用保守、自動車メーカー向け品質管理システムのフロントエンド開発、独立行政法人向けシステム開発補助を経験。TOEIC 950点。未経験技術への高いキャッチアップ力を持つエンジニア。
+        <span class="lang-ja">メーカー技術職から30代でIT業界へ未経験転職し、約5年間Web系開発に従事。PHP・JavaScript・Pythonを中心に、Laravel・React・Vueを用いた開発に対応。外資系カフェチェーン・カラオケチェーンなど複数のBtoC全国チェーン店のブランドサイト開発・運用保守、自動車メーカー向け品質管理システムのフロントエンド開発、独立行政法人向けシステム開発補助を経験。TOEIC 950点。未経験技術への高いキャッチアップ力を持つエンジニア。</span><span class="lang-en">Transitioned into IT in his 30s from a manufacturing technical role with no prior experience, and has worked in web development for about 5 years. Works mainly with PHP, JavaScript, and Python, using Laravel, React, and Vue. Experience includes brand site development and maintenance for multiple nationwide B2C chains (including a foreign-affiliated cafe chain and a karaoke chain), frontend development for an automotive manufacturer's quality management system, and system development support for an independent administrative agency. TOEIC score of 950. An engineer with a strong ability to quickly pick up unfamiliar technologies.</span>
       </p>
       <div class="flex flex-wrap gap-1.5">
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">PHP / Laravel</span>
@@ -160,18 +165,18 @@
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Docker</span>
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">AWS Certified CP</span>
       </div>
-      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1Cx2tEtC0DLWbsV4xDm1oYhElE4FBa_bO/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
-      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1YiMQNcPLa8jsXRlC5UKQzK8-DInL5zWi/view?usp=sharing" target="_blank">サマリを見る →</a>
-      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1W5OKdUnqwIk73Ank0uYVT976bj-A_FBK/view?usp=sharing" target="_blank">スキルシートを見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1Cx2tEtC0DLWbsV4xDm1oYhElE4FBa_bO/view?usp=sharing" target="_blank"><span class="lang-ja">職務経歴書を見る</span><span class="lang-en">View Resume</span> →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1YiMQNcPLa8jsXRlC5UKQzK8-DInL5zWi/view?usp=sharing" target="_blank"><span class="lang-ja">サマリを見る</span><span class="lang-en">View Summary</span> →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1W5OKdUnqwIk73Ank0uYVT976bj-A_FBK/view?usp=sharing" target="_blank"><span class="lang-ja">スキルシートを見る</span><span class="lang-en">View Skill Sheet</span> →</a>
     </div>
 
     <!-- T.U. -->
     <div id="tu" class="card-fade bg-[#fbfaf8] border border-dashed border-line rounded-xl p-8 scroll-mt-24">
-      <span class="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide px-2.5 py-1 rounded mb-5 bg-tag-dev text-tag-dev-text">● Web System Engineer<span class="inline-block font-mono text-xs tracking-wide text-ink-light bg-bg border border-line rounded px-2 py-0.5 ml-2 align-middle">時短勤務希望</span></span>
+      <span class="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide px-2.5 py-1 rounded mb-5 bg-tag-dev text-tag-dev-text">● Web System Engineer<span class="inline-block font-mono text-xs tracking-wide text-ink-light bg-bg border border-line rounded px-2 py-0.5 ml-2 align-middle"><span class="lang-ja">時短勤務希望</span><span class="lang-en">Prefers shorter hours</span></span></span>
       <div class="font-mono text-4xl font-medium tracking-tight text-ink mb-1">T.U.</div>
-      <div class="text-sm text-ink-light mb-5">男性・45歳　／　PHP・Java開発／業務システム保守・改修</div>
+      <div class="text-sm text-ink-light mb-5"><span class="lang-ja">男性・45歳　／　PHP・Java開発／業務システム保守・改修</span><span class="lang-en">Male, 45 / PHP &amp; Java development / Business system maintenance &amp; enhancement</span></div>
       <p class="text-sm text-ink-mid leading-loose mb-6 font-light">
-        Webシステム開発、業務システム開発、既存システム改修、保守運用を中心に長年の開発経験を持つシステムエンジニア。証券取引、オンラインゲーム、アンケート集計、EC、施設管理など多様な領域のシステム開発に携わり、基本設計からテスト・保守まで一貫対応可能。リーダー・サブリーダー経験もあり、既存システムの機能追加・不具合修正に強み。
+        <span class="lang-ja">Webシステム開発、業務システム開発、既存システム改修、保守運用を中心に長年の開発経験を持つシステムエンジニア。証券取引、オンラインゲーム、アンケート集計、EC、施設管理など多様な領域のシステム開発に携わり、基本設計からテスト・保守まで一貫対応可能。リーダー・サブリーダー経験もあり、既存システムの機能追加・不具合修正に強み。</span><span class="lang-en">A systems engineer with many years of experience centered on web system development, business system development, enhancement of existing systems, and maintenance/operations. Has worked on system development across diverse fields including securities trading, online gaming, survey aggregation, e-commerce, and facility management, handling everything from basic design through testing and maintenance. Has experience as both a lead and sub-lead, with particular strength in adding features to and fixing bugs in existing systems.</span>
       </p>
       <div class="flex flex-wrap gap-1.5">
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Java</span>
@@ -181,45 +186,45 @@
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Oracle / MySQL</span>
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">SQL Server / DB2</span>
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">AWS / WordPress</span>
-        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">既存システム保守・改修</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid"><span class="lang-ja">既存システム保守・改修</span><span class="lang-en">Legacy System Maintenance & Enhancement</span></span>
       </div>
-      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1ABYLz28EqG8HjDhxgIZFhTlSEDgHY3md/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
-      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/11j769hp1LTk42VszuGlbp6oOtf2Xyz0o/view?usp=sharing" target="_blank">サマリを見る →</a>
-      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1SNSY-z7DFUvc559eaFkxJ76DoikQjhe2/view?usp=sharing" target="_blank">スキルシートを見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1ABYLz28EqG8HjDhxgIZFhTlSEDgHY3md/view?usp=sharing" target="_blank"><span class="lang-ja">職務経歴書を見る</span><span class="lang-en">View Resume</span> →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/11j769hp1LTk42VszuGlbp6oOtf2Xyz0o/view?usp=sharing" target="_blank"><span class="lang-ja">サマリを見る</span><span class="lang-en">View Summary</span> →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1SNSY-z7DFUvc559eaFkxJ76DoikQjhe2/view?usp=sharing" target="_blank"><span class="lang-ja">スキルシートを見る</span><span class="lang-en">View Skill Sheet</span> →</a>
     </div>
 
     <!-- K.I. (Designer) -->
     <div id="ki-designer" class="card-fade bg-[#fbfaf8] border border-dashed border-line rounded-xl p-8 scroll-mt-24">
-      <span class="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide px-2.5 py-1 rounded mb-5 bg-tag-design text-tag-design-text">● Graphic / Web Designer<span class="inline-block font-mono text-xs tracking-wide text-ink-light bg-bg border border-line rounded px-2 py-0.5 ml-2 align-middle">時短勤務希望</span></span>
+      <span class="inline-flex items-center gap-1.5 text-xs font-medium tracking-wide px-2.5 py-1 rounded mb-5 bg-tag-design text-tag-design-text">● Graphic / Web Designer<span class="inline-block font-mono text-xs tracking-wide text-ink-light bg-bg border border-line rounded px-2 py-0.5 ml-2 align-middle"><span class="lang-ja">時短勤務希望</span><span class="lang-en">Prefers shorter hours</span></span></span>
       <div class="font-mono text-4xl font-medium tracking-tight text-ink mb-1">K.I.</div>
-      <div class="text-sm text-ink-light mb-5">女性・53歳　／　フルリモート対応</div>
+      <div class="text-sm text-ink-light mb-5"><span class="lang-ja">女性・53歳　／　フルリモート対応</span><span class="lang-en">Female, 53 / Fully remote</span></div>
       <p class="text-sm text-ink-mid leading-loose mb-6 font-light">
-        編集プロダクション・出版社・デザイン事務所を経て、30年以上のデザイン実務経験を持つ。紙媒体からWeb広告・イラスト・電子書籍・動画まで幅広く対応。Adobe製品全般（Illustrator・Photoshop・XD・Premiere・After Effects）を使いこなす即戦力デザイナー。
+        <span class="lang-ja">編集プロダクション・出版社・デザイン事務所を経て、30年以上のデザイン実務経験を持つ。紙媒体からWeb広告・イラスト・電子書籍・動画まで幅広く対応。Adobe製品全般（Illustrator・Photoshop・XD・Premiere・After Effects）を使いこなす即戦力デザイナー。</span><span class="lang-en">Has over 30 years of hands-on design experience, having worked at editorial production companies, publishers, and design studios. Handles a wide range of media, from print to web advertising, illustration, e-books, and video. An immediately deployable designer skilled across the full Adobe suite (Illustrator, Photoshop, XD, Premiere, After Effects).</span>
       </p>
       <div class="flex flex-wrap gap-1.5">
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Illustrator</span>
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Photoshop</span>
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Adobe XD</span>
         <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Premiere / AE</span>
-        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">Web広告デザイン</span>
-        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">イラスト制作</span>
-        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">DTP / 入稿</span>
-        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid">SEO設定</span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid"><span class="lang-ja">Web広告デザイン</span><span class="lang-en">Web Ad Design</span></span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid"><span class="lang-ja">イラスト制作</span><span class="lang-en">Illustration</span></span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid"><span class="lang-ja">DTP / 入稿</span><span class="lang-en">DTP / Print Production</span></span>
+        <span class="font-mono text-xs px-2.5 py-1 bg-bg border border-line rounded text-ink-mid"><span class="lang-ja">SEO設定</span><span class="lang-en">SEO Setup</span></span>
       </div>
-      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/18qDMctPkje3Gr2SAgVgK3F6yUXxOo9_i/view?usp=sharing" target="_blank">職務経歴書を見る →</a>
-      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://www.foriio.com/atelierclover" target="_blank">ポートフォリオを見る →</a>
-      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1pSXO_KWcaXM0hFvYCWYBzgi_lqDAR8Gc/view?usp=sharing" target="_blank">サマリを見る →</a>
-      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1N0C0xy_tbqadXi0gLdG9Y4ybVmntPXjD/view?usp=sharing" target="_blank">スキルシートを見る →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/18qDMctPkje3Gr2SAgVgK3F6yUXxOo9_i/view?usp=sharing" target="_blank"><span class="lang-ja">職務経歴書を見る</span><span class="lang-en">View Resume</span> →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://www.foriio.com/atelierclover" target="_blank"><span class="lang-ja">ポートフォリオを見る</span><span class="lang-en">View Portfolio</span> →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1pSXO_KWcaXM0hFvYCWYBzgi_lqDAR8Gc/view?usp=sharing" target="_blank"><span class="lang-ja">サマリを見る</span><span class="lang-en">View Summary</span> →</a>
+      <a class="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent no-underline border border-accent px-3.5 py-1.5 rounded transition-colors hover:bg-accent hover:text-white" href="https://drive.google.com/file/d/1N0C0xy_tbqadXi0gLdG9Y4ybVmntPXjD/view?usp=sharing" target="_blank"><span class="lang-ja">スキルシートを見る</span><span class="lang-en">View Skill Sheet</span> →</a>
     </div>
 
   </div>
 
   <!-- CTA -->
   <div class="rounded-xl p-12 px-10 text-center text-white bg-gradient-to-br from-accent to-accent-dark">
-    <h3 class="text-xl font-bold mb-3 tracking-tight">まずはお気軽にご相談ください</h3>
-    <p class="text-sm text-[#eaf9ff] font-light mb-7">30分程度のオンライン説明から承っております。</p>
+    <h3 class="text-xl font-bold mb-3 tracking-tight"><span class="lang-ja">まずはお気軽にご相談ください</span><span class="lang-en">Feel Free to Reach Out Anytime</span></h3>
+    <p class="text-sm text-[#eaf9ff] font-light mb-7"><span class="lang-ja">30分程度のオンライン説明から承っております。</span><span class="lang-en">We start with a casual 30-minute online consultation.</span></p>
     <div class="flex gap-3 justify-center flex-wrap">
-      <a id="mailto-cta" href="" class="inline-block px-7 py-3 rounded-md text-sm font-medium no-underline transition-opacity hover:opacity-85 bg-white text-accent">メールで問い合わせる</a>
+      <a id="mailto-cta" href="" class="inline-block px-7 py-3 rounded-md text-sm font-medium no-underline transition-opacity hover:opacity-85 bg-white text-accent"><span class="lang-ja">メールで問い合わせる</span><span class="lang-en">Contact Us by Email</span></a>
     </div>
   </div>
 
@@ -230,6 +235,7 @@
 </footer>
 
 <script src="mailto.js"></script>
+<script src="i18n.js"></script>
 
 </body>
 </html>
