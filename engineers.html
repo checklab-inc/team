@@ -90,7 +90,7 @@
   <div class="flex items-center gap-2">
     <a href="https://checklab.net/" class="no-underline"><span class="font-mono text-base font-medium text-ink tracking-wide">Check <span class="text-accent">Lab</span></span></a>
   </div>
-  <nav class="hidden md:flex items-center gap-7">
+  <nav class="hidden lg:flex items-center gap-7">
     <a href="index.html#company" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap"><span class="lang-ja">会社概要</span><span class="lang-en">Company</span></a>
     <a href="index.html#about" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap"><span class="lang-ja">Check Labとは？</span><span class="lang-en">About Us</span></a>
     <a href="index.html#members" class="text-sm text-ink-mid hover:text-accent transition-colors whitespace-nowrap"><span class="lang-ja">チームメンバー</span><span class="lang-en">Team</span></a>
@@ -99,7 +99,30 @@
     <button type="button" data-lang-btn class="font-mono text-xs px-2.5 py-1 border border-line rounded text-ink-mid hover:text-accent hover:border-accent transition-colors bg-white cursor-pointer whitespace-nowrap">EN</button>
     <a id="mailto-header" href="" class="bg-accent hover:bg-accent-dark text-white text-xs font-semibold px-4 py-2 rounded whitespace-nowrap"><span class="lang-ja">お問い合わせ</span><span class="lang-en">Contact</span></a>
   </nav>
+  <button type="button" id="menu-toggle" class="lg:hidden p-2 -mr-2 text-ink-mid hover:text-accent cursor-pointer" aria-controls="mobile-menu" aria-expanded="false" aria-label="メニュー / Menu">
+    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+  </button>
 </header>
+
+<div id="mobile-menu" class="fixed inset-0 z-50 lg:hidden invisible">
+  <div data-menu-overlay class="absolute inset-0 bg-ink/40 opacity-0 transition-opacity duration-300"></div>
+  <aside data-menu-panel class="absolute top-0 right-0 h-full w-72 max-w-full bg-white shadow-xl translate-x-full transition-transform duration-300 flex flex-col px-6 pt-20 pb-8 overflow-y-auto">
+    <button type="button" data-menu-close class="absolute top-4 right-4 p-2 text-ink-mid hover:text-accent cursor-pointer" aria-label="閉じる / Close">
+      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <nav class="flex flex-col" aria-label="メニュー">
+      <a href="index.html#company" class="text-base text-ink-mid hover:text-accent transition-colors py-3 border-b border-line"><span class="lang-ja">会社概要</span><span class="lang-en">Company</span></a>
+      <a href="index.html#about" class="text-base text-ink-mid hover:text-accent transition-colors py-3 border-b border-line"><span class="lang-ja">Check Labとは？</span><span class="lang-en">About Us</span></a>
+      <a href="index.html#members" class="text-base text-ink-mid hover:text-accent transition-colors py-3 border-b border-line"><span class="lang-ja">チームメンバー</span><span class="lang-en">Team</span></a>
+      <a href="engineers.html" class="text-base text-ink-mid hover:text-accent transition-colors py-3 border-b border-line !text-accent font-medium"><span class="lang-ja">登録エンジニア</span><span class="lang-en">Registered Engineers</span></a>
+      <a href="index.html#works" class="text-base text-ink-mid hover:text-accent transition-colors py-3 border-b border-line"><span class="lang-ja">制作実績</span><span class="lang-en">Portfolio</span></a>
+    </nav>
+    <div class="flex items-center gap-4 mt-6">
+      <button type="button" data-lang-btn class="font-mono text-xs px-2.5 py-1 border border-line rounded text-ink-mid hover:text-accent hover:border-accent transition-colors bg-white cursor-pointer whitespace-nowrap">EN</button>
+      <a id="mailto-header-mobile" href="" class="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-4 py-2 rounded whitespace-nowrap"><span class="lang-ja">お問い合わせ</span><span class="lang-en">Contact</span></a>
+    </div>
+  </aside>
+</div>
 
 <div class="max-w-4xl mx-auto px-5 sm:px-10 pb-20">
 
@@ -338,6 +361,7 @@
 </footer>
 
 <script src="mailto.js"></script>
+<script src="menu.js"></script>
 <script src="i18n.js"></script>
 
 </body>

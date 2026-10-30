@@ -40,7 +40,7 @@
 
   const mailtoUrl = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-  ['mailto-header', 'mailto-cta'].forEach(id => {
+  ['mailto-header', 'mailto-header-mobile', 'mailto-cta'].forEach(id => {
     const el = document.getElementById(id);
     if (el) el.href = mailtoUrl;
   });
